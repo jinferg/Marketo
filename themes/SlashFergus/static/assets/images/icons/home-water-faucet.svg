@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="74px" height="81px" viewBox="0 0 74 81" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>water-faucet</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Homepage" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round">
+        <g transform="translate(-204.000000, -2676.000000)" id="water-faucet" stroke-width="3">
+            <g transform="translate(206.000000, 2678.000000)">
+                <path d="M3,57 L3,28.5 C3,12.7612941 15.7612941,0 31.5,0 C47.2387059,0 60,12.7612941 60,28.5 L60,30.1764706 L49.9411765,30.1764706 L49.9411765,29.2912941 C49.9411765,19.6616471 42.9,11.058 33.3105882,10.146 C22.3129412,9.09652941 13.0588235,17.7169412 13.0588235,28.5 L13.0588235,57" id="Shape" stroke="#003CC8"></path>
+                <path d="M57,40 L57,45" id="Shape" stroke="#FF5600" stroke-linecap="round"></path>
+                <path d="M57,51 L57,56" id="Shape" stroke="#FF5600" stroke-linecap="round"></path>
+                <path d="M63,39 L64.929,44" id="Shape" stroke="#FF5600" stroke-linecap="round"></path>
+                <path d="M68,50 L69.929,55" id="Shape" stroke="#FF5600" stroke-linecap="round"></path>
+                <path d="M48.932,39 L47,44" id="Shape" stroke="#FF5600" stroke-linecap="round"></path>
+                <path d="M43.932,50 L42,55" id="Shape" stroke="#FF5600" stroke-linecap="round"></path>
+                <path d="M8.14599637,64.6763484 C6.40048504,65.3447745 5.548105,67.2517551 6.24087603,68.9326503 C6.93364706,70.6135455 8.90668613,71.4359718 10.6521975,70.7675456 L24.8540036,65.3251149 C26.599515,64.6566888 27.451895,62.7497082 26.759124,61.068813 C26.0663529,59.3879178 24.0933139,58.5654915 22.3478025,59.2306411 L8.14599637,64.6763484 Z" id="Shape" stroke="#003CC8"></path>
+                <polyline id="Shape" stroke="#003CC8" points="17 68.6666667 17 77 0 77 0 57 17 57 17 60.3333333"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,52 @@
+{{ partial "head" . }}
+{{ partial "partial/header" . }}
+
+<section class="fill:tint-green">
+  <div class="wrap wrap:padding-x padding-y:10vh align:center max-width:70">
+    <h1 class="font font-size:h3 font-size-md:h2 font-size-lg:h1 margin-bottom:2 font-leading:0 align:center ">
+      Careers at <span class="color:primary font:underline">Fergus</span>
+    </h1>
+    <h2 class="font font-weight:regular font-size:h6 font-size-sm:h5 font-leading:2 align:center max-width:100 margin:auto">
+      Join us as we streamline success for thousands of trade and service businesses around the world.
+    </h2>
+  </div>
+</section>
+
+
+
+<section class="padding-y:10vh">
+
+  <div class="wrap wrap:padding-x">
+    <div class="grid grid:1 grid-sm:2 grid-md:3 grid-gutter:3">
+      {{ range .Params.blocks }}
+        {{ if eq "block-career-card" .template }}
+        <article class="card">
+          <div class="card/content">
+            <div class="grid/item border:radius fill:white">
+              <a href="{{ .info_url }}" class="font font-size:h5 font-weight:bold color:primary">
+                {{ .position }} <i class="fas fa-arrow-right margin-left:1 margin-bottom:3"></i>
+              </a>
+              <div class="row color:black">
+                <div class="column">
+                  <p>
+                    <span class="font-weight:medium font-size:tiny margin-right:1">DEPARTMENT</span><br />{{ .department }}
+                  </p>
+                </div>
+                <div class="column">
+                  <p>
+                    <span class="font-weight:medium font-size:tiny margin-right:1">LOCATION</span><br />{{ .location }}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      {{ end }}
+    {{ end }}
+    </div>
+  </div>
+
+</section>
+
+{{ partial "partial/footer" . }}
+{{ partial "foot" . }}

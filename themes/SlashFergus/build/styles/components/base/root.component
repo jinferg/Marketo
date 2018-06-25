@@ -1,0 +1,52 @@
+/************************************************************
+ROOT
+************************************************************/
+
+:root {
+
+  /******************************
+  DEFAULT
+  ******************************/
+
+  --max-width: #{$max-width};
+  --radius: #{$radius};
+  --columns: #{$columns};
+  --border-color: red;
+  --border: #{$border};
+  --transition: #{$transition};
+  --shadow: #{$shadow};
+
+  /******************************
+  TYPOGRAPHY
+  ******************************/
+
+  --font-family: #{$font-family};
+  --font-size: #{$font-size};
+  --line-height: #{$line-height};
+
+  @each $key, $value in $font-weights {
+    --#{$key}: #{$value};
+  }
+
+  @each $key, $value in $font-sizes {
+    --#{$key}: #{$value};
+  }
+
+  /******************************
+  COLORS
+  ******************************/
+
+  @each $key, $value in $colors {
+    --#{$key}: #{$value};
+  }
+
+  /******************************
+  UNITS
+  ******************************/
+
+  --unit: #{$unit};
+
+  @each $key, $value in $units {
+    --#{$key}: #{$value};
+  }
+}

@@ -1,0 +1,276 @@
+/************************************************************
+BUTTON
+************************************************************/
+
+:root {
+  --button-outline-weight: 2px;
+  --button-radius: var(--radius);
+  --button-font-family: var(--font-family);
+  --button-font-size: var(--font-size);
+  --button-font-weight: var(--regular);
+}
+
+.button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(3 * var(--u1) + var(--u2));
+  margin-right: var(--u1);
+  padding: 0 1em;
+  background-color: var(--primary);
+  outline: none;
+  border: none;
+  border-radius: var(--button-radius);
+  font-family: var(--button-font-family);
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  white-space: nowrap;
+  transition: var(--transition);
+  overflow: hidden;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+    &:before {
+      background: rgba(255,255,255,.25);
+    }
+  }
+  &:active {
+    text-decoration: none;
+    &:before {
+      background: rgba(0,0,0,.25);
+    }
+  }
+
+  &:before {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: rgba(255,255,255,0);
+    transition: var(--transition);
+    mix-blend-mode: overlay;
+  }
+
+  // pseudo
+  &:last-child {
+    margin-right: 0;
+  }
+
+  /******************************
+  SIZES
+  ******************************/
+
+  &-size {
+    @while $levels > 0 {
+      &\:#{$levels} {
+        height: calc(#{$levels} * 1rem + 2rem);
+      }
+      $levels: $levels - 1;
+    }
+  }
+
+  /******************************
+  ELEVATE
+  ******************************/
+
+  &\:elevate {
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2), 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
+    &:hover {
+      transform: translateY(-1px);
+      box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2), 0px 5px 10px 0px rgba(0, 0, 0, 0.4);
+    }
+    &:active {
+      transform: translateY(0);
+      box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2), 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  /******************************
+  GROW
+  ******************************/
+
+  &-grow {
+    @while $levels > 0 {
+      &\:#{$levels} {
+        padding-left: calc(#{$levels} * 2rem);
+        padding-right: calc(#{$levels} * 2rem);
+      }
+      @each $key, $value in $screens {
+        &-#{$key} {
+          @media (min-width: $value) {
+            &\:#{$levels} {
+              padding-left: calc(#{$levels} * 2rem);
+              padding-right: calc(#{$levels} * 2rem);
+            }
+          }
+        }
+      }
+      $levels: $levels - 1;
+    }
+  }
+
+  /******************************
+  FLUID
+  ******************************/
+
+  &\:fluid {
+    width: 100%;
+  }
+  &\:default {
+    width: auto;
+  }
+  @each $key, $value in $screens {
+    &-#{$key} {
+      @media (min-width: $value) {
+        &\:fluid {
+          width: 100%;
+        }
+        &\:default {
+          width: auto;
+        }
+      }
+    }
+  }
+
+  /******************************
+  STYLE
+  ******************************/
+
+  &-style {
+    &\:outline {
+      box-shadow: inset 0px 0px 0px var(--button-outline-weight) var(--primary);
+      background: transparent;
+      color: var(--primary);
+      &:hover {
+        background-color: var(--primary);
+        color: white;
+      }
+      &:active {
+        background-color: var(--primary);
+        color: white;
+      }
+
+      &.fill {
+        @each $key, $value in $colors {
+          @if $key == white {
+            &\:#{$key} {
+              background-color: transparent !important;
+              box-shadow: inset 0px 0px 0px var(--button-outline-weight) var(--#{$key}) !important;
+              color: var(--#{$key}) !important;
+              &:hover {
+                background-color: var(--#{$key}) !important;
+                color: var(--primary) !important;
+              }
+              &:active {
+                background-color: var(--#{$key}) !important;
+                color: var(--primary) !important;
+              }
+            }
+          } @else {
+            &\:#{$key} {
+              background-color: transparent !important;
+              box-shadow: inset 0px 0px 0px var(--button-outline-weight) var(--#{$key}) !important;
+              color: var(--#{$key}) !important;
+              &:hover {
+                background-color: var(--#{$key}) !important;
+                color: white !important;
+              }
+              &:active {
+                background-color: var(--#{$key}) !important;
+                color: white !important;
+              }
+            }
+          }
+
+        }
+      }
+    }
+  }
+}
+
+/************************************************************
+BUTTON(S)
+************************************************************/
+
+.buttons {
+  display: inline-flex;
+  border-radius: var(--button-radius);
+  overflow: hidden;
+
+  & > .button {
+    flex: 1;
+    border-radius: 0;
+    margin: 0;
+    &.button-style\:outline {
+      &:first-child {
+        border-top-left-radius: var(--button-radius);
+        border-bottom-left-radius: var(--button-radius);
+      }
+      &:last-child {
+        border-top-right-radius: var(--button-radius);
+        border-bottom-right-radius: var(--button-radius);
+      }
+      &:not(:first-child) {
+        margin-left: calc(-1 * var(--button-outline-weight));
+      }
+    }
+  }
+
+  &\:fluid {
+    width: 100%;
+  }
+
+  &.shape {
+    &\:sharp {
+      overflow: hidden;
+    }
+    &\:radius {
+      overflow: hidden;
+    }
+    &\:round {
+      overflow: hidden;
+    }
+  }
+
+  &-direction {
+    @each $key, $value in $screens {
+      &-#{$key} {
+        @media (min-width: $value) {
+          &\:vertical {
+            flex-direction: column;
+          }
+        }
+      }
+    }
+    &\:vertical {
+      flex-direction: column;
+      & > .button {
+        &.button-style\:outline {
+          &:first-child {
+            border-radius: 0;
+            border-top-left-radius: var(--button-radius);
+            border-top-right-radius: var(--button-radius);
+          }
+          &:last-child {
+            border-radius: 0;
+            border-bottom-left-radius: var(--button-radius);
+            border-bottom-right-radius: var(--button-radius);
+          }
+          &:not(:first-child) {
+            margin: 0;
+            margin-top: calc(-1 * var(--button-outline-weight));
+          }
+        }
+      }
+    }
+  }
+}

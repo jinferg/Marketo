@@ -1,0 +1,36 @@
+/************************************************************
+CRUMB
+************************************************************/
+
+:root {
+  --crumb-link-color: var(--link-color);
+  --crumb-active-color: var(--default-color);
+  --crumb-slash-color: var(--grey);
+  --crumb-slash-gap: 1rem;
+}
+
+.crumb {
+  display: inline-flex;
+  flex: 1;
+  align-items: center;
+  &\/item {
+    color: var(--crumb-link-color);
+    &.is-active {
+      color: var(--crumb-active-color);
+      text-decoration: none;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  /******************************
+  DIRECTION
+  ******************************/
+
+  &\/slash{
+    margin-left: var(--crumb-slash-gap);
+    margin-right: var(--crumb-slash-gap);
+    color: var(--crumb-slash-color);
+  }
+}

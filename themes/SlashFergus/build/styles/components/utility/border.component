@@ -1,0 +1,174 @@
+/************************************************************
+BORDER
+************************************************************/
+
+:root {
+  --border-border: var(--border);
+}
+
+.border {
+
+  border: var(--border-border) !important;
+
+  &\:sharp {
+    border-radius: 0 !important;
+  }
+  &\:radius {
+    border-radius: var(--radius) !important;
+    &-top {
+      border-top-left-radius: var(--radius) !important;
+      border-top-right-radius: var(--radius) !important;
+    }
+    &-right {
+      border-top-right-radius: var(--radius) !important;
+      border-bottom-right-radius: var(--radius) !important;
+    }
+    &-bottom {
+      border-bottom-left-radius: var(--radius) !important;
+      border-bottom-right-radius: var(--radius) !important;
+    }
+    &-left {
+      border-top-left-radius: var(--radius) !important;
+      border-bottom-left-radius: var(--radius) !important;
+    }
+  }
+  &\:round {
+    border-radius: 500px !important;
+  }
+  &\:top {
+    border-top: var(--border-border) !important;
+  }
+  &\:right {
+    border-right: var(--border-border) !important;
+  }
+  &\:bottom {
+    border-bottom: var(--border-border) !important;
+  }
+  &\:left {
+    border-left: var(--border-border) !important;
+  }
+  &\:x {
+    border-left: var(--border-border) !important;
+    border-right: var(--border-border) !important;
+  }
+  &\:y {
+    border-top: var(--border-border) !important;
+    border-bottom: var(--border-border) !important;
+  }
+  &\:none {
+    border: 0 !important;
+    &-top {
+      border-top: 0 !important;
+    }
+    &-right {
+      border-right: 0 !important;
+    }
+    &-bottom {
+      border-bottom: 0 !important;
+    }
+    &-left {
+      border-left: 0 !important;
+    }
+    &-x {
+      border-left: 0 !important;
+      border-right: 0 !important;
+    }
+    &-y {
+      border-top: 0 !important;
+      border-bottom: 0 !important;
+    }
+  }
+  @each $key, $value in $screens {
+    &-#{$key} {
+      @media (min-width : #{$value}) {
+        border: var(--border-border) !important;
+
+        &\:sharp {
+          border-radius: 0 !important;
+        }
+        &\:radius {
+          border-radius: var(--radius) !important;
+          &-top {
+            border-top-left-radius: var(--radius) !important;
+            border-top-right-radius: var(--radius) !important;
+          }
+          &-right {
+            border-top-right-radius: var(--radius) !important;
+            border-bottom-right-radius: var(--radius) !important;
+          }
+          &-bottom {
+            border-bottom-left-radius: var(--radius) !important;
+            border-bottom-right-radius: var(--radius) !important;
+          }
+          &-left {
+            border-top-left-radius: var(--radius) !important;
+            border-bottom-left-radius: var(--radius) !important;
+          }
+        }
+        &\:round {
+          border-radius: 500px !important;
+        }
+        &\:top {
+          border-top: var(--border-border) !important;
+        }
+        &\:right {
+          border-right: var(--border-border) !important;
+        }
+        &\:bottom {
+          border-bottom: var(--border-border) !important;
+        }
+        &\:left {
+          border-left: var(--border-border) !important;
+        }
+        &\:x {
+          border-left: var(--border-border) !important;
+          border-right: var(--border-border) !important;
+        }
+        &\:y {
+          border-top: var(--border-border) !important;
+          border-bottom: var(--border-border) !important;
+        }
+        &\:none {
+          border: 0 !important;
+          &-top {
+            border-top: 0 !important;
+          }
+          &-right {
+            border-right: 0 !important;
+          }
+          &-bottom {
+            border-bottom: 0 !important;
+          }
+          &-left {
+            border-left: 0 !important;
+          }
+          &-x {
+            border-left: 0 !important;
+            border-right: 0 !important;
+          }
+          &-y {
+            border-top: 0 !important;
+            border-bottom: 0 !important;
+          }
+        }
+      }
+    }
+  }
+
+  &-color {
+    @each $key, $value in $colors {
+      &\:#{$key} {
+        border-color: var(--#{$key}) !important;
+      }
+    }
+  }
+
+  &-width {
+    @while $levels > 0 {
+      &\:#{$levels} {
+        border-width: $levels * 1rem  !important;
+      }
+      $levels: $levels - 1;
+    }
+  }
+}

@@ -1,0 +1,146 @@
+{{ partial "head" . }}
+{{ partial "partial/header" . }}
+
+<section class="fill:primary">
+  <div class="wrap wrap:padding-x padding-y:10vh display:flex align:flex-center">
+    <div class="row align-content:center margin:auto padding-y:5vh">
+      <div class="column:12 column-sm:9">
+        <h4 class="font font-weight:bold font-size:h6 font-size-sm:h4 font-leading:2 color:white margin-bottom:2 js-reveal-set-1">
+          Our Mission
+        </h4>
+        <h1 class="font font-size:h3 font-size-md:h2 font-size-lg:h1 margin-bottom:2 font-leading:0 color:white js-reveal-set-1">
+          “{{ .Params.quote }}”
+        </h1>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="row">
+    <div class="column:12 column-sm:3">
+      <img src="/assets/images/about/about-bg-1.jpg" class="image image:fluid" />
+    </div>
+
+    <div class="column:12 column-sm:3">
+      <img src="/assets/images/about/about-bg-4.jpg" class="image image:fluid" />
+    </div>
+
+    <div class="column:12 column-sm:3">
+      <img src="/assets/images/about/about-bg-3.jpg" class="image image:fluid" />
+    </div>
+
+    <div class="column:12 column-sm:3">
+      <img src="/assets/images/about/about-bg-2.jpg" class="image image:fluid" />
+    </div>
+  </div>
+</section>
+
+<section class="fill:white padding-y:10vh ">
+  <div class="wrap wrap:padding-x">
+    <div class="row row-gutter-sm:5">
+      <div class="column:12 column-sm:6 margin-bottom:4 margin-bottom-sm:none">
+        <h5 class="font font-size:h6 font-size-sm:h5 margin-bottom:3 font-leading:0">
+          {{ .Params.column_1_title }}
+        </h5>
+        {{ .Params.column_1_paragraph | markdownify }}
+      </div>
+
+      <div class="column:12 column-sm:6">
+        <h5 class="font font-size:h6 font-size-sm:h5 margin-bottom:3 font-leading:0">
+          {{ .Params.column_2_title }}
+        </h5>
+        {{ .Params.column_2_paragraph | markdownify }}
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="fill:white padding-y:5vh ">
+  <div class="wrap wrap:padding-x">
+    <h3 class="font font-size:h2 font-size-sm:h1 margin-bottom:5 font-leading:0">
+      Our Core <span class="font color:primary font:underline">Values</span>
+    </h3>
+
+    <div class="tab tab:about-values margin-bottom:2">
+      <div class="tab/header">
+        <a href="#about-values-1" class="tab/item is-active">
+          Curious growth
+        </a>
+        <a href="#about-values-2" class="tab/item">
+          Reliable and trustworthy
+        </a>
+        <a href="#about-values-3" class="tab/item">
+          Drive and embrace change
+        </a>
+      </div>
+      <div class="tab/content">
+        <div id="about-values-1" class="tab/item is-active">
+          <h4 class="font font-weight:medium margin-bottom:2">Curious growth</h4>
+          <p class="font-size:h5">
+            Fergus was built because we were curious about how technology could take a trades business was good to great. We’re constantly searching for new ways, and new ideas, to improve our tools. We can’t do this unless we’re genuinely curious about the Tradie ecosystem, and the world around us. By asking questions about the normal, the unusual or the unchanged we will continue to build the best product in the world.
+          </p>
+        </div>
+        <div id="about-values-2" class="tab/item">
+          <h4 class="font font-weight:medium margin-bottom:3">Reliable and trustworthy</h4>
+          <p class="font-size:h5">
+            When we commit to getting a job done, we follow through and make sure it’s done right. We also support each other to feel they can voice their opinions, new ideas and to do the best job they can do. Knowing your team cares about you, will cheer for you and will back you 100%, draws us together to find the best solutions for our customers.
+          </p>
+        </div>
+        <div id="about-values-3" class="tab/item">
+          <h4 class="font font-weight:medium margin-bottom:3">Drive and embrace change</h4>
+          <p class="font-size:h5">
+            We’re changing thousands of trades and service business across the world to become better, faster and more profitable. To continue driving improvements, we need to take charge of change, embrace the new and inspire our customers to come on the journey with us.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="fill:white padding-y:10vh ">
+  <div class="wrap wrap:padding-x">
+    <h3 class="font font-size:h2 font-size-sm:h1 margin-bottom:5vh font-leading:0">
+      Our <span class="font color:primary font:underline">Team</span>
+    </h3>
+
+    <div class="grid:1 grid-sm:3 grid-md:4 grid-lg:5 grid-gutter:2 grid-gutter-md:3 grid-gutter-lg:5">
+
+      {{ range .Params.blocks }}
+        {{ if eq "block-about-profile" .template }}
+          <div class="grid/item border:radius fill:white align:center padding-bottom:2">
+            <img src="{{ .image }}" class="image image:fluid" />
+            <h6 class="font margin-top:2">{{ .name }}</h6>
+            <p>
+              {{ .position }}
+            </p>
+          </div>
+        {{ end }}
+      {{ end }}
+
+    </div>
+  </div>
+</section>
+
+
+{{.Content}}
+
+
+<section class="padding-y:5vh padding-y-sm:10vh fill:primary">
+  <div class="wrap wrap:padding-x padding-bottom:2vh align:center">
+    <h1 class="font font-size:h3 font-size-sm:h1 margin-bottom:2 font-leading:0 color:white">
+      Interested in working at <span class="font color:yellow font:underline">Fergus?</span>
+    </h1>
+    <h2 class="font font-weight:regular font-size:h6 font-size-sm:h5 font-leading:1 margin-bottom:4 color:white">
+      Join us as we streamline success for thousands of trade <br />and service businesses around the world.
+    </h2>
+    <a href="/company/careers" class="button fill:yellow color:secondary button:elevate button-grow:2">View job openings</a>
+  </div>
+</section>
+
+
+{{ partial "partial/footer" . }}
+{{ partial "foot" . }}

@@ -1,0 +1,23 @@
+/************************************************************
+ICON
+************************************************************/
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: var(--font-size);
+  line-height: 1;
+
+  /******************************
+  SIZES
+  ******************************/
+
+  &-size {
+    @while $levels > 0 {
+      &\:#{$levels} {
+        font-size: $levels * .5rem + .6rem;
+      }
+      $levels: $levels - 1;
+    }
+  }
+}

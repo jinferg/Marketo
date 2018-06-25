@@ -1,0 +1,111 @@
+/************************************************************
+SLIDEMENU
+************************************************************/
+
+.slidemenu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+  visibility: hidden;
+  overflow-x: hidden;
+
+  @media (min-width: #{$sm}) {
+    display: none;
+  }
+
+  &.is-active {
+    visibility: visible;
+    .slidemenu\/overlay {
+      background: rgba(0,0,0,.8);
+    }
+    .slidemenu\/content {
+      left: 0;
+    }
+  }
+
+  /******************************
+  DIRECTION
+  ******************************/
+
+  &-direction {
+    &\:left {
+      .slidemenu\/content {
+        left: auto;
+        right: -100%;
+      }
+      &.is-active {
+        .slidemenu\/content {
+          left: auto;
+          right: 0;
+        }
+      }
+    }
+  }
+
+  /******************************
+  CHILD ELEMENTS
+  ******************************/
+
+  &\/overlay{
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0);
+    transition: all .4s;
+  }
+
+  &\/content {
+    position: fixed;
+    left: -100%;
+    width: 80vw;
+    max-width: 400px;
+    height: 100%;
+    background: white;
+    z-index: 2;
+    overflow: auto;
+    transition: all .4s;
+    -webkit-overflow-scrolling: touch; /* Lets it scroll lazy */
+  }
+
+  &\/header {
+    display: flex;
+    align-items: center;
+    height: var(--u6);
+    padding-left: var(--u2);
+  }
+
+  &\/close {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--u6);
+    height: var(--u6);
+    cursor: pointer;
+    &:before, &:after {
+      position: absolute;
+      display: block;
+      content: '';
+      width: 17px;
+      height: 3px;
+      background: var(--primary);
+      border-radius: 20px;
+    }
+    &:before {
+      transform: rotate(-45deg);
+    }
+    &:after {
+      transform: rotate(45deg);
+    }
+  }
+}

@@ -1,0 +1,203 @@
+/************************************************************
+GRID
+************************************************************/
+
+.row {
+	clear: both;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+	/******************************
+  MEDIA
+  ******************************/
+
+	&\:media {
+		display: flex;
+		& > [class^=column] {
+			flex-grow: 0;
+		  flex-basis: auto;
+		}
+	}
+
+	/******************************
+  DIRECTION
+  ******************************/
+
+	&\:vertical {
+		flex-direction: column;
+		&.row-gutter {
+			@while $levels > 0 {
+				&\:#{$levels} {
+					margin-left: 0;
+					margin-right: 0;
+					& > [class^=column] {
+						padding-left: 0;
+						padding-right: 0;
+						margin-bottom: var(--u#{$levels});
+						&:last-child {
+							margin-bottom: 0;
+						}
+					}
+				}
+				$levels: $levels - 1;
+			}
+			@each $key, $value in $screens {
+				&-#{$key} {
+					@media (min-width : #{$value}) {
+						@while $levels > 0 {
+							&\:#{$levels} {
+								margin-left: 0;
+								margin-right: 0;
+								& > [class^=column] {
+									padding-left: 0;
+									padding-right: 0;
+									margin-bottom: var(--u#{$levels});
+									&:last-child {
+										margin-bottom: 0;
+									}
+								}
+							}
+							$levels: $levels - 1;
+						}
+					}
+				}
+			}
+		}
+	}
+	&\:horizontal {
+		flex-direction: row;
+	}
+	@each $key, $value in $screens {
+		&-#{$key} {
+			@media (min-width : #{$value}) {
+				&\:horizontal {
+					flex-direction: row;
+				}
+				&\:vertical {
+					flex-direction: column;
+				}
+			}
+		}
+	}
+
+	/******************************
+  GUTTER
+  ******************************/
+
+	&-gutter {
+		@while $levels > 0 {
+			&\:#{$levels} {
+				margin-left: calc(-.5 * var(--u#{$levels}));
+				margin-right: calc(-.5 * var(--u#{$levels}));
+				& > [class^=column] {
+					padding-left: calc(var(--u#{$levels}) * .5);
+					padding-right: calc(var(--u#{$levels}) * .5);
+				}
+			}
+			$levels: $levels - 1;
+		}
+		@each $key, $value in $screens {
+			&-#{$key} {
+				@media (min-width : #{$value}) {
+					@while $levels > 0 {
+						&\:#{$levels} {
+							margin-left: calc(-.5 * var(--u#{$levels}));
+							margin-right: calc(-.5 * var(--u#{$levels}));
+							& > [class^=column] {
+								padding-left: calc(var(--u#{$levels}) * .5);
+								padding-right: calc(var(--u#{$levels}) * .5);
+							}
+						}
+						$levels: $levels - 1;
+					}
+				}
+			}
+		}
+	}
+
+	/******************************
+  REVERSE
+  ******************************/
+
+	&\:reverse {
+		flex-direction: row-reverse;
+	}
+
+	/******************************
+  COLUMNS
+  ******************************/
+
+	& > .column {
+
+		flex-grow: 1;
+	  flex-basis: 0;
+	  max-width: 100%;
+
+		$total-columns: $columns;
+		@while $columns > 0 {
+			&\:#{$columns} {
+				flex-grow: 1;
+				flex-basis: 100% / $total-columns * $columns;
+			  max-width: 100% / $total-columns * $columns;
+			}
+			$columns: $columns - 1;
+		}
+		@for $i from 1 through 3 {
+			&\:#{$i}\/3 {
+				flex-grow: 1;
+				flex-basis: 100% / 3 * $i;
+			  max-width: 100% / 3 * $i;
+			}
+	  }
+		@for $i from 1 through 5 {
+			&\:#{$i}\/5 {
+				flex-grow: 1;
+				flex-basis: 100% / 5 * $i;
+			  max-width: 100% / 5 * $i;
+			}
+	  }
+		@for $i from 1 through 7 {
+			&\:#{$i}\/7 {
+				flex-grow: 1;
+				flex-basis: 100% / 7 * $i;
+			  max-width: 100% / 7 * $i;
+			}
+	  }
+		@each $key, $value in $screens {
+			&-#{$key} {
+				@media (min-width : #{$value}) {
+					@while $columns > 0 {
+						&\:#{$columns} {
+							flex-grow: 1;
+							flex-basis: 100% / $total-columns * $columns;
+						  max-width: 100% / $total-columns * $columns;
+						}
+						$columns: $columns - 1;
+					}
+					@for $i from 1 through 3 {
+						&\:#{$i}\/3 {
+							flex-grow: 1;
+							flex-basis: 100% / 3 * $i;
+						  max-width: 100% / 3 * $i;
+						}
+				  }
+					@for $i from 1 through 5 {
+						&\:#{$i}\/5 {
+							flex-grow: 1;
+							flex-basis: 100% / 5 * $i;
+						  max-width: 100% / 5 * $i;
+						}
+				  }
+					@for $i from 1 through 7 {
+						&\:#{$i}\/7 {
+							flex-grow: 1;
+							flex-basis: 100% / 7 * $i;
+						  max-width: 100% / 7 * $i;
+						}
+				  }
+				}
+			}
+		}
+	}
+}

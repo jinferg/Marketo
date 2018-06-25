@@ -1,0 +1,49 @@
+/************************************************************
+WRAP
+************************************************************/
+
+.wrap {
+
+  position: relative;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: auto;
+
+  /******************************
+  PADDING
+  ******************************/
+
+  &\:padding-x {
+    padding-left: var(--u2);
+    padding-right: var(--u2);
+    @media (min-width: $sm) {
+      padding-left: var(--u8);
+      padding-right: var(--u8);
+    }
+    @media (min-width: $md) {
+      padding-left: var(--u8);
+      padding-right: var(--u8);
+    }
+    @media (min-width: $lg) {
+      padding-left: var(--u8);
+      padding-right: var(--u8);
+    }
+  }
+
+  /******************************
+  FLUID
+  ******************************/
+
+  &\:fluid {
+    max-width: 100%;
+  }
+  @each $key, $value in $screens {
+    &-#{$key} {
+      @media (min-width: $value) {
+        &\:fluid {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}

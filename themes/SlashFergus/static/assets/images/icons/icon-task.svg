@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-office</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icon-office" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round">
+        <g id="new-document-check" transform="translate(2.000000, 2.000000)" stroke-width="3">
+            <g id="Group">
+                <g id="Shape" stroke="#003CC8">
+                    <polygon points="29.9714052 29.9714052 29.9714052 45.9060458 0.0939542484 45.9060458 0.0939542484 0.0939542484 45.9060458 0.0939542484 45.9060458 29.9714052"></polygon>
+                    <path d="M45.9060458,29.9714052 L29.9714052,45.9060458"></path>
+                </g>
+                <polyline id="Shape" stroke="#FF5600" stroke-linecap="round" points="33.9550654 11.0490196 17.0245098 29.9714052 11.0490196 23.995915"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

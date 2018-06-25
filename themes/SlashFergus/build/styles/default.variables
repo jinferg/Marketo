@@ -1,0 +1,124 @@
+/************************************************************
+DEFAULT VARIABLES
+************************************************************/
+
+/******************************
+DEFAULT
+******************************/
+
+$levels: 5 !default;
+$columns: 12 !default;
+$max-width: 1600px !default;
+$radius: 5px !default;
+$border: 1px solid var(--border-color) !default;
+$transition: all .2s !default;
+$shadow: 0 3px 6px 2px rgba(0,60,200,0.10);
+
+/******************************
+BREAKPOINTS
+******************************/
+
+// breakpoint variables
+$sm: 960px !default;
+$md: 1280px !default;
+$lg: 1600px !default;
+
+// breakpoint map
+$screens: (
+  sm: $sm,
+  md: $md,
+  lg: $lg
+) !default;
+
+// font size map
+$html-sizes: (
+  $sm: 57.5%,
+  $md: 60%,
+  $lg: 62.5%
+) !default;
+
+/******************************
+TYPOGRAPHY
+******************************/
+
+$font-family: 'IBM Plex Sans', sans-serif !default;
+$font-size: 1.6rem !default;
+$line-height: 1.5 !default;
+
+$font-weights: (
+  light: 300,
+  regular: 400,
+  medium: 500,
+  bold: 700,
+  heavy: 700
+) !default;
+
+$font-sizes: (
+  h1: 5rem,
+  h2: 3.6rem,
+  h3: 2.8rem,
+  h4: 2.4rem,
+  h5: 2rem,
+  h6: 1.8rem,
+  body: 1.6rem,
+  tiny: 1.4rem,
+  micro: 1.3rem
+) !default;
+
+/******************************
+COLORS
+******************************/
+
+$colors: (
+  red: #f52c00,
+  orange: #FF691a,
+  yellow: #FFDD24,
+  green: #00c16d,
+  blue: #007eff,
+  purple: #4739ff,
+  black: #0F1326,
+  grey: #cccccc,
+  white: #fff,
+  primary: #0036D0,
+  primary-tint: #0F44DC,
+  primary-shade: #0031BC,
+  secondary: #FF5600,
+  secondary-tint: #FF6C22,
+  secondary-shade: #EA4F00,
+  background: #f9fafb,
+  background-focus: #f1f5fb,
+  background-active: #e4e9f1,
+  default-color: #4D5871,
+  link-color: #0036D0,
+  border-color: #e3e6ea
+) !default;
+
+/******************************
+GRID RHYTHM
+******************************/
+
+$unit: 1rem !default;
+
+$units: (
+  u0: calc(var(--unit) / 2),
+  u1: calc(var(--unit) * 1),
+  u2: calc(var(--unit) * 2),
+  u3: calc(var(--unit) * 3),
+  u4: calc(var(--unit) * 4),
+  u5: calc(var(--unit) * 5),
+  u6: calc(var(--unit) * 6),
+  u7: calc(var(--unit) * 7),
+  u8: calc(var(--unit) * 8),
+  u9: calc(var(--unit) * 9),
+  u10: calc(var(--unit) * 10),
+  u11: calc(var(--unit) * 11),
+  u12: calc(var(--unit) * 12),
+  u13: calc(var(--unit) * 13),
+  u14: calc(var(--unit) * 14),
+  u15: calc(var(--unit) * 15),
+  u16: calc(var(--unit) * 16),
+  u17: calc(var(--unit) * 17),
+  u18: calc(var(--unit) * 18),
+  u19: calc(var(--unit) * 19),
+  u20: calc(var(--unit) * 20)
+) !default;

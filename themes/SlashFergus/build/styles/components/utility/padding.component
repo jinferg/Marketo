@@ -1,0 +1,309 @@
+/************************************************************
+PADDING
+************************************************************/
+
+.padding {
+
+  &\:none {
+    padding: 0 !important;
+  }
+  &\:auto {
+    padding: auto !important;
+  }
+
+  @for $i from 0 through 10 {
+    &\:#{$i} {
+      padding: var(--u#{$i}) !important;
+    }
+  }
+  @for $i from 5 through 10 {
+    &\:#{$i}vh {
+      padding: #{$i}vh !important;
+    }
+  }
+
+  @each $key, $value in $screens {
+    &-#{$key} {
+      @media (min-width: $value) {
+        &\:none {
+          padding: 0 !important;
+        }
+        &\:auto {
+          padding: auto !important;
+        }
+        @for $i from 0 through 10 {
+          &\:#{$i} {
+            padding: var(--u#{$i}) !important;
+          }
+        }
+        @for $i from 5 through 10 {
+          &\:#{$i}vh {
+            padding: #{$i}vh !important;
+          }
+        }
+      }
+    }
+  }
+
+  &-top {
+    &\:none {
+      padding-top: 0 !important;
+    }
+    &\:auto {
+      padding-top: auto !important;
+    }
+    @for $i from 0 through 10 {
+      &\:#{$i} {
+        padding-top: var(--u#{$i}) !important;
+      }
+    }
+    @for $i from 5 through 10 {
+      &\:#{$i}vh {
+        padding-top: #{$i}vh !important;
+      }
+    }
+    @each $key, $value in $screens {
+      &-#{$key} {
+        @media (min-width: $value) {
+          &\:none {
+            padding-top: 0 !important;
+          }
+          &\:auto {
+            padding-top: auto !important;
+          }
+          @for $i from 0 through 10 {
+            &\:#{$i} {
+              padding-top: var(--u#{$i}) !important;
+            }
+          }
+          @for $i from 5 through 10 {
+            &\:#{$i}vh {
+              padding-top: #{$i}vh !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-right {
+    &\:none {
+      padding-right: 0 !important;
+    }
+    &\:auto {
+      padding-right: auto !important;
+    }
+    @for $i from 0 through 10 {
+      &\:#{$i} {
+        padding-right: var(--u#{$i}) !important;
+      }
+    }
+    @for $i from 5 through 10 {
+      &\:#{$i}vw {
+        padding-right: #{$i}vw !important;
+      }
+    }
+    @each $key, $value in $screens {
+      &-#{$key} {
+        @media (min-width: $value) {
+          &\:none {
+            padding-right: 0 !important;
+          }
+          &\:auto {
+            padding-right: auto !important;
+          }
+          @for $i from 0 through 10 {
+            &\:#{$i} {
+              padding-right: var(--u#{$i}) !important;
+            }
+          }
+          @for $i from 5 through 10 {
+            &\:#{$i}vw {
+              padding-right: #{$i}vw !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-bottom {
+    &\:none {
+      padding-bottom: 0 !important;
+    }
+    &\:auto {
+      padding-bottom: auto !important;
+    }
+    @for $i from 0 through 10 {
+      &\:#{$i} {
+        padding-bottom: var(--u#{$i}) !important;
+      }
+    }
+    @for $i from 5 through 10 {
+      &\:#{$i}vh {
+        padding-bottom: #{$i}vh !important;
+      }
+    }
+    @each $key, $value in $screens {
+      &-#{$key} {
+        @media (min-width: $value) {
+          &\:none {
+            padding-bottom: 0 !important;
+          }
+          &\:auto {
+            padding-bottom: auto !important;
+          }
+          @for $i from 0 through 10 {
+            &\:#{$i} {
+              padding-bottom: var(--u#{$i}) !important;
+            }
+          }
+          @for $i from 5 through 10 {
+            &\:#{$i}vh {
+              padding-bottom: #{$i}vh !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-left {
+    &\:none {
+      padding-left: 0 !important;
+    }
+    &\:auto {
+      padding-left: auto !important;
+    }
+    @for $i from 0 through 10 {
+      &\:#{$i} {
+        padding-left: var(--u#{$i}) !important;
+      }
+    }
+    @for $i from 5 through 10 {
+      &\:#{$i}vw {
+        padding-left: #{$i}vw !important;
+      }
+    }
+    @each $key, $value in $screens {
+      &-#{$key} {
+        @media (min-width: $value) {
+          &\:none {
+            padding-left: 0 !important;
+          }
+          &\:auto {
+            padding-left: auto !important;
+          }
+          @for $i from 0 through 10 {
+            &\:#{$i} {
+              padding-left: var(--u#{$i}) !important;
+            }
+          }
+          @for $i from 5 through 10 {
+            &\:#{$i}vw {
+              padding-left: #{$i}vw !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-x {
+    &\:none {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+    &\:auto {
+      padding-left: auto !important;
+      padding-right: auto !important;
+    }
+    @for $i from 0 through 10 {
+      &\:#{$i} {
+        padding-left: var(--u#{$i}) !important;
+        padding-right: var(--u#{$i}) !important;
+      }
+    }
+    @for $i from 5 through 10 {
+      &\:#{$i}vw {
+        padding-left: #{$i}vw !important;
+        padding-right: #{$i}vw !important;
+      }
+    }
+    @each $key, $value in $screens {
+      &-#{$key} {
+        @media (min-width: $value) {
+          &\:none {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+          }
+          &\:auto {
+            padding-left: auto !important;
+            padding-right: auto !important;
+          }
+          @for $i from 0 through 10 {
+            &\:#{$i} {
+              padding-left: var(--u#{$i}) !important;
+              padding-right: var(--u#{$i}) !important;
+            }
+          }
+          @for $i from 5 through 10 {
+            &\:#{$i}vw {
+              padding-left: #{$i}vw !important;
+              padding-right: #{$i}vw !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-y {
+    &\:none {
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+    }
+    &\:auto {
+      padding-top: auto !important;
+      padding-bottom: auto !important;
+    }
+    @for $i from 0 through 10 {
+      &\:#{$i} {
+        padding-top: var(--u#{$i}) !important;
+        padding-bottom: var(--u#{$i}) !important;
+      }
+    }
+    @for $i from 5 through 10 {
+      &\:#{$i}vh {
+        padding-top: #{$i}vh !important;
+        padding-bottom: #{$i}vh !important;
+      }
+    }
+    @each $key, $value in $screens {
+      &-#{$key} {
+        @media (min-width: $value) {
+          &\:none {
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
+          }
+          &\:auto {
+            padding-top: auto !important;
+            padding-bottom: auto !important;
+          }
+          @for $i from 0 through 10 {
+            &\:#{$i} {
+              padding-top: var(--u#{$i}) !important;
+              padding-bottom: var(--u#{$i}) !important;
+            }
+          }
+          @for $i from 5 through 10 {
+            &\:#{$i}vh {
+              padding-top: #{$i}vh !important;
+              padding-bottom: #{$i}vh !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+/************************************************************
+OVERFLOW
+************************************************************/
+
+.overflow {
+
+  &\:visible {
+    overflow: visible !important;
+  }
+  &\:hidden {
+    overflow: hidden !important;
+  }
+  &-x {
+    &\:visible {
+      overflow-x: visible !important;
+    }
+    &\:hidden {
+      overflow-x: hidden !important;
+    }
+  }
+  &-y {
+    &\:visible {
+      overflow-y: visible !important;
+    }
+    &\:hidden {
+      overflow-y: hidden !important;
+    }
+  }
+  @each $key, $value in $screens {
+    &-#{$key} {
+      @media (min-width: $value) {
+        &\:visible {
+          overflow: visible !important;
+        }
+        &\:hidden {
+          overflow: hidden !important;
+        }
+        &-x {
+          &\:visible {
+            overflow-x: visible !important;
+          }
+          &\:hidden {
+            overflow-x: hidden !important;
+          }
+        }
+        &-y {
+          &\:visible {
+            overflow-y: visible !important;
+          }
+          &\:hidden {
+            overflow-y: hidden !important;
+          }
+        }
+      }
+    }
+  }
+}

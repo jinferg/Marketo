@@ -1,0 +1,114 @@
+/************************************************************
+FONT
+************************************************************/
+
+:root {
+  --font-condense: -1px;
+  --font-expand: 1px;
+}
+
+.font {
+  margin: 0;
+  padding: 0;
+
+  /******************************
+  RESET
+  ******************************/
+
+  &\:reset {
+    font-family: inherit;
+    font-weight: normal;
+    color: inherit;
+    text-transform: none;
+    text-decoration: none;
+    letter-spacing: normal;
+    &:hover {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
+  /******************************
+  FONT SIZES
+  ******************************/
+
+  &-size {
+    @each $font-size, $value in $font-sizes {
+      &\:#{$font-size} {
+        font-size: var(--#{$font-size});
+      }
+      @each $screen, $size in $screens {
+        &-#{$screen} {
+          @media (min-width : #{$size}) {
+            &\:#{$font-size} {
+              font-size: var(--#{$font-size});
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /******************************
+  FONT WEIGHTS
+  ******************************/
+
+  &-weight {
+    @each $key, $value in $font-weights {
+      &\:#{$key} {
+        font-weight: var(--#{$key}) !important;
+      }
+    }
+  }
+
+  /******************************
+  UNDERLINE
+  ******************************/
+
+  &\:underline {
+    padding-bottom: .25rem;
+    border-bottom: var(--border);
+  }
+
+  /******************************
+  LINE HEIGHT
+  ******************************/
+
+  &-leading {
+		@while $levels >= 0 {
+      &\:#{$levels} {
+        line-height: $levels / 5 + 1;
+      }
+      $levels: $levels - 1;
+    }
+	}
+
+  /******************************
+  TRANSFORM
+  ******************************/
+
+  &-transform {
+    &\:none {
+      text-transform: none;
+    }
+    &\:upper {
+      text-transform: uppercase;
+    }
+    &\:lower {
+      text-transform: lowercase;
+    }
+  }
+
+  /******************************
+  LINK
+  ******************************/
+
+  &\:link {
+    cursor: pointer;
+    transition: var(--transition);
+    color: var(--primary);
+    &:hover {
+      color: var(--black);
+    }
+  }
+}

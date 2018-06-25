@@ -1,0 +1,76 @@
+/************************************************************
+CARD
+************************************************************/
+
+:root {
+	--card-bg: var(--white);
+	--card-radius: var(--radius);
+	--card-shadow: var(--shadow);
+	--card-hover-shadow: 0px 5px 10px 3px rgba(0,60,200,0.18);
+	--card-flat-bg: var(--background-focus);
+	--card-header-padding: var(--u2);
+	--card-content-padding: var(--u2);
+	--card-footer-padding: var(--u1);
+}
+
+.card {
+	position: relative;
+	display: block;
+	background-color: var(--card-bg);
+	border-radius: var(--card-radius);
+	box-shadow: var(--card-shadow);
+	transition: var(--transition);
+
+	/******************************
+  CLEARFIX
+  ******************************/
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+	/******************************
+  ELEVATE
+  ******************************/
+
+	&\:elevate {
+		&:hover {
+			box-shadow: var(--card-hover-shadow);
+			transform: translateY(-1px);
+		}
+		&:active {
+			box-shadow: var(--card-shadow);
+			transform: translateY(0);
+		}
+	}
+
+	/******************************
+  CHILD ELEMENTS
+  ******************************/
+
+	&\/header {
+		padding: var(--card-header-padding);
+		border-top-left-radius: var(--card-radius);
+		border-top-right-radius: var(--card-radius);
+		overflow: hidden;
+	}
+	&\/content {
+		padding: var(--card-content-padding);
+	  &:after {
+	    content: "";
+	    display: table;
+	    clear: both;
+	  }
+		&.-flush {
+			padding: 0;
+		}
+	}
+	&\/footer {
+		padding: var(--card-footer-padding);
+		border-bottom-left-radius: var(--card-radius);
+		border-bottom-right-radius: var(--card-radius);
+		overflow: hidden;
+	}
+}

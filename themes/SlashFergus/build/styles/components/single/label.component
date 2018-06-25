@@ -1,0 +1,40 @@
+/************************************************************
+LABEL
+************************************************************/
+
+:root {
+  --label-padding: 5px 5px 4px 5px;
+  --label-radius: 3px;
+}
+
+.label {
+  position: relative;
+  display: inline-flex;
+  bottom: 1px;
+  margin-left: .25rem;
+  margin-right: .25rem;
+  padding: var(--label-padding);
+  border-radius: var(--label-radius);
+  background: var(--primary);
+  vertical-align: middle;
+  font-family: var(--font-family);
+  font-size: 9px;
+  font-weight: var(--heavy);
+  line-height: 1;
+  color: white;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.labels {
+  position: relative;
+  display: inline-flex;
+  bottom: 1px;
+  border-radius: var(--label-radius);
+  overflow: hidden;
+  .label {
+    bottom: 0;
+    margin: 0;
+    border-radius: 0;
+  }
+}

@@ -1,0 +1,126 @@
+{{ partial "head" . }}
+{{ partial "partial/header" . }}
+
+<section class="fill:black">
+  <div class="wrap wrap:padding-x padding-y:2 display:flex display-direction:vertical display-direction-sm:horizontal align-content:between">
+
+    <nav class="list list:inline margin-bottom:3 margin-bottom-sm:none">
+      <a href="/blog" class="list/item margin-right:3 font-leading:1 color:white font-weight:medium font-size:body font-size-sm:body hover-color:yellow">All</a>
+
+      <a href="/categories/product" class="list/item margin-right:3 font-leading:1 color:white font-weight:medium font-size:body font-size-sm:body hover-color:yellow">Product</a>
+
+      <a href="/categories/customer-stories" class="list/item margin-right:3 font-leading:1 color:white font-weight:medium font-size:body font-size-sm:body hover-color:yellow">Customer Stories</a>
+
+      <a href="/categories/tradie-tips" class="list/item margin-right:3 font-leading:1 color:white font-weight:medium font-size:body font-size-sm:body hover-color:yellow">Tradie Tips</a>
+    </nav>
+
+    <div class="">
+      <span class="font font-weight:medium margin-right:2 color:white">
+        Subscribe to our newsletter
+      </span>
+      <a href="#" class="button button-size:2 button-grow:1 color:yellow js-modal-subscribe-trigger">
+        Subscribe
+      </a>
+    </div>
+
+
+  </div>
+</section>
+
+
+
+{{ range .Pages }}
+  {{ if .Params.feature }}
+    <section class="fill:primary">
+
+      <div class="row">
+        <div class="column:12 column-sm:6 display:flex align-item:middle min-height:30" style="background-image: url({{ .Params.thumbnail }}); background-size: cover; background-position: center center;">
+
+        </div>
+        <div class="column:12 column-sm:6 display:flex align-item:middle padding:2 padding-x-md:5 padding-y:5vh padding-y-sm:10vh">
+          <div class="margin:auto max-width:70 align:center padding-x-sm:3 padding-x-md:3 padding-x-md:5">
+            <h6 class="font font-size:h6 font-weight:bold color:yellow margin-bottom:1">Featured</h6>
+            <a href="{{ .URL }}">
+              <h1 class="font font-size:h2 font-leading:0 color:white margin-bottom:2">
+                {{ .Title }}
+              </h1>
+            </a>
+            <p class="color:white margin-bottom:4">
+              {{ .Summary }}...
+              </a>
+            </p>
+
+            {{ if eq .Params.Author "Katherine" }}
+              <div class="row:media row-gutter:2 align-item:middle align-content:center align:left">
+                <div class="column">
+                  <img src="/uploads/katherine.jpg" class="image image:profile image-shape:round image-size:4" />
+                </div>
+                <div class="column">
+                  <h5 class="font font-size:body font-weight:bold color:white">
+                    {{ .Params.Author }}
+                  </h5>
+                  <p class="color:white">
+                    Content Producer
+                  </p>
+                </div>
+              </div>
+            {{end}}
+
+          </div>
+        </div>
+      </div>
+
+    </section>
+  {{end}}
+{{end}}
+
+<section class="align:center padding-y:10">
+
+  <div class="wrap wrap:padding-x">
+
+    <div class="row align-content:center">
+      <div class="column:12 column-md:8 column-lg:7">
+        {{ range .Pages }}
+          {{ if .Params.feature }}
+          {{else}}
+
+
+            <article class="card overflow:hidden margin-bottom:10vh js-reveal">
+              <div class="card/content padding-y:7vh">
+
+                <div class="margin:auto max-width:60">
+                  <div class="margin-bottom:3 font-size:micro font-transform:upper font-weight:medium opacity:4">
+
+                    <i class="far fa-clock margin-right:0"></i> {{ .Params.duration }}
+                    <i class="far fa-tag margin-right:0 margin-left:2"></i> {{ if isset .Params "categories" }}{{ index .Params.categories 0 }}{{end}}
+
+                  </div>
+                  <a href="{{ .URL }}">
+                    <h1 class="font font-size:h2 font-leading:0 margin-bottom:2">
+                      {{ .Title }}
+                    </h1>
+                  </a>
+
+                  <p class="margin-bottom:4">
+                    {{ .Summary }}...
+                  </p>
+
+                  {{ partial "partial/blog-author" . }}
+                </div>
+
+              </div>
+              <img src="{{ .Params.thumbnail }}" class="image image:fluid">
+            </article>
+
+
+          {{end}}
+        {{end}}
+      </div>
+    </div>
+  </div>
+
+</section>
+
+{{ partial "partial/cta" . }}
+{{ partial "partial/footer" . }}
+{{ partial "foot" . }}

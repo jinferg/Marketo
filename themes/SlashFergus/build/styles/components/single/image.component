@@ -1,0 +1,59 @@
+/************************************************************
+IMAGE
+************************************************************/
+
+:root {
+  --image-radius: var(--radius);
+  --image-size-1: var(--u3);
+  --image-size-2: var(--u4);
+  --image-size-3: var(--u5);
+  --image-size-4: var(--u6);
+  --image-size-5: var(--u7);
+}
+
+.image {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  &\:fluid {
+    width: 100%;
+  }
+
+  /******************************
+  SHAPE
+  ******************************/
+
+  &-shape {
+
+    &\:square {
+      border-radius: 0;
+      overflow: hidden;
+      &.image-size {
+        @while $levels > 0 {
+          &\:#{$levels} {
+            width: var(--image-size-#{$levels});
+            height: var(--image-size-#{$levels});
+          }
+          $levels: $levels - 1;
+        }
+      }
+    }
+    &\:round {
+      border-radius: 500px;
+      overflow: hidden;
+      &.image-size {
+        @while $levels > 0 {
+          &\:#{$levels} {
+            width: var(--image-size-#{$levels});
+            height: var(--image-size-#{$levels});
+          }
+          $levels: $levels - 1;
+        }
+      }
+    }
+  }
+}

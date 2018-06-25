@@ -1,0 +1,148 @@
+<header class="row/area -header">
+  <nav class="m-nav -doc">
+
+    <div class="m-nav__content -left">
+      <div class="m-nav__item -no-hover -no-pad u-pad-left-3">
+        <a href="/" class="l-flex -gap-1 -logo">
+          <div class="l-flex__item">
+            <img src="/assets/images/logo.svg" class="s-image -logo">
+          </div>
+          <div class="l-flex__item">
+            <!-- <h1 class="font -h5 -bold">
+              zap<span class="u-color-brand">CSS</span>
+            </h1> -->
+
+          </div>
+        </a>
+      </div>
+      {{ $name := .Params.family }}
+      {{ range .Site.Data.structure.main }}
+        <a class="m-nav__item -no-pad -no-hover u-pad-right-4" href="{{ .url }}" title="{{ .name }}">
+          <h6 class="font -hover -medium {{ if eq .name $name }}-brand{{end}}">{{ .name }}</h6>
+        </a>
+      {{ end }}
+    </div>
+
+    <div class="m-nav__content -right">
+      <div class="m-nav__item -no-hover">
+        <span class="font -reset -medium -body -grey">
+          v1.0
+        </span>
+      </div>
+    </div>
+
+    <div class="m-nav__hamburger js-hamburger">
+      <span></span>
+    </div>
+  </nav>
+</header>
+
+<aside class="m-slidemenu -right">
+  <div class="m-slidemenu__overlay">
+
+  </div>
+  <div class="m-slidemenu__content">
+    <div class="m-slidemenu__header">
+      <img src="/assets/images/logo.svg" class="s-image -logo">
+      <div class="m-slidemenu__close">
+
+      </div>
+    </div>
+
+    <div class="m-accordion -slidemenu margin-bottom:2">
+
+      {{ $parentName := .Params.parent }}
+      {{ $childName := .Title }}
+      {{ $array := .Site.Data.structure.docs.frontendFramework }}
+
+      {{ range $index, $element := .Site.Data.structure.docs.frontendFramework }}
+        <div class="m-accordion__item {{ if eq .name $parentName }}is-active{{end}}">
+          <a class="m-accordion__header">
+            <h6 class="font -medium {{ if eq .name $parentName }}-brand{{end}}">
+              {{ .name }}
+            </h6>
+          </a>
+
+          <div class="m-accordion__content" style="{{ if eq .name $parentName }}display: list-item;{{end}}">
+            <nav class="m-list -slidemenu">
+              {{ if eq $index "general" }}
+                {{ range $array.general.child }}
+                  <a class="m-list__item {{ if eq .name $childName }}is-active{{end}} {{ if eq .name $childName }}u-color-brand{{end}}"  href="{{ .url }}" title="{{ .name }}">
+                    <span class="font -body -relax">{{ .name }}</span>
+                  </a>
+                {{ end }}
+
+              {{ else if eq $index "layout" }}
+                {{ range $array.layout.child }}
+                  <a class="m-list__item {{ if eq .name $childName }}is-active{{end}} {{ if eq .name $childName }}u-color-brand{{end}}"  href="{{ .url }}" title="{{ .name }}">
+                    <span class="font -body -relax">{{ .name }}</span>
+                  </a>
+                {{ end }}
+
+              {{ else if eq $index "module" }}
+                {{ range $array.module.child }}
+                  <a class="m-list__item {{ if eq .name $childName }}is-active{{end}} {{ if eq .name $childName }}u-color-brand{{end}}"  href="{{ .url }}" title="{{ .name }}">
+                    <span class="font -body -relax">{{ .name }}</span>
+                  </a>
+                {{ end }}
+
+              {{ else if eq $index "single" }}
+                {{ range $array.single.child }}
+                  <a class="m-list__item {{ if eq .name $childName }}is-active{{end}} {{ if eq .name $childName }}u-color-brand{{end}}"  href="{{ .url }}" title="{{ .name }}">
+                    <span class="font -body -relax">{{ .name }}</span>
+                  </a>
+                {{ end }}
+
+              {{ else if eq $index "utility" }}
+                {{ range $array.utility.child }}
+                  <a class="m-list__item {{ if eq .name $childName }}is-active{{end}} {{ if eq .name $childName }}u-color-brand{{end}}"  href="{{ .url }}" title="{{ .name }}">
+                    <span class="font -body -relax">{{ .name }}</span>
+                  </a>
+                {{ end }}
+              {{ end }}
+            </nav>
+          </div>
+        </div>
+      {{ end }}
+
+      {{ $array2 := .Site.Data.structure.docs.brandGuideline }}
+      <div class="m-accordion__item {{ if eq "Brand" $parentName }}is-active{{end}}">
+        <a class="m-accordion__header">
+          <h6 class="font -medium {{ if eq "Brand" $parentName }}-brand{{end}}">
+            Brand Guideline
+          </h6>
+        </a>
+
+        <div class="m-accordion__content" style="{{ if eq "Brand" $parentName }}display: list-item;{{end}}">
+          <nav class="m-list -slidemenu">
+            {{ range $array2 }}
+              <a class="m-list__item {{ if eq .name $childName }}is-active{{end}} {{ if eq .name $childName }}u-color-brand{{end}}"  href="{{ .url }}" title="{{ .name }}">
+                <span class="font -body -relax">{{ .name }}</span>
+              </a>
+            {{ end }}
+          </nav>
+        </div>
+      </div>
+
+      {{ $array3 := .Site.Data.structure.docs.resources }}
+      <div class="m-accordion__item {{ if eq "Resource" $parentName }}is-active{{end}}">
+        <a class="m-accordion__header">
+          <h6 class="font -medium {{ if eq "Resource" $parentName }}-brand{{end}}">
+            Resources
+          </h6>
+        </a>
+
+        <div class="m-accordion__content" style="{{ if eq "Brand" $parentName }}display: list-item;{{end}}">
+          <nav class="m-list -slidemenu">
+            {{ range $array3 }}
+              <a class="m-list__item {{ if eq .name $childName }}is-active{{end}} {{ if eq .name $childName }}u-color-brand{{end}}"  href="{{ .url }}" title="{{ .name }}">
+                <span class="font -body -relax">{{ .name }}</span>
+              </a>
+            {{ end }}
+          </nav>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</aside>

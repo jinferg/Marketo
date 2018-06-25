@@ -1,0 +1,125 @@
+/************************************************************
+HOVER
+************************************************************/
+
+.hover {
+  cursor: pointer;
+  transition: var(--transition) !important;
+
+  &\:underline {
+    cursor: pointer !important;
+    transition: var(--transition) !important;
+    &:hover {
+      text-decoration: underline !important;
+    }
+  }
+  &-background {
+    &\:none {
+      cursor: pointer !important;
+      &:hover {
+        background-color: transparent !important;
+      }
+    }
+    @each $key, $value in $colors {
+      &\:#{$key} {
+        &:hover {
+          background-color: var(--#{$key}) !important;
+        }
+      }
+    }
+  }
+  &-color {
+    &\:none {
+      cursor: pointer !important;
+      &:hover {
+        color: transparent !important;
+      }
+    }
+    @each $key, $value in $colors {
+      &\:#{$key} {
+        &:hover {
+          color: var(--#{$key}) !important;
+        }
+      }
+    }
+  }
+  &-opacity {
+    &\:0 {
+      cursor: pointer !important;
+      transition: var(--transition) !important;
+      &:hover {
+        opacity: 0 !important;
+      }
+    }
+    &\:1 {
+      cursor: pointer !important;
+      transition: var(--transition) !important;
+      &:hover {
+        opacity: .1 !important;
+      }
+    }
+    &\:2 {
+      cursor: pointer !important;
+      transition: var(--transition) !important;
+      &:hover {
+        opacity: .2 !important;
+      }
+    }
+    &\:3 {
+      cursor: pointer !important;
+      transition: var(--transition) !important;
+      &:hover {
+        opacity: .3 !important;
+      }
+    }
+    &\:4 {
+      cursor: pointer !important;
+      transition: var(--transition) !important;
+      &:hover {
+        opacity: .4 !important;
+      }
+    }
+    &\:5 {
+      cursor: pointer !important;
+      transition: var(--transition) !important;
+      &:hover {
+        opacity: .5 !important;
+      }
+    }
+    &\:6 {
+      cursor: pointer !important;
+      transition: var(--transition) !important;
+      &:hover {
+        opacity: .6 !important;
+      }
+    }
+    &\:7 {
+      cursor: pointer !important;
+      transition: var(--transition) !important;
+      &:hover {
+        opacity: .7 !important;
+      }
+    }
+    &\:8 {
+      cursor: pointer !important;
+      transition: var(--transition) !important;
+      &:hover {
+        opacity: .8 !important;
+      }
+    }
+    &\:9 {
+      cursor: pointer !important;
+      transition: var(--transition) !important;
+      &:hover {
+        opacity: .9 !important;
+      }
+    }
+    &\:10 {
+      cursor: pointer !important;
+      transition: var(--transition) !important;
+      &:hover {
+        opacity: 1 !important;
+      }
+    }
+  }
+}

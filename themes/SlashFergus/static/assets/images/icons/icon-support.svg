@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-support</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icon-support" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="chat-double-bubble-3" transform="translate(2.000000, 4.000000)" stroke-width="3">
+            <path d="M28,0 L8,0 C3.582,0 0,3.582 0,8 L0,16 C0,20.42 3.582,24 8,24 L10,24 L10,32 L19,24 L28,24 C32.418,24 36,20.42 36,16 L36,8 C36,3.582 32.418,0 28,0 Z" id="Shape" stroke="#0036D0"></path>
+            <path d="M22,31 C22,33.762 24.238,36 27,36 L32,36 L38,42 L38,36 L41,36 C43.762,36 46,33.762 46,31 L46,27 C46,24.238 43.762,22 41,22" id="Shape" stroke="#FF5600"></path>
+        </g>
+    </g>
+</svg>

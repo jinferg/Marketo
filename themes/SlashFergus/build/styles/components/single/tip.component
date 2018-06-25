@@ -1,0 +1,100 @@
+/************************************************************
+TIP
+************************************************************/
+
+.tip {
+  position:relative;
+  &:before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 7px 7px 0;
+    border-style: solid;
+    border-color: rgba(0,0,0,1) transparent transparent transparent;
+    z-index: 99;
+    opacity: 0;
+    transition: all .2s ease;
+  }
+  &:after {
+    content: attr(tip);
+    position: absolute;
+    left: 50%;
+    top: -10px;
+    min-width: 140px;
+    padding: 5px;
+    transform: translateX(-50%) translateY(-100%);
+    background: rgba(0,0,0,1);
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+    font-weight: var(--medium);
+    line-height: 1.5;
+    border-radius: 3px;
+    z-index: 99;
+    opacity: 0;
+    text-transform: none;
+    letter-spacing: 0;
+    transition: all .2s ease;
+    pointer-events: none;
+  }
+  &:hover:after,&:hover:before {
+     opacity:1
+  }
+
+  /******************************
+  DIRECTION
+  ******************************/
+
+  &-direction {
+    &\:right {
+      &:before {
+        left:100%;
+        top:50%;
+        margin-left: 0;
+        transform:translatey(-50%) rotate(90deg)
+      }
+      &:after {
+        left:100%;
+        top:50%;
+        margin-left: 10px;
+        transform: translateX(0%)   translateY(-50%);
+      }
+    }
+    &\:left {
+      &:before {
+        left: 0%;
+        top: 50%;
+        margin-left: -14px;
+        transform: translatey(-50%) rotate(-90deg)
+      }
+      &:after {
+        left: 0%;
+        top: 50%;
+        margin-left: -10px;
+        transform: translateX(-100%)   translateY(-50%);
+      }
+    }
+    &\:top {
+      &:before {
+        left:50%;
+      }
+      &:after {
+        left:50%;
+      }
+    }
+    &\:bottom {
+      &:before {
+        top:100%;
+        margin-top: 10px;
+        transform: translateX(-50%) translatey(-100%) rotate(-180deg);
+      }
+      &:after {
+        top:100%;
+        margin-top: 10px;
+        transform: translateX(-50%) translateY(0%);
+      }
+    }
+  }
+}

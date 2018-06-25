@@ -1,0 +1,24 @@
+# Redirect domain aliases to primary domain
+https://web2018.fergus.com/* https://fergus.com/:splat 301!
+https://www.fergus.com/* https://fergus.com/:splat 301!
+https://fergus.co.nz/* https://fergus.com/:splat 301!
+https://www.fergus.co.nz/* https://fergus.com/:splat 301!
+https://gofergus.com/* https://fergus.com/:splat 301!
+https://www.gofergus.com/* https://fergus.com/:splat 301!
+https://gofergus.co.nz/* https://fergus.com/:splat 301!
+https://www.gofergus.co.nz/* https://fergus.com/:splat 301!
+
+# These extra rules are required because HTTPS is not forced
+http://web2018.fergus.com/* https://fergus.com/:splat 301!
+http://www.fergus.com/* https://fergus.com/:splat 301!
+http://fergus.co.nz/* https://fergus.com/:splat 301!
+http://www.fergus.co.nz/* https://fergus.com/:splat 301!
+http://gofergus.com/* https://fergus.com/:splat 301!
+http://www.gofergus.com/* https://fergus.com/:splat 301!
+http://gofergus.co.nz/* https://fergus.com/:splat 301!
+http://www.gofergus.co.nz/* https://fergus.com/:splat 301!
+
+# Optional: Redirect default Netlify subdomain to primary domain
+https://fergus.netlify.com/* https://fergus.com/:splat 301!
+http://fergus.netlify.com/* https://fergus.com/:splat 301!
+http://fergus.com/* https://fergus.com/:splat 301!

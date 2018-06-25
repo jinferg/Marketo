@@ -1,0 +1,24 @@
+baseURL= "/"
+languageCode = "en-us"
+title = "Fergus Website"
+theme = "SlashFergus"
+
+# pygmentsCodeFences = true
+# pygmentsUseClasses = true
+
+summaryLength = 24
+
+[menu]
+
+  [[menu.main]]
+    identifier = "about"
+    name = "about hugo"
+    pre = "<i class='fa fa-heart'></i>"
+    url = "/about/"
+    weight = -110
+
+  [[menu.main]]
+    name = "getting started"
+    pre = "<i class='fa fa-road'></i>"
+    url = "/getting-started/"
+    weight = -100

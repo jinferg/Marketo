@@ -1,0 +1,150 @@
+/************************************************************
+ALIGN
+************************************************************/
+
+.align {
+
+  &\:left {
+    text-align: left !important;
+  }
+  &\:right{
+    text-align: right !important;
+  }
+  &\:center {
+    text-align: center !important;
+  }
+  @each $key, $value in $screens {
+    &-#{$key} {
+      @media (min-width : #{$value}) {
+        &\:left {
+          text-align: left !important;
+        }
+        &\:right{
+          text-align: right !important;
+        }
+        &\:center {
+          text-align: center !important;
+        }
+      }
+    }
+  }
+
+  /******************************
+  CONTENT
+  ******************************/
+
+  &-content {
+    &\:top {
+      align-content: start !important;
+    }
+    &\:middle {
+      align-content: center !important;
+    }
+    &\:bottom {
+      align-content: end !important;
+    }
+    &\:between {
+      justify-content: space-between !important;
+    }
+    &\:around {
+      justify-content: space-around !important;
+    }
+    &\:even {
+      justify-content: space-evenly !important;
+    }
+    &\:left {
+      justify-content: flex-start !important;
+    }
+    &\:right {
+      justify-content: flex-end !important;
+    }
+    &\:center {
+      justify-content: center !important;
+    }
+    @each $key, $value in $screens {
+      &-#{$key} {
+        @media (min-width : #{$value}) {
+          &\:top {
+            align-content: start !important;
+          }
+          &\:middle {
+            align-content: center !important;
+          }
+          &\:bottom {
+            align-content: end !important;
+          }
+          &\:between {
+            justify-content: space-between !important;
+          }
+          &\:around {
+            justify-content: space-around !important;
+          }
+          &\:even {
+            justify-content: space-evenly !important;
+          }
+          &\:left {
+            justify-content: flex-start !important;
+          }
+          &\:right {
+            justify-content: flex-end !important;
+          }
+          &\:center {
+            justify-content: center !important;
+          }
+        }
+      }
+    }
+  }
+
+  /******************************
+  ITEM
+  ******************************/
+
+  &-item {
+    &\:top {
+      align-items: flex-start !important;
+    }
+    &\:middle {
+      align-items: center !important;
+    }
+    &\:bottom {
+      align-items: flex-end !important;
+    }
+    &\:left {
+      justify-items: start !important;
+    }
+    &\:right {
+      justify-items: end !important;
+    }
+    &\:center {
+      justify-items: center !important;
+    }
+    @each $key, $value in $screens {
+      &-#{$key} {
+        @media (min-width : #{$value}) {
+          &\:top {
+            align-items: flex-start !important;
+          }
+          &\:middle {
+            align-items: center !important;
+          }
+          &\:bottom {
+            align-items: flex-end !important;
+          }
+          &\:left {
+            justify-items: start !important;
+          }
+          &\:right {
+            justify-items: end !important;
+          }
+          &\:center {
+            justify-items: center !important;
+          }
+        }
+      }
+    }
+  }
+
+
+
+}

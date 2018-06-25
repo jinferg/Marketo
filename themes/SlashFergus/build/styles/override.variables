@@ -1,0 +1,54 @@
+/******************************
+TYPOGRAPHY
+******************************/
+
+$font-size: 1.6rem !default;
+$line-height: 1.5 !default;
+
+$font-weights: (
+  light: 300,
+  regular: 400,
+  medium: 500,
+  bold: 700,
+  heavy: 900
+) !default;
+
+$font-sizes: (
+  h1: 5rem,
+  h2: 3.6rem,
+  h3: 2.8rem,
+  h4: 2.4rem,
+  h5: 2rem,
+  h6: 1.8rem,
+  body: 1.6rem,
+  tiny: 1.4rem,
+  micro: 1.3rem
+) !default;
+
+/******************************
+COLORS
+******************************/
+
+$colors: (
+  red: #f52c00,
+  orange: #FF691a,
+  yellow: #FFDD24,
+  green: #00c16d,
+  blue: #007eff,
+  purple: #4739ff,
+  black: #001547,
+  grey: #cccccc,
+  white: #fff,
+  primary: #0036D0,
+  primary-tint: #0F44DC,
+  primary-shade: #0031BC,
+  secondary: #FF5600,
+  secondary-tint: #FF6C22,
+  secondary-shade: #EA4F00,
+  background: #f9fafb,
+  background-focus: #f1f5fb,
+  background-active: #e4e9f1,
+  default-color: #4D5871,
+  link-color: #0036D0,
+  border-color: #e3e6ea
+) !default;

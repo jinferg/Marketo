@@ -1,0 +1,110 @@
+/************************************************************
+GRID
+************************************************************/
+
+.grid {
+
+  display: grid;
+
+  /******************************
+  COLUMN
+  ******************************/
+
+  $total-columns: $columns;
+	@while $columns > 0 {
+		&\:#{$columns} {
+      display: grid;
+      grid-template-columns: repeat($columns, 1fr);
+		}
+		$columns: $columns - 1;
+	}
+  @each $key, $value in $screens {
+    &-#{$key} {
+      @media (min-width : #{$value}) {
+        @while $columns > 0 {
+      		&\:#{$columns} {
+            display: grid;
+            grid-template-columns: repeat($columns, 1fr);
+      		}
+      		$columns: $columns - 1;
+      	}
+      }
+    }
+  }
+
+  /******************************
+  GUTTER
+  ******************************/
+
+  &-gutter {
+    @while $levels > 0 {
+      &\:#{$levels} {
+        grid-column-gap: var(--u#{$levels});
+        grid-row-gap: var(--u#{$levels});
+      }
+      $levels: $levels - 1;
+    }
+    &-row {
+      @while $levels > 0 {
+        &\:#{$levels} {
+          grid-row-gap: var(--u#{$levels});
+        }
+        $levels: $levels - 1;
+      }
+      @each $key, $value in $screens {
+        &-#{$key} {
+          @media (min-width : #{$value}) {
+            @while $levels > 0 {
+              &\:#{$levels} {
+                grid-row-gap: var(--u#{$levels});
+              }
+              $levels: $levels - 1;
+            }
+          }
+        }
+      }
+    }
+    &-column {
+      @while $levels > 0 {
+        &\:#{$levels} {
+          grid-column-gap: var(--u#{$levels});
+        }
+        $levels: $levels - 1;
+      }
+      @each $key, $value in $screens {
+        &-#{$key} {
+          @media (min-width : #{$value}) {
+            @while $levels > 0 {
+              &\:#{$levels} {
+                grid-column-gap: var(--u#{$levels});
+              }
+              $levels: $levels - 1;
+            }
+          }
+        }
+      }
+    }
+    @each $key, $value in $screens {
+      &-#{$key} {
+        @media (min-width : #{$value}) {
+          @while $levels > 0 {
+            &\:#{$levels} {
+              grid-column-gap: var(--u#{$levels});
+              grid-row-gap: var(--u#{$levels});
+            }
+            $levels: $levels - 1;
+          }
+        }
+      }
+    }
+  }
+
+
+  /******************************
+  ITEM
+  ******************************/
+
+  &\/item {
+    position: relative;
+  }
+}

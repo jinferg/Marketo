@@ -1,0 +1,139 @@
+---
+main:
+  - name: Frontend Framework
+    icon: fas fa-star
+    url: "/docs/frontend-framework/general/introduction"
+  - name: Brand Guideline
+    icon: fas fa-star
+    url: "/docs/brand-guideline/logo-usage"
+  - name: Resources
+    icon: fas fa-star
+    url: "/docs/resources/brand-assets"
+
+docs:
+  frontendFramework:
+    general:
+      name: General
+      icon: fas fa-star
+      url: "/docs/frontend-framework/general/introduction"
+      child:
+        - name: Introduction
+          url: "/docs/frontend-framework/general/introduction"
+        - name: Getting Started
+          url: "/docs/frontend-framework/general/getting-started"
+        - name: File Organization
+          url: "/docs/frontend-framework/general/file-organization"
+        - name: Naming Rules
+          url: "/docs/frontend-framework/general/naming-rules"
+        - name: Scaling Metrics
+          url: "/docs/frontend-framework/general/scaling-metrics"
+        - name: Mobile First
+          url: "/docs/frontend-framework/general/mobile-first"
+        - name: Configuration
+          url: "/docs/frontend-framework/general/configuration"
+        - name: Theming
+          url: "/docs/frontend-framework/general/theming"
+        - name: Reset
+          url: "/docs/frontend-framework/general/reset"
+    layout:
+      name: Layout
+      icon: fas fa-exchange
+      url: "/docs/frontend-framework/layout/band"
+      child:
+        - name: Band
+          url: "/docs/frontend-framework/layout/band"
+        - name: Grid
+          url: "/docs/frontend-framework/layout/grid"
+        - name: Flex
+          url: "/docs/frontend-framework/layout/flex"
+        - name: Wrap
+          url: "/docs/frontend-framework/layout/wrap"
+    module:
+      name: Module
+      icon: fas fa-sliders-v-square
+      url: "/docs/frontend-framework/module/crumb"
+      child:
+        - name: Crumb
+          url: "/docs/frontend-framework/module/crumb"
+        - name: Card
+          url: "/docs/frontend-framework/module/card"
+        - name: Form
+          url: "/docs/frontend-framework/module/form"
+        - name: List
+          url: "/docs/frontend-framework/module/list"
+        - name: Nav
+          url: "/docs/frontend-framework/module/nav"
+        - name: Tab
+          url: "/docs/frontend-framework/module/tab"
+        - name: Accordion
+          url: "/docs/frontend-framework/module/accordion"
+        - name: Dropdown
+          url: "/docs/frontend-framework/module/dropdown"
+        - name: Slidemenu
+          url: "/docs/frontend-framework/module/slidemenu"
+        - name: Notice
+          url: "/docs/frontend-framework/module/notice"
+        - name: Table
+          url: "/docs/frontend-framework/module/table"
+    single:
+      name: Single
+      icon: fas fa-bowling-ball
+      url: "/docs/frontend-framework/single/button"
+      child:
+        - name: Button
+          url: "/docs/frontend-framework/single/button"
+        - name: Font
+          url: "/docs/frontend-framework/single/font"
+        - name: Icon
+          url: "/docs/frontend-framework/single/icon"
+        - name: Image
+          url: "/docs/frontend-framework/single/image"
+        - name: Label
+          url: "/docs/frontend-framework/single/label"
+        - name: Line
+          url: "/docs/frontend-framework/single/line"
+        - name: Thumb
+          url: "/docs/frontend-framework/single/thumb"
+        - name: Tip
+          url: "/docs/frontend-framework/single/tip"
+    utility:
+      name: Utility
+      icon: fas fa-magic
+      url: "/docs/frontend-framework/utility/align"
+      child:
+        - name: Align
+          url: "/docs/frontend-framework/utility/align"
+        - name: Border
+          url: "/docs/frontend-framework/utility/border"
+        - name: Color
+          url: "/docs/frontend-framework/utility/color"
+        - name: Fade
+          url: "/docs/frontend-framework/utility/fade"
+        - name: Fill
+          url: "/docs/frontend-framework/utility/fill"
+        - name: Float
+          url: "/docs/frontend-framework/utility/float"
+        - name: Hide
+          url: "/docs/frontend-framework/utility/hide"
+        - name: Margin
+          url: "/docs/frontend-framework/utility/margin"
+        - name: Pad
+          url: "/docs/frontend-framework/utility/pad"
+        - name: Show
+          url: "/docs/frontend-framework/utility/show"
+        - name: Spread
+          url: "/docs/frontend-framework/utility/spread"
+
+  brandGuideline:
+    - name: Logo Usage
+      url: "/docs/brand-guideline/logo-usage"
+    - name: Colors
+      url: "/docs/brand-guideline/colors"
+    - name: Typography
+      url: "/docs/brand-guideline/typography"
+
+  resources:
+    - name: Brand Assets
+      url: "/docs/resources/brand-assets"
+    - name: Signatures
+      url: "/docs/resources/signatures"

@@ -1,0 +1,46 @@
+/************************************************************
+MIN
+************************************************************/
+
+.min {
+
+  &-width {
+    @for $i from 10 through 100 {
+      &\:#{$i} {
+        min-width: $i * 1rem  !important;
+      }
+    }
+  }
+  &-height {
+    @for $i from 10 through 100 {
+      &\:#{$i} {
+        min-height: $i * 1rem  !important;
+      }
+    }
+  }
+
+  @each $key, $value in $screens {
+    &-width {
+      &-#{$key} {
+        @media (min-width: $value) {
+          @for $i from 10 through 100 {
+            &\:#{$i} {
+              min-width: $i * 1rem  !important;
+            }
+          }
+        }
+      }
+    }
+    &-height {
+      &-#{$key} {
+        @media (min-width: $value) {
+          @for $i from 10 through 100 {
+            &\:#{$i} {
+              min-height: $i * 1rem  !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

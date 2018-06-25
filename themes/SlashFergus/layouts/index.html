@@ -1,0 +1,390 @@
+{{ partial "head" . }}
+
+<header class="header fill:white js-header js-header:home">
+  <div class="wrap wrap:padding-x">
+    {{ partial "partial/menus/menu-main" . }}
+  </div>
+</header>
+
+<section class="hero hero:home overflow:hidden">
+
+  {{ partial "partial/notices/notice-main" . }}
+  <div class="position:absolute column:12 padding-top:2 padding-top-sm:5">
+    <header class="header:home">
+      <div class="wrap wrap:padding-x">
+        {{ partial "partial/menus/menu-main" . }}
+      </div>
+    </header>
+  </div>
+
+  <div class="hero/wrap wrap wrap:padding-x">
+    <div class="hero/content">
+      <h1 class="font font-weight:bold font-size:h2 font-size-md:h1 font-size-lg:h1 font-leading:0 margin-bottom:2 margin-bottom-sm:3 color:white">
+        Smart software <br class="display-sm:none" />for <br class="display:none display-sm">growing <span class="font font-weight:bold font:underline color:yellow js-typed">trade </span> <br class="display-sm:none" />businesses
+      </h1>
+      <h2 class="font font-size:h6 font-size-sm:h5 -font-leading:0 font-weight:medium color:white margin-bottom:2 margin-bottom-sm:4">
+        Everything you need. All in one place
+      </h2>
+      <!-- Trigger to open Modal -->
+      <a class="button fill:yellow color:secondary button:elevate button-grow:3 js-modal-register-trigger margin-right:3">Get Started</a>
+
+      <div class="display:block display-sm:inline-block margin-top:2 margin-top-sm:none">
+        <span class="display:none display-sm:inline-block margin-right:3 color:white opacity:5">or</span>
+
+        <div class="dropdown dropdown:main dropdown-direction:left" style="z-index:5">
+          <div class="dropdown/toggle" title="Menu">
+            <a class="font font-weight:medium color:white" title="What does Fergus do?">
+            See how Fergus can help<i class="far fa-angle-down margin-left:1"></i>
+            </a>
+          </div>
+          <div class="dropdown/content">
+            <div class="dropdown/body align:left">
+              <a class="dropdown/item font font-size:body font-weight:regular color:black padding-y:1 hover js-modal-feature-checklist-trigger">
+                Get feature checklist
+              </a>
+              <a class="dropdown/item font font-size:body font-weight:regular color:black padding-y:1 hover js-modal-suitability-trigger">
+                Is Fergus right for you?
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero/art">
+      <div class="position:relative">
+        <img src="/assets/images/home/hero/hero-empty.png" class="hero/empty" />
+        <img src="/assets/images/home/hero/hero-shadow-laptop.png" class="hero/image hero/image:shadow-laptop" />
+        <img src="/assets/images/home/hero/hero-shadow-phone.png" class="hero/image hero/image:shadow-phone" />
+        <img src="/assets/images/home/hero/hero-shadow-driver.png" class="hero/image hero/image:shadow-driver" />
+        <img src="/assets/images/home/hero/hero-hammer.png" class="hero/image hero/image:hammer" />
+        <img src="/assets/images/home/hero/hero-plier.png" class="hero/image hero/image:plier" />
+        <img src="/assets/images/home/hero/hero-drill.png" class="hero/image hero/image:drill" />
+        <img src="/assets/images/home/hero/hero-valve.png" class="hero/image hero/image:valve" />
+        <img src="/assets/images/home/hero/hero-multigrip.png" class="hero/image hero/image:multigrip" />
+        <img src="/assets/images/home/hero/hero-driver.png" class="hero/image hero/image:driver" />
+        <img src="/assets/images/home/hero/hero-laptop.png" class="hero/image hero/image:laptop" />
+        <img src="/assets/images/home/hero/hero-phone.png" class="hero/image hero/image:phone" />
+        <img src="/assets/images/home/hero/hero-driver.png" class="hero/image hero/image:driver" />
+      </div>
+    </div>
+    <!-- <div class="hero/video fill:primary-shade display:none display-sm:block">
+      <div class="row:media align-item:middle">
+        <div class="column margin-right:2">
+          <a class="hero/thumb hover">
+            <img src="https://placeimg.com/800/450/arch" class="image" />
+            <div class="hero/play fill:white color:black">
+              <i class="fas fa-fw fa-play"></i>
+            </div>
+          </a>
+        </div>
+        <div class="column color:white">
+          <h6 class="font font-weight:bold margin-bottom:1 color:white">The Story of Dan</h6>
+          <p>
+            From scheduling site visits through to invoicing, clearly see what needs to be done and when.
+          </p>
+        </div>
+      </div>
+    </div> -->
+  </div>
+
+  <footer class="hero/footer fill:primary-shade align:center">
+    <div class="wrap wrap:padding-x">
+      <!-- <h4 class="font font-weight:medium margin-bottom:2 color:white">Smart software for growing trade businesses.</h4> -->
+      <div class="row row:stats-brand">
+        <div class="column:6 column-md:3 padding-y:4 padding-y-md:2">
+          <h1 class="font font-size:h2 font-size-sm:h2 font-size-lg:h1 font-leading:0 color:white">
+            874,235 <span class="font font-weight:regular font-size:h6 display padding-top:1 opacity:6">Invoices Paid</span>
+          </h1>
+        </div>
+        <div class="column:6 column-md:3 padding-y:4 padding-y-md:2">
+          <h1 class="font font-size:h2 font-size-sm:h2 font-size-lg:h1 font-leading:0 color:white">
+            $1.5B <span class="font font-weight:regular font-size:h6 display padding-top:1 opacity:6">Materials Charged</span>
+          </h1>
+        </div>
+        <div class="column:6 column-md:3 padding-y:4 padding-y-md:2">
+          <h1 class="font font-size:h2 font-size-sm:h2 font-size-lg:h1 font-leading:0 color:white">
+            40,000 <span class="font font-weight:regular font-size:h6 display padding-top:1 opacity:6">Hazards Avoided</span>
+          </h1>
+        </div>
+        <div class="column:6 column-md:3 padding-y:4 padding-y-md:2">
+          <h1 class="font font-size:h2 font-size-sm:h2 font-size-lg:h1 font-leading:0 color:white">
+            1.3M <span class="font font-weight:regular font-size:h6 display padding-top:1 opacity:6">Projects Completed</span>
+          </h1>
+        </div>
+      </div>
+    </div>
+  </footer>
+</section>
+
+
+
+<section class="fill:pegboard padding-top:10vh ">
+  <div class="wrap wrap:padding-x">
+
+    <h3 class="font font-size:h3 font-size-sm:h1 margin-bottom:2 font-leading:0 align:center">
+      Job management <br />software built to <span class="font color:primary font:underline">grow</span>
+    </h3>
+
+    <h2 class="font font-weight:regular font-size:h6 font-size-sm:h5 font-leading:2 align:center margin-bottom:5vh">
+      Setting trade & service businesses up for success, from the job site to the office.
+    </h2>
+
+    <div class="row row-gutter-sm:2 row-gutter-lg:3">
+      <div class="column:12 column-sm:4 column-md:4 margin-bottom:2">
+        <article class="card js-reveal-set-1">
+          <div class="card/content padding-sm:4 padding-md:5 padding-xl:5 align:center">
+            <img src="/assets/images/icons/icon-task.svg" class="image margin:auto margin-bottom:3" />
+            <h5 class="font margin-bottom:3">Run your office</h5>
+            <p>
+              From scheduling site visits to invoicing, clearly see what needs to be done and when. Complete admin in minutes and get rid of double handling.
+            </p>
+            <a href="/features/run-your-office/" class="font font:link font-weight:bold">Learn more</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="column:12 column-sm:4 column-md:4 margin-bottom:2">
+        <article class="card js-reveal-set-2">
+          <div class="card/content padding-sm:4 padding-md:5 padding-xl:5 align:center">
+            <img src="/assets/images/icons/icon-team.svg" class="image margin:auto margin-bottom:3" />
+            <h5 class="font margin-bottom:3">Manage your team</h5>
+            <p>
+              Keep your team on the road with remote job cards, instant notifications, and real-time job information, right at your fingertips.
+            </p>
+            <a href="/features/manage-your-team/" class="font font:link font-weight:bold">Learn more</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="column:12 column-sm:4 column-md:4 margin-bottom:2">
+        <article class="card js-reveal-set-3">
+          <div class="card/content padding-sm:4 padding-md:5 padding-xl:5 align:center">
+            <img src="/assets/images/icons/icon-graph.svg" class="image margin:auto margin-bottom:3" />
+            <h5 class="font margin-bottom:3">Grow your business</h5>
+            <p>
+              Track your profit in real-time, see where you are making and losing money on each job. Back-cost before invoicing to make sure you hit your margins.
+            </p>
+            <a href="/features/grow-your-business/" class="font font:link font-weight:bold">Learn more</a>
+          </div>
+        </article>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="fill:table">
+  <div class="wrap wrap:padding-x">
+    <img src="/assets/images/home/home-table.png" class="image image:table" />
+  </div>
+</section>
+
+<section class="fill:home-case-bg-1 padding-y:5vh padding-y-sm:7vh">
+  <div class="wrap wrap:padding-x padding-y:5vh">
+    <div class="row">
+      <div class="column:12 column-sm:8 column-md:6 padding-bottom-sm:5vh">
+        <img src="/assets/images/icons/home-water-faucet.svg" class="image margin-bottom:4" />
+        <h3 class="font font-size:h2 font-size-sm:h1 margin-bottom:5 font-leading:0">
+          Built by Tradies <br />for <span class="font color:primary font:underline">Tradies</span>
+        </h3>
+        <p class="font margin-bottom:4">
+          Fergus is used by trades and service businesses across Australasia and the World. Fergus works best for small to medium-sized businesses and is perfect for managing large projects and small jobs.
+        </p>
+        <a href="/features" class="font font-weight:medium font:link">Find out whether Fergus would work for you <i class="fas fa-arrow-right fa-sm u-margin-left-0"></i></a>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="fill:white padding-y:5vh">
+  <div class="wrap wrap:padding-x">
+    <div class="row row-gutter:2">
+
+      <div class="column:6 column-md:3 margin-bottom:2">
+        <a href="/features/electrician" class="card card:elevate fill:tools-electrician">
+          <div class="card/content padding-x:none padding-top:2 padding-top-sm:4 padding-bottom:none">
+            <h5 class="font font-size:body font-size-sm:h6 align:center">Electricians</h5>
+            <img src="/assets/images/home/tools/tools-electrician.jpg" class="image border:radius-bottom margin:auto" />
+          </div>
+        </a>
+      </div>
+
+      <div class="column:6 column-md:3 margin-bottom:2">
+        <a href="/features/plumber" class="card card:elevate">
+          <div class="card/content padding-x:none padding-top:2 padding-top-sm:4 padding-bottom:none">
+            <h5 class="font font-size:body font-size-sm:h6 align:center">Plumbers</h5>
+            <img src="/assets/images/home/tools/tools-plumber.jpg" class="image border:radius-bottom margin:auto" />
+          </div>
+        </a>
+      </div>
+
+      <div class="column:6 column-md:3 margin-bottom:2">
+        <a href="/features/other-services" class="card card:elevate">
+          <div class="card/content padding-x:none padding-top:2 padding-top-sm:4 padding-bottom:none">
+            <h5 class="font font-size:body font-size-sm:h6 align:center">Other Trades</h5>
+            <img src="/assets/images/home/tools/tools-painter.jpg" class="image border:radius-bottom margin:auto" />
+          </div>
+        </a>
+      </div>
+
+      <div class="column:6 column-md:3 margin-bottom:2">
+        <a href="/features/service-industry" class="card card:elevate">
+          <div class="card/content padding-x:none padding-top:2 padding-top-sm:4 padding-bottom:none">
+            <h5 class="font font-size:body font-size-sm:h6 align:center">Services</h5>
+            <img src="/assets/images/home/tools/tools-trade.jpg" class="image border:radius-bottom margin:auto" />
+          </div>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="row align-content:center align:center padding-y:8vh max-width:80 margin:auto">
+      <div class="column:12">
+        <h5 class="font margin-bottom:3">Trusted by thousands around the world</h5>
+        <p>
+          Fergus is used by thousands of Tradies around the world to build homes, raise office blocks, mow lawns, and drive growth and we've got the stats to prove it.
+        </p>
+      </div>
+    </div>
+
+    <div class="row row:stats-grad align:center margin-top:2">
+      <div class="column:6 column-md:3 padding-y:3 padding-y-md:4">
+        <h1 class="font font-size:h2 font-size-sm:h2 font-size-lg:h1 font-leading:0 color:primary">
+          10.1M <span class="font font-weight:regular font-size:h6 color:black display padding-top:1">Hours Logged</span>
+        </h1>
+      </div>
+      <div class="column:6 column-md:3 padding-y:3 padding-y-md:4">
+        <h1 class="font font-size:h2 font-size-sm:h2 font-size-lg:h1 font-leading:0 color:primary">
+          1.4M <span class="font font-weight:regular font-size:h6 color:black display padding-top:1">Site Visits</span>
+        </h1>
+      </div>
+      <div class="column:6 column-md:3 padding-y:3 padding-y-md:4">
+        <h1 class="font font-size:h2 font-size-sm:h2 font-size-lg:h1 font-leading:0 color:primary">
+          349 <span class="font font-weight:regular font-size:h6 color:black display padding-top:1">Cities Globally</span>
+        </h1>
+      </div>
+      <div class="column:6 column-md:3 padding-y:3 padding-y-md:4">
+        <h1 class="font font-size:h2 font-size-sm:h2 font-size-lg:h1 font-leading:0 color:primary">
+          2 <span class="font font-weight:regular font-size:h6 color:black display padding-top:1">Fergus Dogs</span>
+        </h1>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="fill:home-case-bg-2 padding-y:6vh padding-y-sm:10vh">
+  <div class="wrap wrap:padding-x padding-y:5vh">
+    <div class="row row-gutter-md:5">
+      <div class="column:12 column-sm:8 column-md:6 column-push-sm:2 column-push-md:6">
+        <h3 class="font font-size:h3 font-size-sm:h3 font-size-md:h2 font-size-lg:h1 font-size-xl:h1 margin-bottom:3 font-leading:0">
+          “I can do everything from my phone, computer or tablet. That's why Fergus is such a great match for me.”
+        </h3>
+        <div class="row:media row-gutter:2 align-item:middle">
+          <div class="column">
+            <img src="/assets/images/customer-andrew.jpg" class="image image:profile image-shape:round image-size:4" />
+          </div>
+          <div class="column">
+            <h5 class="font font-size:body font-weight:bold color:black">
+              Andrew Smith,
+            </h5>
+            <p>
+              Watersmith Plumbing and Gas
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="padding-y:10vh fill:background-focus">
+
+  <div class="js-slick">
+    {{ range .Params.blocks }}
+      {{ if eq "block-card-testimonial" .template }}
+        <div>
+          <div class="padding-y:4">
+            <div class="card card:elevate card:testimonial color:black">
+              <div class="card/content align:center padding:2 padding-sm:4 position:relative">
+                <a href="{{ if eq .source "xero" }}https://community.xero.com/business/discussion/2209556{{else}}https://www.capterra.com/p/155571/Fergus/{{end}}" class="card/testimonial-source">
+                <img src="{{ .Site.baseURL }}assets/images/testimonials/{{ .source }}@2x.png" class="image image-shape:round image-size:5">
+                </a>
+                <div class="font color:yellow margin-y:2" style="letter-spacing:6px;">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p>
+                  {{ .testimonial }}
+                </p>
+                <p>
+                  <span class="font-weight:bold color:black">{{ .name }}</span><br>
+                  {{ .company }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      {{ end }}
+    {{ end }}
+
+  </div>
+
+</section>
+
+
+<script src = "//app-sn04.marketo.com/js/forms2/js/forms2.min.js"> </script>
+
+<!-- Register Stage 1 - Done -->
+<form id="mktoForm_1297" style="display:none"></form>
+
+<!-- P&L Calculator - Done -->
+<form id="mktoForm_1304" style="display:none"></form>
+
+<!-- Feature Checklist - Done -->
+<form id="mktoForm_1303" style="display:none"></form>
+
+<!-- Blog Subscription - Done -->
+<form id="mktoForm_1302" style="display:none"></form>
+
+<!-- Demo Request - Done -->
+<form id="mktoForm_1300" style="display:none"></form>
+
+<!-- Partner Request - Done -->
+<form id="mktoForm_1299" style="display:none"></form>
+
+<script>
+  MktoForms2.loadForm("//app-sn04.marketo.com", "163-RUO-573", 1297);
+  MktoForms2.loadForm("//app-sn04.marketo.com", "163-RUO-573", 1304);
+  MktoForms2.loadForm("//app-sn04.marketo.com", "163-RUO-573", 1303);
+  MktoForms2.loadForm("//app-sn04.marketo.com", "163-RUO-573", 1302);
+  MktoForms2.loadForm("//app-sn04.marketo.com", "163-RUO-573", 1300);
+  MktoForms2.loadForm("//app-sn04.marketo.com", "163-RUO-573", 1299);
+</script>
+
+{{ partial "partial/modals/modal-register"}}
+{{ partial "partial/modals/modal-suitability"}}
+{{ partial "partial/modals/modal-feature-checklist"}}
+{{ partial "partial/modals/modal-feature-comparison"}}
+{{ partial "partial/modals/modal-subscribe"}}
+{{ partial "partial/modals/modal-demo"}}
+{{ partial "partial/modals/modal-calculator"}}
+{{ partial "partial/cta" . }}
+{{ partial "partial/footer" . }}
+
+<!-- Scripts -->
+<script src="/assets/scripts/main.js"></script>
+<script>
+// Typed
+var typed = new Typed('.js-typed', {
+  strings: ['trade', 'plumbing', 'electrical', 'building', 'flooring', 'HVAC', 'heating', 'IT', 'service', 'data &amp; security', 'landscaping', 'painting', 'maintenance', 'roofing', 'glass repair'],
+  typeSpeed: 50,
+  backSpeed: 50,
+  backDelay: 2000,
+  showCursor: false,
+  loop: true
+});
+</script>
+</body>
+</html>

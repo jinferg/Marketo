@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-integration</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icon-integration" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="connection-file-network-share-sharing-document-action" transform="translate(10.000000, 4.000000)">
+            <path d="M31,9.13076037 L31,39.2608696 C31,40.7736482 29.7753658,42 28.2647059,42 L2.73529412,42 C1.22463257,42 0,40.7736482 0,39.2608696 L0,2.73913043 C0,1.22635051 1.22463257,0 2.73529412,0 L21.8822468,0 L31,9.13076037 Z" id="XMLID_1323_" stroke="#0036D0" stroke-width="3"></path>
+            <path d="M22,0 L22,6.3 C22,7.79116914 23.2088168,9 24.6999668,9 L31,9" id="XMLID_1322_" stroke="#0036D0" stroke-width="3"></path>
+            <circle id="Oval" stroke="#FF5600" stroke-width="2" cx="9.5" cy="24.5" r="2.5"></circle>
+            <path d="M12,26 L18,29" id="Shape" stroke="#FF5600" stroke-width="2"></path>
+            <path d="M18,20 L12,23" id="Shape" stroke="#FF5600" stroke-width="2"></path>
+            <circle id="Oval" stroke="#FF5600" stroke-width="2" cx="20.5" cy="18.5" r="2.5"></circle>
+            <ellipse id="Oval" stroke="#FF5600" stroke-width="2" cx="20.5" cy="30" rx="2.5" ry="3"></ellipse>
+        </g>
+    </g>
+</svg>

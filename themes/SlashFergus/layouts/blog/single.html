@@ -1,0 +1,60 @@
+{{ partial "head" . }}
+{{ partial "partial/header" . }}
+
+<section class="fill:black">
+  <div class="wrap wrap:padding-x padding-y:2 display:flex align-content:between">
+
+    <nav class="list list:inline">
+      <a href="/blog" class="list/item margin-right:3 font-leading:1 color:white font-weight:medium font-size:body font-size-sm:body hover-color:yellow">All</a>
+
+      <a href="/categories/product" class="list/item margin-right:3 font-leading:1 color:white font-weight:medium font-size:body font-size-sm:body hover-color:yellow">Product</a>
+
+      <a href="/categories/customer-stories" class="list/item margin-right:3 font-leading:1 color:white font-weight:medium font-size:body font-size-sm:body hover-color:yellow">Customer Stories</a>
+
+      <a href="/categories/tradie-tips" class="list/item margin-right:3 font-leading:1 color:white font-weight:medium font-size:body font-size-sm:body hover-color:yellow">Tradie Tips</a>
+    </nav>
+
+    <div class="">
+      <span class="font font-weight:medium margin-right:2 color:white">
+        Subscribe to our newsletter
+      </span>
+      <a href="#" class="button button-size:2 button-grow:1 color:yellow js-modal-subscribe-trigger">
+        Subscribe
+      </a>
+    </div>
+
+
+  </div>
+</section>
+
+
+<section class="fill:white">
+  <div class="wrap wrap:padding-x padding-y:8vh align:center">
+    <div class="margin-bottom:3 font-size:micro font-transform:upper font-weight:medium opacity:4">
+      <i class="far fa-clock margin-right:0"></i> {{ .Params.duration }}
+      <i class="far fa-tag margin-right:0 margin-left:2"></i> {{ if isset .Params "categories" }}{{ index .Params.categories 0 }}{{end}}
+    </div>
+
+    <a href="{{ .URL }}">
+      <h1 class="font font-size:h2 font-size-lg:h1 font-leading:0 margin-bottom:2 max-width:90 margin:auto">
+        {{ .Title }}
+      </h1>
+    </a>
+
+    {{ partial "partial/blog-author" . }}
+
+    <div class="margin-top:8vh margin-bottom:8vh min-height:50" style="background-image: url({{ .Params.thumbnail }}); background-size: cover; background-position: center center;">
+    </div>
+
+    <article class="row align-content:center align:left">
+      <div class="column:12 column-md:8 column-lg:6">
+        {{ .Content }}
+      </div>
+    </article>
+  </div>
+</section>
+
+
+{{ partial "partial/cta" . }}
+{{ partial "partial/footer" . }}
+{{ partial "foot" . }}

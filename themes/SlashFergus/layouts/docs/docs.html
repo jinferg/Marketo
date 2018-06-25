@@ -1,0 +1,40 @@
+{{ partial "head" . }}
+
+<main class="row grid:docs-css">
+	{{ partial "header-doc-framework" . }}
+	{{ partial "sidebar-doc-framework" . }}
+	<section class="row-area:content">
+		<div class="row">
+			<div class="item span-md-12 -span-lg-8">
+        <header class="u-pad-y-5vh">
+          <h1 class="font -h2 -height-0 -bold -gap-3">
+            <span>{{.Title}}</span>{{ if .Params.includeLabel }}<span class="label -{{ .Params.labelColor }} -top">{{ .Params.labelText }}</span>{{ end }}
+          </h1>
+          <h6 class="font -regular -gap-4">
+            {{ .Params.description }}
+          </h6>
+
+          {{ if .Params.buttonOne.include }}
+            <a href="{{ .Params.buttonOne.link }}" class="s-button -elevate -brand-m -grow-1">
+              {{ .Params.buttonOne.text }}
+            </a>
+          {{ end }}
+          {{ if .Params.buttonTwo.include }}
+            <a href="{{ .Params.buttonTwo.link }}" class="s-button -elevate -accent-alt -accent-alt-m -grow-1">
+              {{ .Params.buttonTwo.text }}
+            </a>
+          {{ end }}
+        </header>
+
+        <span class="s-line -shade-heavy"></span>
+
+        <div class="m-markup u-pad-y-5vh padding:2">
+          {{.Content}}
+        </div>
+			</div>
+		</div>
+	</section>
+</main>
+
+<!-- Scripts -->
+{{ partial "foot" . }}

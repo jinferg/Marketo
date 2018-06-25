@@ -1,0 +1,23 @@
+{
+  "name": "slashcss",
+  "version": "1.0.0",
+  "description": "Build source files for SlashCSS framework.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jin Park",
+  "license": "ISC",
+  "devDependencies": {
+    "css-mqpacker": "^6.0.2",
+    "cssnano": "^3.10.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-sass": "^4.0.1",
+    "gulp-uglify": "^3.0.0",
+    "postcss-cssnext": "^3.1.0"
+  }
+}

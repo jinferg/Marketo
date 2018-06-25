@@ -1,0 +1,70 @@
+/************************************************************
+MENU
+************************************************************/
+
+:root {
+  --nav-height: var(--u6);
+  --nav-border: var(--border);
+
+  --nav-mobile-radius: var(--radius);
+  --nav-mobile-shadow: 0px 5px 5px 0px rgba(0,60,200,0.1);;
+  --nav-mobile-bg: #f6f8fb;
+}
+
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: var(--nav-height);
+  margin:0;
+  padding: 0;
+  background: white;
+
+  /******************************
+  CHILD ELEMENTS
+  ******************************/
+
+  &\/content {
+    display: flex;
+    margin:0;
+    padding: 0;
+    &:first-child {
+      flex-grow: 1;
+      &:last-child {
+        justify-content: flex-start;
+      }
+    }
+    &:nth-child(2) {
+      flex-grow: 2;
+      justify-content: center;
+      &:last-child {
+        flex-grow: 1;
+      }
+    }
+    &:last-child {
+      flex-grow: 1;
+      justify-content: flex-end;
+    }
+  }
+
+  &\/item {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    padding-left: var(--u2);
+    padding-right: var(--u2);
+    transition: all .2s ease;
+    color: var(--black);
+    text-decoration: none;
+    &\:hover {
+      &:hover {
+        background-color: var(--background-focus);
+      }
+    }
+    &.is-active {
+      box-shadow: inset 0px -2px 0px 0px var(--primary);
+    }
+  }
+}

@@ -1,0 +1,47 @@
+/************************************************************
+DISTRIBUTE
+************************************************************/
+
+.distribute {
+
+  &-x {
+    @while $levels > 0 {
+      &\:#{$levels} > * + * {
+        margin-left: $levels * 1rem !important;
+      }
+      $levels: $levels - 1;
+    }
+    @each $key, $value in $screens {
+      &-#{$key} {
+        @media (min-width: $value) {
+          @while $levels > 0 {
+            &\:#{$levels} > * + * {
+              margin-left: $levels * 1rem !important;
+            }
+            $levels: $levels - 1;
+          }
+        }
+      }
+    }
+  }
+  &-y {
+    @while $levels > 0 {
+      &\:#{$levels} > * + * {
+        margin-top: $levels * 1rem !important;
+      }
+      $levels: $levels - 1;
+    }
+    @each $key, $value in $screens {
+      &-#{$key} {
+        @media (min-width: $value) {
+          @while $levels > 0 {
+            &\:#{$levels} > * + * {
+              margin-top: $levels * 1rem !important;
+            }
+            $levels: $levels - 1;
+          }
+        }
+      }
+    }
+  }
+}
