@@ -1,0 +1,361 @@
+{{ partial "marketo/marketing/head" }}
+
+
+<body topmargin="0" rightmargin="0" bottommargin="0" leftmargin="0" marginwidth="0" marginheight="0" width="100%" style="{{ partial "marketo/marketing/body" }}">
+
+<!-- MAIN BG -->
+<table width="100%" align="center" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; width: 100%;">
+	<tr>
+		<td align="center" valign="top" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0;" bgcolor="#001547">
+
+			<!-- HEADER -->
+			<table border="0" cellpadding="0" cellspacing="0" align="center" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: inherit;	max-width: 650px;">
+				<tr>
+					<td align="center" valign="top" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-left: 6%; padding-right: 6%; width: 88%; padding-top: 20px; padding-bottom: 20px;">
+
+						<a {{ printf "href=%q" "{{system.viewAsWebpageLink}}" | safeHTMLAttr }} target="_blank" style="font-family: 'Lato', sans-serif; font-size: 13px; color: white; text-decoration: none;">
+							View this email in your browser"
+						</a>
+					</td>
+				</tr>
+			</table>
+			<!-- END / HEADER -->
+
+      <table align="center" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;" width="100%">
+        <tr>
+          <td align="center" class="mktoContainer" id="mainContainer" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0;" valign="top">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" class="mktoModule" id="moduleHeaderDark" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;" width="650">
+              <!-- LOGO -->
+              <tr>
+                <td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-top: 40px; padding-bottom: 40px;" valign="top">
+                  <img src="https://fergus.com/assets/images/fergus-horizontal-white@2x.png" style="display: block; width: 176px;" width="176">
+                </td>
+              </tr><!-- END / LOGO -->
+              <!-- TITLE -->
+              <tr>
+                <td align="center" class="container" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; width: 88%; padding-bottom: 10px; padding-left: 6%; padding-right: 6%; color: #ffffff; font-family: 'Lato', sans-serif; font-size: 32px; font-weight: bold; line-height: 130%; display: ${MHD_title_switch}" valign="top">
+                  <div class="mktoText" id="MHD_title">
+                    Quote, estimate and invoice
+                  </div>
+                </td>
+              </tr><!-- END / TITLE -->
+              <!-- TITLE -->
+              <tr>
+                <td align="center" class="container" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; width: 88%; padding-bottom: 30px; padding-left: 6%; padding-right: 6%; color: #ffffff; font-family: 'Lato', sans-serif; font-size: 18px; font-weight: normal; line-height: 130%; display: ${MHD_sub_switch}" valign="top">
+                  <div class="mktoText" id="MHD_sub">
+                    All from the same place. Forget data entry.
+                  </div>
+                </td>
+              </tr><!-- END / TITLE -->
+            </table>
+            <table align="center" bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" class="mktoModule" id="moduleHeaderLight" style="border-collapse:collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px; background-color: #ffffff; -webkit-border-top-left-radius: 8px; -webkit-border-top-right-radius: 8px; -moz-border-radius-topleft: 8px; -moz-border-radius-topright: 8px; border-top-left-radius: 8px; border-top-right-radius: 8px;" width="650">
+              <!-- LOGO -->
+              <tr>
+                <td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-top: 40px; padding-bottom: 40px;" valign="top">
+                  <img src="https://fergus.com/assets/images/fergus-horizontal@2x.png" style="display: block; width: 176px;" width="176">
+                </td>
+              </tr><!-- END / LOGO -->
+              <!-- TITLE -->
+              <tr>
+                <td align="center" class="container" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; width: 88%; padding-bottom: 10px; padding-left: 6%; padding-right: 6%; color: #0F3752; font-family: 'Lato', sans-serif; font-size: 32px; font-weight: bold; line-height: 130%; display: ${MHL_title_switch}" valign="top">
+                  <div class="mktoText" id="MHL_title">
+                    Quote, estimate and invoice
+                  </div>
+                </td>
+              </tr><!-- END / TITLE -->
+              <!-- TITLE -->
+              <tr>
+                <td align="center" class="container" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; width: 88%; padding-bottom: 30px; padding-left: 6%; padding-right: 6%; color: #0F3752; font-family: 'Lato', sans-serif; font-size: 18px; font-weight: normal; line-height: 130%; display: ${MHL_sub_switch}" valign="top">
+                  <div class="mktoText" id="MHL_sub">
+                    All from the same place. Forget data entry.
+                  </div>
+                </td>
+              </tr><!-- END / TITLE -->
+            </table>
+            <table align="center" bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" class="mktoModule" id="moduleHero" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;" width="650">
+              <!-- HERO IMAGE -->
+              <tr>
+                <td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0;" valign="top">
+                  <img border="0" class="mktoImg" hspace="0" id="MHI_image" style="padding: 0; margin: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; border: none; display: block; width: 100%;" vspace="0">
+                </td>
+              </tr><!-- END / HERO IMAGE -->
+            </table>
+            <table align="center" bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" class="mktoModule" id="moduleBodyWelcome" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;" width="650">
+              <!-- SPACER -->
+              <tr>
+                <td align="left" bgcolor="#EDF4FB" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; width: 100%; padding-top: 40px; background-color: #EDF4FB;" valign="top"></td>
+              </tr><!-- END / SPACER -->
+              <!-- WELCOME MESSAGE -->
+              <tr>
+                <td align="left" bgcolor="#EDF4FB" class="container" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; width: 88%; padding-left: 6%; padding-right: 6%; padding-bottom: 20px; background-color: #EDF4FB; color: #0D3753; font-family: 'Lato', sans-serif; font-size: 22px; font-weight: bold; line-height: 130%; display: ${MBW_name_switch}" valign="top">
+                  <div class="mktoText" id="MBW_name">
+                    Welcome Name
+                  </div>
+                </td>
+              </tr><!-- END / WELCOME MESSAGE -->
+              <!-- BODY -->
+              <tr>
+                <td align="left" bgcolor="#EDF4FB" class="container" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; width: 88%; padding-bottom: 40px; padding-left: 6%; padding-right: 6%; background-color: #EDF4FB; color: #526e82; font-family: 'Lato', sans-serif; font-size: 15px; font-weight: normal; line-height: 24px;" valign="top">
+                  <div class="mktoText" id="MBW_body">
+                    Praesent sed diam fermentum, lobortis est non, vehicula sapien. Duis pretium ligula sed nibh varius porta. Vivamus vel augue ornare, tincidunt mauris eget, egestas urna. Fusce rutrum eleifend mauris, sit amet rhoncus augue aliquam quis. Donec feugiat ex quis mattis convallis. Proin sollicitudin tincidunt quam sit amet porta. Vivamus pretium cursus risus, non dignissim neque ullamcorper a.
+                  </div>
+                </td>
+              </tr><!-- END / BODY -->
+            </table>
+            <table align="center" bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" class="mktoModule" id="moduleTextBtn" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;" width="650">
+              <!-- SPACER -->
+              <tr>
+                <td align="left" bgcolor="#EDF4FB" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; width: 100%; padding-top: 40px; background-color: #FFFFFF;" valign="top"></td>
+              </tr><!-- END / SPACER -->
+              <!-- SUBTITLE -->
+              <tr>
+                <td align="center" class="container" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; width: 88%; padding-bottom: 20px; padding-left: 6%; padding-right: 6%; color: #0D3753; font-family: 'Lato', sans-serif; font-size: 20px; font-weight: bold; line-height: 130%; display: ${MTB_text_switch}" valign="top">
+                  <div class="mktoText" id="MTB_text">
+                    Start your free trial
+                  </div>
+                </td>
+              </tr><!-- END / SUBTITLE -->
+              <!-- BUTTON -->
+              <tr>
+                <td align="center" class="container" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; width: 88%; padding-left: 6%; padding-right: 6%; color: #0D3753; font-family: 'Lato', sans-serif; font-size: 24px; font-weight: bold; line-height: 130%;" valign="top">
+                  <div>
+                    <!--[if mso]>
+                                              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="${MTB_btnLink}" style="height:40px;v-text-anchor:middle;width:200px;" arcsize="125%" stroke="f" fillcolor="#00D295">
+                                                  <w:anchorlock/>
+                                                  <center>
+                                              <![endif]-->
+                     <a href="${MTB_btnLink}" style=" background-color:#00D295; border-radius:50px; color:#ffffff !important; display:inline-block; font-family: sans-serif; font-size:13px; font-weight:bold; line-height:40px; text-align:center; text-decoration:none; width:200px; -webkit-text-size-adjust:none;">${MTB_btnText}</a> <!--[if mso]>
+                                                  </center>
+                                              </v:roundrect>
+                                          <![endif]-->
+                  </div>
+                </td>
+              </tr><!-- END / BUTTON -->
+              <!-- SPACER -->
+              <tr>
+                <td align="left" bgcolor="#EDF4FB" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; width: 100%; padding-top: 40px; background-color: #FFFFFF;" valign="top"></td>
+              </tr><!-- END / SPACER -->
+            </table>
+            <table align="center" bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" class="mktoModule" id="moduleLine" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;" width="650">
+              <!-- LINE -->
+              <tr>
+                <td align="center" class="container" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-left: 6%; padding-right: 6%; width: 88%;" valign="top">
+                  <hr align="center" noshade size="1" style="margin: 0; padding: 0;" width="100%">
+                </td>
+              </tr><!-- END / LINE -->
+            </table>
+            <table align="center" bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" class="mktoModule" id="moduleImageText" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;" width="650">
+              <!-- IMAGE LEFT + TEXT RIGHT -->
+              <tr>
+                <td align="center" class="container" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; width: 88%; padding-top: 40px; padding-bottom: 40px; padding-left: 6%; padding-right: 6%; color: #0D3753; font-family: 'Lato', sans-serif; font-size: 18px; font-weight: normal; line-height: 130%;" valign="top">
+                  <table align="center" border="0" cellpadding="0" cellspacing="0" style="width: 100%; margin: 0; padding: 0; border-collapse: collapse; border-spacing: 0;">
+                    <tr>
+                      <td align="left" class="col" style="border-collapse: collapse; border-spacing: 0; width: 50%; padding-right: 40px;" valign="top">
+                        <img border="0" class="mktoImg resp-img" hspace="0" id="MIT_image" style="padding: 0; margin: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; border: none; display: block; width: 100%;" vspace="0">
+                      </td>
+                      <td align="left" class="col" style="font-size: 15px; font-weight: 400; line-height: 160%; border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; color: #627E90; font-family: 'Lato', sans-serif;" valign="top">
+                        <b style="color: #0F3752;"></b>
+                        <div class="mktoText" id="MIT_title">
+                          <b style="color: #0F3752;">Title</b>
+                        </div><b style="color: #0F3752;"></b><br>
+                        <div class="mktoText" id="MIT_body">
+                          Tested on the most popular email clients for web, desktop and mobile. Checklist included.
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr><!-- END / IMAGE LEFT + CTA RIGHT -->
+            </table>
+            <table align="center" bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" class="mktoModule" id="moduleFootnote" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;" width="650">
+              <!-- FOOTNOTE -->
+              <tr>
+                <td align="center" class="container" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; width: 88%; padding-top: 30px; padding-bottom: 30px; padding-left: 6%; padding-right: 6%; color: #627E90; font-family: 'Lato', sans-serif; font-size: 15px; font-weight: normal; line-height: 160%;" valign="top">
+                  <div class="mktoText" id="MF_footnote">
+                    Using Fergus on Google Chrome will give you the best experience. If you don’t have it, download it <a href="#" style="color:#00D295">here.</a>
+                  </div>
+                </td>
+              </tr><!-- END / FOOTNOTE -->
+            </table>
+            <table align="center" bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" class="mktoModule" id="moduleTwoCol" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;" width="650">
+              <!-- SPACER -->
+              <tr>
+                <td align="left" bgcolor="#EDF4FB" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; width: 100%; padding-top: 30px; background-color: #FFFFFF;" valign="top"></td>
+              </tr><!-- END / SPACER -->
+              <!-- CENTER TITLE -->
+              <tr>
+                <td align="center" class="container" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; width: 88%; padding-left: 6%; padding-right: 6%; color: #0D3753; font-family: 'Lato', sans-serif; font-size: 22px; font-weight: bold; line-height: 130%; display: ${MTC_intro_switch}" valign="top">
+                  <div class="mktoText" id="MTC_intro">
+                    Title
+                  </div>
+                </td>
+              </tr><!-- END / CENTER TITLE -->
+              <!-- 2 COL -->
+              <tr>
+                <td align="center" class="container" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; width: 88%; padding-left: 6%; padding-right: 6%; color: #0D3753; font-family: 'Lato', sans-serif; font-size: 22px; font-weight: bold; line-height: 130%;" valign="top">
+                  <table align="center" border="0" cellpadding="0" cellspacing="0" style="width: 100%; margin: 0; padding: 0; border-collapse: collapse; border-spacing: 0;">
+                    <tr>
+                      <td align="left" class="col" style="font-size: 15px; font-weight: 400; line-height: 160%; border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; width: 50%; padding-top: 30px; padding-bottom: 30px; padding-right: 15px; color: #627E90; font-family: 'Lato', sans-serif;" valign="top">
+                        <div class="mktoImg" id="MTC_image1">
+                          <a><img border="0" hspace="0" style="padding: 0; margin: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; border: none; display: block; width: 100%;" vspace="0"></a>
+                        </div><b style="color: #0F3752;"></b>
+                        <div class="mktoText" id="MTC_title1">
+                          <b style="color: #0F3752;">Title 1</b>
+                        </div><b style="color: #0F3752;"></b><br>
+                        <div class="mktoText" id="MTC_body1">
+                          Using Fergus on Google Chrome will give you the best experience.
+                        </div>
+                      </td>
+                      <td align="left" class="col" style="font-size: 15px; font-weight: 400; line-height: 160%; border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; width: 50%; padding-top: 30px; padding-bottom: 30px; padding-left: 15px; color: #627E90; font-family: 'Lato', sans-serif;" valign="top">
+                        <div class="mktoImg" id="MTC_image2">
+                          <a><img border="0" hspace="0" style="padding: 0; margin: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; border: none; display: block; width: 100%;" vspace="0"></a>
+                        </div><b style="color: #0F3752;"></b>
+                        <div class="mktoText" id="MTC_title2">
+                          <b style="color: #0F3752;">Title</b>
+                        </div><b style="color: #0F3752;"></b><br>
+                        <div class="mktoText" id="MTC_body2">
+                          Using Fergus on Google Chrome will give you the best experience.
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr><!-- END / 2 COL -->
+            </table>
+            <table align="center" bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" class="mktoModule" id="moduleThreeCol" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;" width="650">
+              <!-- 3 COL -->
+              <tr>
+                <td align="center" class="container" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; width: 88%; padding-left: 6%; padding-right: 6%; color: #0D3753; font-family: 'Lato', sans-serif; font-size: 22px; font-weight: bold; line-height: 130%;" valign="top">
+                  <table align="center" border="0" cellpadding="0" cellspacing="0" style="width: 100%; margin: 0; padding: 0; border-collapse: collapse; border-spacing: 0;">
+                    <tr>
+                      <td align="left" class="col" style="font-size: 15px; font-weight: 400; line-height: 160%; border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; width: 33%; padding-top: 40px; padding-bottom: 40px; padding-right: 15px; color: #627E90; font-family: 'Lato', sans-serif;" valign="top">
+                        <img border="0" class="mktoImg" hspace="0" id="MTHC_image1" style="padding: 0; margin: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; border: none; display: block; width: 100%;" vspace="0"> <b style="color: #0F3752;"></b>
+                        <div class="mktoText" id="MTHC_title1">
+                          <b style="color: #0F3752;">Title</b>
+                        </div><b style="color: #0F3752;"></b><br>
+                        <div class="mktoText" id="MTHC_body1">
+                          Using Fergus on Google Chrome will give you the best experience.
+                        </div>
+                      </td>
+                      <td align="left" class="col" style="font-size: 15px; font-weight: 400; line-height: 160%; border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; width: 33%; padding-top: 40px; padding-bottom: 40px; padding-left: 5px; padding-right: 5px; color: #627E90; font-family: 'Lato', sans-serif;" valign="top">
+                        <img border="0" class="mktoImg" hspace="0" id="MTHC_image2" style="padding: 0; margin: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; border: none; display: block; width: 100%;" vspace="0"> <b style="color: #0F3752;"></b>
+                        <div class="mktoText" id="MTHC_title2">
+                          <b style="color: #0F3752;">Title</b>
+                        </div><b style="color: #0F3752;"></b><br>
+                        <div class="mktoText" id="MTHC_body2">
+                          Using Fergus on Google Chrome will give you the best experience.
+                        </div>
+                      </td>
+                      <td align="left" class="col" style="font-size: 15px; font-weight: 400; line-height: 160%; border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; width: 33%; padding-top: 40px; padding-bottom: 40px; padding-left: 15px; color: #627E90; font-family: 'Lato', sans-serif;" valign="top">
+                        <img border="0" class="mktoImg" hspace="0" id="MTHC_image3" style="padding: 0; margin: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; border: none; display: block; width: 100%;" vspace="0"> <b style="color: #0F3752;"></b>
+                        <div class="mktoText" id="MTHC_title3">
+                          <b style="color: #0F3752;">Title</b>
+                        </div><b style="color: #0F3752;"></b><br>
+                        <div class="mktoText" id="MTHC_body3">
+                          Using Fergus on Google Chrome will give you the best experience.
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr><!-- END / 3 COL -->
+            </table>
+            <table align="center" bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" class="mktoModule" id="moduleCTA" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;" width="650">
+              <!-- CTA -->
+              <tr>
+                <td align="center" class="container" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; width: 88%; padding-top: 60px; padding-bottom: 10px; padding-left: 6%; padding-right: 6%; background-color: #124162; color: #ffffff; font-family: 'Lato', sans-serif; font-size: 24px; font-weight: bold; line-height: 130%;" valign="top">
+                  <div class="mktoText" id="MCTA_title">
+                    Try it free for 30 days
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td align="center" class="container" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; width: 88%; padding-top: 0px; padding-bottom: 30px; padding-left: 6%; padding-right: 6%; background-color: #124162; color: #ffffff; font-family: 'Lato', sans-serif; font-size: 18px; font-weight: normal; line-height: 130%;" valign="top">
+                  <div class="mktoText" id="MCTA_sub">
+                    All from the same place. Forget data entry.
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td align="center" class="container" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; width: 88%; padding-left: 6%; padding-right: 6%; background-color: #124162; color: #0D3753; font-family: 'Lato', sans-serif; font-size: 24px; font-weight: bold; line-height: 130%;" valign="top">
+                  <div>
+                    <!--[if mso]>
+                                              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="${MCTA_btnLink}" style="height:40px;v-text-anchor:middle;width:200px;" arcsize="125%" stroke="f" fillcolor="#00D295">
+                                                  <w:anchorlock/>
+                                                  <center>
+                                              <![endif]-->
+                     <a href="${MCTA_btnLink}" style=" background-color:#00D295; border-radius:50px; color:#ffffff !important; display:inline-block; font-family: sans-serif; font-size:13px; font-weight:bold; line-height:40px; text-align:center; text-decoration:none; width:200px; -webkit-text-size-adjust:none;">${MCTA_btnText}</a> <!--[if mso]>
+                                                  </center>
+                                              </v:roundrect>
+                                          <![endif]-->
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td align="center" class="container" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; width: 88%; padding-left: 6%; padding-right: 6%; padding-top: 30px; background-color: #124162; color: #ffffff; font-family: 'Lato', sans-serif; font-size: 12px; font-weight: normal; line-height: 130%; display: ${MCTA_disclaimer_switch}" valign="top">
+                  <div class="mktoText" id="MCTA_disclaimer">
+                    No credit card required. Try it for 30 days for free.
+                  </div>
+                </td>
+              </tr><!-- END / CTA -->
+              <!-- SPACER -->
+              <tr>
+                <td align="left" bgcolor="#EDF4FB" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; width: 100%; padding-top: 60px; background-color: #124162;" valign="top"></td>
+              </tr><!-- END / SPACER -->
+            </table>
+          </td>
+        </tr>
+        </table><!-- END / MODULE CONTAINER -->
+        <!-- FOOTER -->
+        <table align="center" bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: inherit; max-width: 650px;" width="650">
+        <tr>
+          <td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-top: 40px; padding-bottom: 30px; background-color:#0F3752;" valign="top">
+            <img src="https://info.fergus.com/rs/163-RUO-573/images/fergus-logo-white.png" style="display: block; width: 130px;" width="130">
+          </td>
+        </tr>
+        <tr>
+          <td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; width: 88%; padding-top: 0; padding-bottom: 30px; padding-left: 6%; padding-right: 6%; background-color: #0F3752; color: #ffffff; font-family: 'Lato', sans-serif; font-size: 20px; font-weight: normal; line-height: 130%;" valign="top">
+            All the tools you need. All in one place
+          </td>
+        </tr>
+        <tr>
+          <td align="center" class="container" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; width: 88%; padding-top: 0; padding-bottom: 40px; padding-left: 6%; padding-right: 6%; background-color:#0F3752; font-family: 'Lato', sans-serif; font-size: 13px; font-weight: 400; line-height: 150%; color: #ffffff;" valign="top">
+            65 New North Road, Eden Terrace, Auckland 1021
+          </td>
+        </tr>
+        <tr>
+          <td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-top: 0; padding-bottom: 10px; padding-left: 6%; padding-right: 6%; background-color:#0F3752; width: 88%;" valign="top">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; border-spacing: 0; padding: 0;" width="100">
+              <tr>
+                <!-- ICON 1 -->
+                <td align="center" style="margin: 0; padding: 0; padding-left: 10px; padding-right: 10px; border-collapse: collapse; border-spacing: 0;" valign="middle">
+                  <a href="https://www.facebook.com/fergusapp/" style="text-decoration: none;" target="_blank"><img alt="Facebook" border="0" height="24" hspace="0" src="https://info.fergus.com/rs/163-RUO-573/images/facebook.png" style="padding: 0; margin: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; border: none; display: inline-block; color: #000000;" title="Facebook" vspace="0" width="24"></a>
+                </td><!-- ICON 2 -->
+                <td align="center" style="margin: 0; padding: 0; padding-left: 10px; padding-right: 10px; border-collapse: collapse; border-spacing: 0;" valign="middle">
+                  <a href="https://nz.linkedin.com/company/fergus-software-limited" style="text-decoration: none;" target="_blank"><img alt="Linkedin" border="0" height="24" hspace="0" src="https://info.fergus.com/rs/163-RUO-573/images/linkedin.png" style="padding: 0; margin: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; border: none; display: inline-block; color: #000000;" title="Linkedin" vspace="0" width="24"></a>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" class="container" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; width: 88%; padding-top: 20px; padding-bottom: 40px; padding-left: 6%; padding-right: 6%; background-color:#0F3752; font-family: 'Lato', sans-serif; font-size: 13px; font-weight: 400; line-height: 150%; color: rgba(255,255,255,.5);" valign="top">
+            If you no longer wish to receive these emails, click on the following link: <a href="http://info.fergus.com/UnsubscribePage.html" style="text-decoration: underline; color: #ffffff; font-family: 'Lato', sans-serif; font-size: 13px; font-weight: 400; line-height: 150%;">Unsubscribe</a>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" class="container" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; width: 88%; padding-top: 0; padding-bottom: 40px; padding-left: 6%; padding-right: 6%; background-color:#0F3752; font-family: 'Lato', sans-serif; font-size: 16px; font-weight: 400; line-height: 150%; color: #ffffff;" valign="top">
+            &copy; Fergus
+          </td>
+        </tr>
+        </table><!-- END / FOOTER -->
+
+
+
+		</td>
+	</tr>
+</table>
+<!-- END / MAIN BG -->
+
+</body>
+</html>
