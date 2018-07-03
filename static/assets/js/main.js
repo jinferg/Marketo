@@ -111,8 +111,8 @@ Prism.languages.scss=Prism.languages.extend("css",{comment:{pattern:/(^|[^\\])(?
 
 		let tabClass = this.options.element
     let allTab = document.querySelectorAll(tabClass)
-		let headerClass = '.tab\\/header .tab\\/item'
-    let contentClass = '.tab\\/content .tab\\/item'
+		let headerClass = '.tab\\/header-item'
+    let contentClass = '.tab\\/content-item'
 		let activeClass = 'is-active'
 
 
@@ -658,6 +658,15 @@ $( document ).ready(function() {
 
   $(".js-modal-register").iziModal();
     $(document).on('click', '.js-modal-register-trigger', function (event) {
+      if (this.id == 'pricingBasic') {
+         pricePlanSelected = 9;
+      }
+      else if (this.id == 'pricingEssential') {
+         pricePlanSelected = 10;
+      }
+      else {
+         pricePlanSelected = 11;
+      }
       event.preventDefault();
       $('.js-modal-register').iziModal('open');
   });
@@ -985,13 +994,14 @@ $( document ).ready(function() {
     sendMFCalculator();
     return false;
   });
-
-  $('#js-form-partner').parsley().on('field:validated', function() {
-  })
-  .on('form:submit', function() {
-    sendMFPartner();
-    return false;
-  });
+  if ( $('#js-form-partner').length ) {
+    $('#js-form-partner').parsley().on('field:validated', function() {
+    })
+    .on('form:submit', function() {
+      sendMFPartner();
+      return false;
+    });
+  };
 
 
 
@@ -1022,7 +1032,7 @@ function sendMFRegister() {
         var redirectCountry = $("#register-country").val();
 				var redirectTerms = $("#register-terms").prop('checked');
 				var redirectOptIn = $('#register-optin').prop('checked');
-				location.href = "https://fergusapp.com/public_site/sign_up?email=" + redirectEmail + "&terms=" + redirectTerms + "&opt_in=" + redirectOptIn + "&country=" + redirectCountry;
+				location.href = "https://fergusapp.com/public_site/sign_up?email=" + redirectEmail + "&terms=" + redirectTerms + "&opt_in=" + redirectOptIn + "&country=" + redirectCountry + "&plan_id=" + pricePlanSelected;
         console.log('this was sent with success');
         return false;
       });

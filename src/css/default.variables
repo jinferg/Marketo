@@ -32,8 +32,8 @@ $screens: (
 
 // font size map
 $html-sizes: (
-  $sm: 57.5%,
-  $md: 60%,
+  $sm: 50%,
+  $md: 55%,
   $lg: 62.5%
 ) !default;
 
@@ -42,7 +42,7 @@ TYPOGRAPHY
 ******************************/
 
 $font-family: 'IBM Plex Sans', sans-serif !default;
-$font-size: 1.6rem !default;
+$font-size: 16px !default;
 $line-height: 1.5 !default;
 
 $font-weights: (
@@ -60,7 +60,7 @@ $font-sizes: (
   h4: 2.4rem,
   h5: 2rem,
   h6: 1.8rem,
-  body: 1.6rem,
+  body: 16px,
   tiny: 1.4rem,
   micro: 1.3rem
 ) !default;

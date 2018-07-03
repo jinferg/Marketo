@@ -68,6 +68,7 @@ p:last-child {
 
 
 <meta class="mktoBoolean" id="module-content__title-switch" mktoName="Module - Content Show Title" default="true" false_value="none" true_value="table-row" false_value_name="Hide" true_value_name="Show" mktoModuleScope="true">
+<meta class="mktoBoolean" id="module-cta__subtitle-switch" mktoName="Module - CTA Show Subtitle" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show" mktoModuleScope="true">
 <meta class="mktoBoolean" id="module-cta__disclaimer-switch" mktoName="Module - CTA Show Disclaimer" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show" mktoModuleScope="true">
 
 </head>
@@ -432,7 +433,7 @@ p:last-child {
 												
 												<table align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
 												  <tr>
-												    <td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-top: 20px;">
+												    <td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-top: 40px;">
 												    </td>
 												  </tr>
 												</table>
@@ -441,23 +442,25 @@ p:last-child {
 										</tr>
 									</table>
 
-									<table align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-										<tr>
-											<td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-left: 40px; padding-right: 40px; font-family: 'Theinhardt Web', sans-serif; font-size: 18px; font-weight: 500; line-height: 130%; color: #ffffff;">
-												<div id="module-cta__subtitle" class="mktoText" mktoname="Module - CTA Subtitle">
-			                    All from the same place. Forget data entry.
-			                  </div>
-												
-												<table align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-												  <tr>
-												    <td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-top: 20px;">
-												    </td>
-												  </tr>
-												</table>
-												
-											</td>
-										</tr>
-									</table>
+									<div style="display: ${module-cta__subtitle-switch}">
+										<table align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
+											<tr>
+												<td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-left: 40px; padding-right: 40px; font-family: 'Theinhardt Web', sans-serif; font-size: 18px; font-weight: 500; line-height: 130%; color: #ffffff;">
+													<div id="module-cta__subtitle" class="mktoText" mktoname="Module - CTA Subtitle">
+				                    All from the same place. Forget data entry.
+				                  </div>
+													
+													<table align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
+													  <tr>
+													    <td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-top: 20px;">
+													    </td>
+													  </tr>
+													</table>
+													
+												</td>
+											</tr>
+										</table>
+									</div>
 
 									<table align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
 										<tr>
