@@ -1,822 +1,695 @@
 <!doctype html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
 	<meta name="generator" content="Hugo 0.42.1" />
 
-<meta http-equiv="content-type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0;">
-<meta name="format-detection" content="telephone=no"/>
 
-<style>
-@font-face{
-    font-family: 'Theinhardt Web';
-    src:url(https://fergus.com/assets/fonts/theinhardt/webfonts/Theinhardt-Regular.woff) format("woff");
-    font-weight: 400;
-}
-@font-face{
-    font-family: 'Theinhardt Web';
-    src:url(https://fergus.com/assets/fonts/theinhardt/webfonts/Theinhardt-Medium.woff) format("woff");
-    font-weight: 500;
-}
-@font-face{
-    font-family: 'Theinhardt Web';
-    src:url(https://fergus.com/assets/fonts/theinhardt/webfonts/Theinhardt-Bold.woff) format("woff");
-    font-weight: 600;
-}
+  <meta class="mktoString" id="meta_title" mktoName="Meta - Title" default="Fergus | Quote, estimate and invoice" allowHtml="true">
+  <meta class="mktoString" id="meta_description" mktoName="Meta - Description" default="Description" allowHtml="true">
 
- 
-body {
-	margin: 0;
-	padding: 0;
-	min-width: 100%;
-	width: 100%;
-	height: 100%;
-}
-a {
-	text-decoration: none;
-	color: #0036d0;
-}
-p {
-	margin: 0;
-	margin-bottom: 1em;
-}
-p:last-child {
-	margin-bottom: 0;
-}
-@media all and (max-width: 560px) {
-	.col {
-		display: block !important;
-		width: 100% !important;
-		padding-left: 20px !important;
-		padding-right: 20px !important;
-    margin-bottom: 20px !important;
-    box-sizing: border-box;
-	}
-  .col:last-child {
-  	margin-bottom: 0;
-  }
-	.container {
-
-	}
-	.responsive-image {
-		display: block !important;
-		width: 100% !important;
-		margin-bottom: 30px !important;
-	}
-}
-</style>
+  <title>${meta_title}</title>
 
 
+  <meta charset="utf-8" />
+  <meta name="description" content="${meta_description}">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-<meta class="mktoBoolean" id="module-content__title-switch" mktoName="Module - Content Show Title" default="true" false_value="none" true_value="table-row" false_value_name="Hide" true_value_name="Show" mktoModuleScope="true">
-<meta class="mktoBoolean" id="module-cta__subtitle-switch" mktoName="Module - CTA Show Subtitle" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show" mktoModuleScope="true">
-<meta class="mktoBoolean" id="module-cta__disclaimer-switch" mktoName="Module - CTA Show Disclaimer" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show" mktoModuleScope="true">
+
+  <link rel="icon" type="image/png" href="https://fergus.com/assets/images/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="https://fergus.com/assets/images/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="https://fergus.com/assets/images/favicon-96x96.png" sizes="96x96">
+
+
+  <link rel="stylesheet" href="https://info.fergus.com/rs/163-RUO-573/images/marketo3.css">
+
+
+  <style>
+    .mktoImg.mktoGen {
+      display: block !important;
+    }
+  </style>
+
+
+  <meta class="mktoBoolean" id="hero_switch" mktoName="Hero - Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="heroIMG_switch" mktoName="Hero Image - Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="threeCI_switch" mktoName="Three Col Icon - Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="threeCIMG_switch" mktoName="Three Col Imagae - Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="plainCTA_switch" mktoName="Plain CTA - Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="videoYT_switch" mktoName="Video YouTube - Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="videoVM_switch" mktoName="Video Vimeo - Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="imageLTR_switch" mktoName="Image Left Text Right - Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="form_switch" mktoName="Form - Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="singleCTA_switch" mktoName="Single CTA - Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="testimonial_switch" mktoName="Testimonial - Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="mainCTA_switch" mktoName="Main CTA - Visibility" default="true" true_value="block"  false_value="none" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="footer_switch" mktoName="Footer - Visibility" default="true" true_value="block"  false_value="none" false_value_name="Hide" true_value_name="Show">
+
+
+  <meta class="mktoBoolean" id="margin_toggle" mktoName="Margin - Toggle" default="false" true_value="padding-top: 0 !important" false_value="" false_value_name="Default" true_value_name="None">
+
+
+  <meta class="mktoBoolean" id="hero_title_switch" mktoName="Hero - Title Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="hero_subtitle_switch" mktoName="Hero - Subtitle Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="hero_btn_switch" mktoName="Hero - Button Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="hero_disclaimer_switch" mktoName="Hero - Disclaimer Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="hero_custom_switch" mktoName="Hero - Custom Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoString" id="hero_title" mktoName="Hero - Title" default="Quote, estimate and invoice" allowHtml="true">
+  <meta class="mktoString" id="hero_subtitle" mktoName="Hero - Subtitle" default="All from the same place. Forget data entry." allowHtml="true">
+  <meta class="mktoString" id="hero_btnLink" mktoName="Hero - Button Link" default="https://fergus.com" allowHtml="true">
+  <meta class="mktoString" id="hero_btnText" mktoName="Hero - Button Text" default="Free Trial" allowHtml="true">
+  <meta class="mktoString" id="hero_disclaimer" mktoName="Hero - Disclaimer" default="No credit card required. Try it for 30 days for free." allowHtml="true">
+
+
+  <meta class="mktoString" id="threeCI_introTitle" mktoName="Three Col Icon - Intro Title" default="The nuts and bolts" allowHtml="true">
+  <meta class="mktoString" id="threeCI_introSubtitle" mktoName="Three Col Icon - Intro Subtitle" default="Create detailed quotes, carry out the work and then eliminate double handling by exporting as an invoice." allowHtml="true">
+  <meta class="mktoString" id="threeCI_title1" mktoName="Three Col Icon - Title 1" default="Title 1" allowHtml="true">
+  <meta class="mktoString" id="threeCI_title2" mktoName="Three Col Icon - Title 2" default="Title 2" allowHtml="true">
+  <meta class="mktoString" id="threeCI_title3" mktoName="Three Col Icon - Title 3" default="Title 3" allowHtml="true">
+  <meta class="mktoString" id="threeCI_btnLink" mktoName="Three Col Icon - Button Link" default="https://fergus.com" allowHtml="true">
+  <meta class="mktoString" id="threeCI_btnText" mktoName="Three Col Icon - Button Text" default="Free Trial" allowHtml="true">
+
+
+
+  <meta class="mktoString" id="threeCIMG_introTitle" mktoName="Three Col Image - Intro Title" default="The nuts and bolts" allowHtml="true">
+  <meta class="mktoString" id="threeCIMG_introSubtitle" mktoName="Three Col Image - Intro Subtitle" default="Create detailed quotes, carry out the work and then eliminate double handling by exporting as an invoice." allowHtml="true">
+  <meta class="mktoString" id="threeCIMG_title1" mktoName="Three Col Image - Title 1" default="Title 1" allowHtml="true">
+  <meta class="mktoString" id="threeCIMG_title2" mktoName="Three Col Image - Title 2" default="Title 2" allowHtml="true">
+  <meta class="mktoString" id="threeCIMG_title3" mktoName="Three Col Image - Title 3" default="Title 3" allowHtml="true">
+  <meta class="mktoString" id="threeCIMG_btnLink" mktoName="Three Col Image - Button Link" default="https://fergus.com" allowHtml="true">
+  <meta class="mktoString" id="threeCIMG_btnText" mktoName="Three Col Image - Button Text" default="Free Trial" allowHtml="true">
+
+
+
+  <meta class="mktoString" id="plainCTA_title" mktoName="Plain CTA - Title" default="The nuts and bolts" allowHtml="true">
+  <meta class="mktoString" id="plainCTA_subtitle" mktoName="Plain CTA - Subtitle" default="Create detailed quotes, carry out the work and then eliminate double handling by exporting as an invoice." allowHtml="true">
+  <meta class="mktoString" id="plainCTA_btnLink" mktoName="PlainC TA - Button Link" default="https://fergus.com" allowHtml="true">
+  <meta class="mktoString" id="plainCTA_btnText" mktoName="Plain CTA - Button Text" default="Free Trial" allowHtml="true">
+
+
+
+  <meta class="mktoString" id="videoYT_title" mktoName="Video Youtube - Title" default="The nuts and bolts" allowHtml="true">
+  <meta class="mktoString" id="videoYT_subtitle" mktoName="Video Youtube - Subtitle" default="Create detailed quotes, carry out the work and then eliminate double handling by exporting as an invoice." allowHtml="true">
+  <meta class="mktoString" id="videoYT_link" mktoName="Video Youtube - Link" default="QILiHiTD3uc" allowHtml="true">
+
+
+
+  <meta class="mktoString" id="videoVM_title" mktoName="Video Vimeo - Title" default="The nuts and bolts" allowHtml="true">
+  <meta class="mktoString" id="videoVM_subtitle" mktoName="Video Vimeo - Subtitle" default="Create detailed quotes, carry out the work and then eliminate double handling by exporting as an invoice." allowHtml="true">
+  <meta class="mktoString" id="videoVM_link" mktoName="Video Vimeo - Link" default="268010875" allowHtml="true">
+
+
+
+  <meta class="mktoBoolean" id="imageLTR_btnSwitch" mktoName="Image Left Text Right - Button Switch" default="true" true_value="block"  false_value="none" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoString" id="imageLTR_title" mktoName="Image Left Text Right - Title" default="The nuts and bolts" allowHtml="true">
+  <meta class="mktoString" id="imageLTR_btnLink" mktoName="Image Left Text Right - Button Link" default="https://fergus.com" allowHtml="true">
+  <meta class="mktoString" id="imageLTR_btnText" mktoName="Image Left Text Right - Button Text" default="Free Trial" allowHtml="true">
+
+
+
+  <meta class="mktoString" id="form_title" mktoName="Form - Title" default="Sign up Form" allowHtml="true">
+  <meta class="mktoString" id="form_subtitle" mktoName="Form - Subitle" default="This is an example of a form block for marketo" allowHtml="true">
+  <meta class="mktoBoolean" id="form_disclaimer_switch" mktoName="Form - Disclaimer Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoString" id="form_disclaimer" mktoName="Form - Disclaimer" default="Please note, your email preference settings only apply to Fergus marketing emails. We may still send you operational emails that contain important information relating to Fergus services or your Fergus account." allowHtml="true">
+
+
+
+  <meta class="mktoString" id="singleCTA_btnLink" mktoName="Single CTA - Button Link" default="https://fergus.com" allowHtml="true">
+  <meta class="mktoString" id="singleCTA_btnText" mktoName="Single CTA - Button Text" default="Free Trial" allowHtml="true">
+
+
+
+  <meta class="mktoString" id="testimonial_title" mktoName="Testimonial - Title" default="What our customers have to say..." allowHtml="true">
+  <meta class="mktoString" id="testimonial_subtitle" mktoName="Testimonial - Subitle" default="Create detailed quotes, carry out the work and then eliminate double handling by exporting as an invoice." allowHtml="true">
+
+  <meta class="mktoString" id="testimonial_quote1" mktoName="Testimonial - Quote 1" default="This job app software is amazing! It has cut my office time in half." allowHtml="true">
+  <meta class="mktoString" id="testimonial_name1" mktoName="Testimonial - Name 1" default="Ryan Walker" allowHtml="true">
+  <meta class="mktoString" id="testimonial_company1" mktoName="Testimonial - Company 1" default="Owner, Three Ducks Solutions Ltd." allowHtml="true">
+
+  <meta class="mktoString" id="testimonial_quote2" mktoName="Testimonial - Quote 2" default="This job app software is amazing! It has cut my office time in half." allowHtml="true">
+  <meta class="mktoString" id="testimonial_name2" mktoName="Testimonial - Name 2" default="Ryan Walker" allowHtml="true">
+  <meta class="mktoString" id="testimonial_company2" mktoName="Testimonial - Company 2" default="Owner, Three Ducks Solutions Ltd." allowHtml="true">
+
+  <meta class="mktoString" id="testimonial_quote3" mktoName="Testimonial - Quote 3" default="This job app software is amazing! It has cut my office time in half." allowHtml="true">
+  <meta class="mktoString" id="testimonial_name3" mktoName="Testimonial - Name 3" default="Ryan Walker" allowHtml="true">
+  <meta class="mktoString" id="testimonial_company3" mktoName="Testimonial - Company 3" default="Owner, Three Ducks Solutions Ltd." allowHtml="true">
+
+  <meta class="mktoString" id="testimonial_quote4" mktoName="Testimonial - Quote 4" default="This job app software is amazing! It has cut my office time in half." allowHtml="true">
+  <meta class="mktoString" id="testimonial_name4" mktoName="Testimonial - Name 4" default="Ryan Walker" allowHtml="true">
+  <meta class="mktoString" id="testimonial_company4" mktoName="Testimonial - Company 4" default="Owner, Three Ducks Solutions Ltd." allowHtml="true">
+
+
+
+  <meta class="mktoBoolean" id="mainCTA_logoSwitch" mktoName="Main CTA - Logo Visibility" default="true" true_value="block"  false_value="none" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoString" id="mainCTA_title" mktoName="Main CTA - Title" default="Try it free for 30 days" allowHtml="true">
+  <meta class="mktoString" id="mainCTA_subtitle" mktoName="Main CTA - Subitle" default="All from the same place. Forget data entry." allowHtml="true">
+  <meta class="mktoString" id="mainCTA_disclaimer" mktoName="Main CTA - Disclaimer" default="No credit card required. Try it for 30 days for free." allowHtml="true">
+  <meta class="mktoString" id="mainCTA_btnLink" mktoName="Main CTA - Button Link" default="https://fergus.com" allowHtml="true">
+  <meta class="mktoString" id="mainCTA_btnText" mktoName="Main CTA - Button Text" default="Free Trial" allowHtml="true">
+
+	<!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PPBLX5N');</script>
+  <!-- End Google Tag Manager -->
 
 </head>
+<body>
 
+<div class="fill:primary padding-top:8vh ">
 
-<body topmargin="0" rightmargin="0" bottommargin="0" leftmargin="0" marginwidth="0" marginheight="0" width="100%" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; width: 100%; height: 100%; -webkit-font-smoothing: antialiased; text-size-adjust: 100%; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; line-height: 100%; background-color: #001547;">
-
-
-<table width="100%" align="center" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; width: 100%;">
-	<tr>
-		<td align="center" valign="top" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0;" bgcolor="#001547">
-
-			
-<table id="module-padding-20" class="mktoModule" mktoname="Padding 20" align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-  <tr>
-    <td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-top: 20px;">
-    </td>
-  </tr>
-</table>
+  <header class="padding-bottom:3">
+    <div class="wrap align:center">
+      <a href="https://fergus.com" class="margin:auto display:inline-block">
+        <img src="https://fergus.com/assets/images/fergus-horizontal-white@2x.png" width="150" style="display: block; width: 170px;">
+      </a>
+    </div>
+  </header>
 
 
 
-			
-			<table align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-				<tr>
-					<td align="center" valign="top" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0;">
-						<a href="{{system.viewAsWebpageLink}}" target="_blank" style="font-family: 'Theinhardt Web', sans-serif; font-size: 13px; color: #ffdd24; text-decoration: none;">View this email in your browser</a>
-					</td>
-				</tr>
-			</table>
-			
+  <section class="color:white" style="display: ${hero_switch};">
+    <div class="wrap">
+      <div class="row padding-bottom:5vh">
+        <div class="column align:center">
+          <h1 class="font font-size:h2 font-size-sm:h1 color:white weight:semi-bold margin-bottom:1" style="display: ${hero_title_switch};">
+            ${hero_title}
+          </h1>
+          <h3 class="font font-size:h5 font-weight:regular margin-bottom:5 color:white" style="display: ${hero_subtitle_switch};">
+            ${hero_subtitle}
+          </h3>
+          <div style="display: ${hero_btn_switch};">
+            <a href="${hero_btnLink}" class="button button-grow:2 fill:yellow color:secondary">
+              ${hero_btnText}
+            </a>
+          </div>
+          <p class="font font-size:tiny margin-top:2" style="display: ${hero_disclaimer_switch};">
+            ${hero_disclaimer}
+          </p>
 
-			
-<table id="module-padding-60" class="mktoModule" mktoname="Padding 60" align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-  <tr>
-    <td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-top: 60px;">
-    </td>
-  </tr>
-</table>
+          <div style="display: ${hero_custom_switch};">
+            <div class="mktoText" id="hero_custom" mktoName="Hero - Custom">
+              CUSTOM CONTENT
+            </div>
+          </div>
 
-
-			
-<table id="module-logo-white" class="mktoModule" mktoname="Module - Logo White" align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-  <tr>
-    <td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0;">
-      <img src="https://fergus.com/assets/images/fergus-horizontal-white@2x.png" width="150" style="display: block; width: 150px;">
-    </td>
-  </tr>
-</table>
-
-
-			
-<table id="module-padding-40" class="mktoModule" mktoname="Padding 40" align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-  <tr>
-    <td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-top: 40px;">
-    </td>
-  </tr>
-</table>
-
-
-			
-<table id="module-h1-white" class="mktoModule" mktoname="Module - H1 White" align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-  <tr>
-    <td align="center" class="container" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-left: 20px; padding-right: 20px; font-family: 'Theinhardt Web', sans-serif; font-size: 32px; font-weight: 600; line-height: 130%; color: #ffffff;">
-      <div class="mktoText" id="module-h1-white__title" mktoname="Module - H1 Title">
-        Quote, estimate and invoice
+        </div>
       </div>
-    </td>
-  </tr>
-</table>
+    </div>
+  </section>
 
-
-			
-<table id="module-padding-20" class="mktoModule" mktoname="Padding 20" align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-  <tr>
-    <td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-top: 20px;">
-    </td>
-  </tr>
-</table>
-
-
-			
-<table id="module-h2-white" class="mktoModule" align="center" mktoname="Module - H2 White" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-  <tr>
-    <td align="center" class="container" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-left: 20px; padding-right: 20px; color: #ffffff; font-family: 'Theinhardt Web', sans-serif; font-size: 18px; font-weight: normal; line-height: 130%;" valign="top">
-      <div class="mktoText" id="module-h2-white__title" mktoname="Module - H2 Title">
-        All from the same place. Forget data entry.
+  <section class="" style="display: ${heroIMG_switch}; ${margin_toggle};">
+    <div class="wrap">
+      <div class="row">
+        <div class="column max-width:90 margin:auto">
+          <img class="mktoImg" id="hero_image" mktoName="Hero - Image" src="https://placehold.it/800x400" class="image">
+        </div>
       </div>
-    </td>
-  </tr>
-</table>
-
-
-			
-<table id="module-padding-60" class="mktoModule" mktoname="Padding 60" align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-  <tr>
-    <td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-top: 60px;">
-    </td>
-  </tr>
-</table>
-
-
-
-			
-			<table align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px; background-color: white">
-			  <tr>
-			    <td align="center" class="mktoContainer" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0;">
-
-						
-<table id="module-padding-60" class="mktoModule" mktoname="Padding 60" align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-  <tr>
-    <td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-top: 60px;">
-    </td>
-  </tr>
-</table>
-
-
-
-						
-						<table id="module-logo-white" class="mktoModule" align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-							<tr>
-								<td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0;">
-									<img src="https://fergus.com/assets/images/fergus-horizontal@2x.png" width="150" style="display: block; width: 150px;">
-								</td>
-							</tr>
-						</table>
-						
-
-						
-<table id="module-padding-20" class="mktoModule" mktoname="Padding 20" align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-  <tr>
-    <td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-top: 20px;">
-    </td>
-  </tr>
-</table>
-
-
-
-						
-						<table id="module-h1" class="mktoModule" align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-							<tr>
-								<td align="center" class="container" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-left: 20px; padding-right: 20px; font-family: 'Theinhardt Web', sans-serif; font-size: 32px; font-weight: 600; line-height: 130%; color: #001547;">
-									<div id="module-h1__title" class="mktoText">
-										Quote, estimate and invoice
-									</div>
-								</td>
-							</tr>
-						</table>
-						
-
-						
-<table id="module-padding-20" class="mktoModule" mktoname="Padding 20" align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-  <tr>
-    <td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-top: 20px;">
-    </td>
-  </tr>
-</table>
-
-
-
-						
-						<table id="module-h2" class="mktoModule" align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-							<tr>
-								<td align="center" class="container" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-left: 20px; padding-right: 20px; font-family: 'Theinhardt Web', sans-serif; font-size: 18px; font-weight: 400; line-height: 130%; color: #001547;">
-									<div id="module-h2__title" class="mktoText">
-										All from the same place. Forget data entry.
-									</div>
-								</td>
-							</tr>
-						</table>
-						
-
-						
-<table id="module-padding-60" class="mktoModule" mktoname="Padding 60" align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-  <tr>
-    <td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-top: 60px;">
-    </td>
-  </tr>
-</table>
-
-
-
-						
-						<table id="module-content" class="mktoModule" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px; background-color:#ebeff7">
-							<tr>
-								<td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0;">
-
-									
-									<table align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-									  <tr>
-									    <td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-top: 40px;">
-									    </td>
-									  </tr>
-									</table>
-									
-
-									<table align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px; display: ${module-content__title-switch}">
-										<tr>
-											<td style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-left: 40px; padding-right: 40px; font-family: 'Theinhardt Web', sans-serif; font-size: 22px; font-weight: 600; line-height: 130%; color: #001547;">
-												<div id="module-content__title" class="mktoText">
-			                    Welcome Name
-			                  </div>
-												
-												<table align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-												  <tr>
-												    <td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-top: 20px;">
-												    </td>
-												  </tr>
-												</table>
-												
-											</td>
-										</tr>
-
-										<tr>
-			               <td style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-left: 40px; padding-right: 40px; font-family: 'Theinhardt Web', sans-serif; font-size: 15px; font-weight: 400; line-height: 24px; color: #545e75; ">
-			                  <div id="module-content__body" class="mktoText">
-			                    Praesent sed diam fermentum, lobortis est non, vehicula sapien. Duis pretium ligula sed nibh varius porta. Vivamus vel augue ornare, tincidunt mauris eget, egestas urna. Fusce rutrum eleifend mauris, sit amet rhoncus augue aliquam quis. Donec feugiat ex quis mattis convallis. Proin sollicitudin tincidunt quam sit amet porta. Vivamus pretium cursus risus, non dignissim neque ullamcorper a.
-			                  </div>
-			                </td>
-			              </tr>
-									</table>
-
-									
-									<table align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-									  <tr>
-									    <td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-top: 40px;">
-									    </td>
-									  </tr>
-									</table>
-									
-
-								</td>
-							</tr>
-						</table>
-						
-
-						
-<table id="module-padding-40" class="mktoModule" mktoname="Padding 40" align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-  <tr>
-    <td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-top: 40px;">
-    </td>
-  </tr>
-</table>
-
-
-
-						
-						<table id="module-h2" class="mktoModule" align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-							<tr>
-								<td align="center" class="container" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-left: 20px; padding-right: 20px; font-family: 'Theinhardt Web', sans-serif; font-size: 18px; font-weight: 600; line-height: 130%; color: #001547;">
-									<div id="module-h2__title" class="mktoText">
-										Start your free trial
-									</div>
-								</td>
-							</tr>
-						</table>
-						
-
-						
-<table id="module-padding-20" class="mktoModule" mktoname="Padding 20" align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-  <tr>
-    <td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-top: 20px;">
-    </td>
-  </tr>
-</table>
-
-
-
-						
-						<table id="module-button" class="mktoModule" align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-							<tr>
-								<td align="center" class="container" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-left: 20px; padding-right: 20px;">
-									<a href="${module-button-link}" style=" background-color: #0036d0; border-radius: 5px; color: #ffdd24; display: inline-block; font-family: 'Theinhardt Web', sans-serif; font-size: 12px; font-weight: 600; line-height: 50px; text-align: center; text-decoration: none; text-transform: uppercase; width: 220px; -webkit-text-size-adjust: none;">${module-button-text}</a>
-								</td>
-							</tr>
-						</table>
-						
-
-						
-<table id="module-padding-40" class="mktoModule" mktoname="Padding 40" align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-  <tr>
-    <td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-top: 40px;">
-    </td>
-  </tr>
-</table>
-
-
-
-						
-						<table id="module-line" class="mktoModule" align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-							<tr>
-								<td align="center" class="container" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-left: 40px; padding-right: 40px;">
-									<hr align="center" noshade="" size="1" width="100%" style="margin: 0; padding: 0; border-color: #e5e6e8;" >
-								</td>
-							</tr>
-						</table>
-						
-
-						
-<table id="module-padding-40" class="mktoModule" mktoname="Padding 40" align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-  <tr>
-    <td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-top: 40px;">
-    </td>
-  </tr>
-</table>
-
-
-
-						
-						<table id="module-h2" class="mktoModule" align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-							<tr>
-								<td align="center" class="container" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-left: 20px; padding-right: 20px; font-family: 'Theinhardt Web', sans-serif; font-size: 18px; font-weight: 600; line-height: 130%; color: #001547;">
-									<div id="module-h2__title" class="mktoText">
-										Intro title goes here
-									</div>
-								</td>
-							</tr>
-						</table>
-						
-
-						
-<table id="module-padding-20" class="mktoModule" mktoname="Padding 20" align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-  <tr>
-    <td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-top: 20px;">
-    </td>
-  </tr>
-</table>
-
-
-
-						
-						<table id="module-p" class="mktoModule" align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-							<tr>
-								<td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-left: 60px; padding-right: 60px; font-family: 'Theinhardt Web', sans-serif; font-size: 15px; font-weight: 400; line-height: 24px; color: #545e75; ">
-									<div id="module-p__body" class="mktoText">
-										Praesent sed diam fermentum, lobortis est non, vehicula sapien. Duis pretium ligula sed nibh varius porta.
-									</div>
-								</td>
-							</tr>
-						</table>
-						
-
-						
-<table id="module-padding-40" class="mktoModule" mktoname="Padding 40" align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-  <tr>
-    <td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-top: 40px;">
-    </td>
-  </tr>
-</table>
-
-
-
-						
-						<table id="module-line" class="mktoModule" align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-							<tr>
-								<td align="center" class="container" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-left: 40px; padding-right: 40px;">
-									<hr align="center" noshade="" size="1" width="100%" style="margin: 0; padding: 0; border-color: #e5e6e8;" >
-								</td>
-							</tr>
-						</table>
-						
-
-						
-<table id="module-padding-40" class="mktoModule" mktoname="Padding 40" align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-  <tr>
-    <td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-top: 40px;">
-    </td>
-  </tr>
-</table>
-
-
-
-						
-						<table id="module-image-text" class="mktoModule" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-							<tr>
-								<td class="col" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; width: 50%; padding-left: 40px; padding-right: 20px;">
-									<img id="module-image-text__image" class="mktoImg responsive-image" src="http://via.placeholder.com/800x500" hspace="0" border="0" style="padding: 0; margin: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; border: none; display: block; width: 100%; border-radius: 5px;">
-								</td>
-								<td class="col" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; width: 50%; padding-left: 20px; padding-right: 40px;">
-									<div class="mktoText" id="module-image-text__title" style="font-family: 'Theinhardt Web', sans-serif; font-size: 18px; font-weight: 600; line-height: 130%; color: #001547;">
-			            	Title
-			            </div><br>
-			            <div class="mktoText" id="module-image-text__body" style="font-family: 'Theinhardt Web', sans-serif; font-size: 15px; font-weight: 400; line-height: 24px; color: #545e75">
-			              Tested on the most popular email clients for web, desktop and mobile. Checklist included.
-			            </div>
-								</td>
-							</tr>
-						</table>
-						
-
-						
-<table id="module-padding-40" class="mktoModule" mktoname="Padding 40" align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-  <tr>
-    <td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-top: 40px;">
-    </td>
-  </tr>
-</table>
-
-
-
-						
-						<table id="module-two-col" class="mktoModule" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-							<tr>
-								<td class="col" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; width: 50%; padding-left: 40px; padding-right: 20px;">
-									<div id="module-two-col__image-a" class="mktoImg">
-										<a>
-											<img class="responsive-image" src="http://via.placeholder.com/800x500" hspace="0" border="0" style="padding: 0; margin: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; border: none; display: block; width: 100%; margin-bottom: 20px; border-radius: 5px;">
-										</a>
-									</div>
-									<div class="mktoText" id="module-two-col__title-a" style="font-family: 'Theinhardt Web', sans-serif; font-size: 18px; font-weight: 600; line-height: 130%; color: #001547;">
-			            	Title
-			            </div><br>
-			            <div class="mktoText" id="module-two-col__body-a" style="font-family: 'Theinhardt Web', sans-serif; font-size: 15px; font-weight: 400; line-height: 24px; color: #545e75">
-			              Tested on the most popular email clients for web, desktop and mobile. Checklist included.
-			            </div>
-								</td>
-								<td class="col" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; width: 50%; padding-left: 20px; padding-right: 40px;">
-									<div id="module-two-col__image-b" class="mktoImg">
-										<a>
-											<img class="responsive-image" src="http://via.placeholder.com/800x500" hspace="0" border="0" style="padding: 0; margin: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; border: none; display: block; width: 100%; margin-bottom: 20px; border-radius: 5px;">
-										</a>
-									</div>
-
-
-									<div class="mktoText" id="module-two-col__title-b" style="font-family: 'Theinhardt Web', sans-serif; font-size: 18px; font-weight: 600; line-height: 130%; color: #001547;">
-			            	Title
-			            </div><br>
-			            <div class="mktoText" id="module-two-col__body-b" style="font-family: 'Theinhardt Web', sans-serif; font-size: 15px; font-weight: 400; line-height: 24px; color: #545e75">
-			              Tested on the most popular email clients for web, desktop and mobile. Checklist included.
-			            </div>
-								</td>
-							</tr>
-						</table>
-						
-
-						
-<table id="module-padding-40" class="mktoModule" mktoname="Padding 40" align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-  <tr>
-    <td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-top: 40px;">
-    </td>
-  </tr>
-</table>
-
-
-
-						
-						<table id="module-three-col" class="mktoModule" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-							<tr>
-								<td class="col" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; width: 33%; padding-left: 40px; padding-right: 0px;">
-									<div id="module-three-col__image-a" class="mktoImg">
-										<a>
-											<img class="responsive-image" src="http://via.placeholder.com/800x500" hspace="0" border="0" style="padding: 0; margin: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; border: none; display: block; width: 100%; margin-bottom: 20px; border-radius: 5px;">
-										</a>
-									</div>
-									<div class="mktoText" id="module-three-col__title-a" style="font-family: 'Theinhardt Web', sans-serif; font-size: 18px; font-weight: 600; line-height: 130%; color: #001547;">
-			            	Title
-			            </div><br>
-			            <div class="mktoText" id="module-three-col__body-a" style="font-family: 'Theinhardt Web', sans-serif; font-size: 15px; font-weight: 400; line-height: 24px; color: #545e75">
-			              Tested on the most popular email clients for web, desktop and mobile. Checklist included.
-			            </div>
-								</td>
-								<td class="col" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; width: 33%; padding-left: 20px; padding-right: 20px;">
-									<div id="module-three-col__image-b" class="mktoImg">
-										<a>
-											<img class="responsive-image" src="http://via.placeholder.com/800x500" hspace="0" border="0" style="padding: 0; margin: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; border: none; display: block; width: 100%; margin-bottom: 20px; border-radius: 5px;">
-										</a>
-									</div>
-									<div class="mktoText" id="module-three-col__title-b" style="font-family: 'Theinhardt Web', sans-serif; font-size: 18px; font-weight: 600; line-height: 130%; color: #001547;">
-			            	Title
-			            </div><br>
-			            <div class="mktoText" id="module-three-col__body-b" style="font-family: 'Theinhardt Web', sans-serif; font-size: 15px; font-weight: 400; line-height: 24px; color: #545e75">
-			              Tested on the most popular email clients for web, desktop and mobile. Checklist included.
-			            </div>
-								</td>
-								<td class="col" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; width: 33%; padding-left: 0px; padding-right: 40px;">
-									<div id="module-three-col__image-c" class="mktoImg">
-										<a>
-											<img class="responsive-image" src="http://via.placeholder.com/800x500" hspace="0" border="0" style="padding: 0; margin: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; border: none; display: block; width: 100%; margin-bottom: 20px; border-radius: 5px;">
-										</a>
-									</div>
-
-
-									<div class="mktoText" id="module-three-col__title-c" style="font-family: 'Theinhardt Web', sans-serif; font-size: 18px; font-weight: 600; line-height: 130%; color: #001547;">
-			            	Title
-			            </div><br>
-			            <div class="mktoText" id="module-three-col__body-c" style="font-family: 'Theinhardt Web', sans-serif; font-size: 15px; font-weight: 400; line-height: 24px; color: #545e75">
-			              Tested on the most popular email clients for web, desktop and mobile. Checklist included.
-			            </div>
-								</td>
-							</tr>
-						</table>
-						
-
-
-						
-<table id="module-padding-60" class="mktoModule" mktoname="Padding 60" align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-  <tr>
-    <td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-top: 60px;">
-    </td>
-  </tr>
-</table>
-
-
-
-						
-						<table id="module-cta" class="mktoModule" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px; background-color:#0036d0">
-							<tr>
-								<td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0;">
-
-									
-									<table align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-									  <tr>
-									    <td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-top: 60px;">
-									    </td>
-									  </tr>
-									</table>
-									
-
-									<table align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-										<tr>
-											<td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-left: 40px; padding-right: 40px; font-family: 'Theinhardt Web', sans-serif; font-size: 22px; font-weight: 600; line-height: 130%; color: #ffffff;">
-												<div id="module-cta__title" class="mktoText">
-			                    Try it free for 30 days
-			                  </div>
-												
-												<table align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-												  <tr>
-												    <td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-top: 20px;">
-												    </td>
-												  </tr>
-												</table>
-												
-											</td>
-										</tr>
-									</table>
-
-									<table align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-										<tr>
-											<td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-left: 40px; padding-right: 40px; font-family: 'Theinhardt Web', sans-serif; font-size: 18px; font-weight: 500; line-height: 130%; color: #ffffff;">
-												<div id="module-cta__subtitle" class="mktoText">
-			                    All from the same place. Forget data entry.
-			                  </div>
-												
-												<table align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-												  <tr>
-												    <td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-top: 20px;">
-												    </td>
-												  </tr>
-												</table>
-												
-											</td>
-										</tr>
-									</table>
-
-									
-<table id="module-padding-20" class="mktoModule" mktoname="Padding 20" align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-  <tr>
-    <td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-top: 20px;">
-    </td>
-  </tr>
-</table>
-
-
-
-									
-									<table id="module-button" class="mktoModule" align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-										<tr>
-											<td align="center" class="container" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-left: 20px; padding-right: 20px;">
-												<a href="${module-button-link}" style=" background-color: #ffdd24; border-radius: 5px; color: #ff5600; display: inline-block; font-family: 'Theinhardt Web', sans-serif; font-size: 12px; font-weight: 600; line-height: 50px; text-align: center; text-decoration: none; text-transform: uppercase; width: 220px; -webkit-text-size-adjust: none;">${module-button-text}</a>
-											</td>
-										</tr>
-									</table>
-									
-
-									<table align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px; display: ${module-cta__disclaimer-switch}">
-										<tr>
-											<td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-left: 40px; padding-right: 40px; font-family: 'Theinhardt Web', sans-serif; font-size: 13px; font-weight: 400; line-height: 130%; color: #ffffff;">
-
-												
-												<table align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-												  <tr>
-												    <td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-top: 40px;">
-												    </td>
-												  </tr>
-												</table>
-												
-
-												<div id="module-cta__disclaimer" class="mktoText">
-			                    No credit card required. Try it for 30 days for free.
-			                  </div>
-											</td>
-										</tr>
-									</table>
-
-									
-									<table align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-									  <tr>
-									    <td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-top: 60px;">
-									    </td>
-									  </tr>
-									</table>
-									
-
-								</td>
-							</tr>
-						</table>
-						
-
-					</td>
-				</tr>
-			</table>
-			
-
-			
-			<table id="module-footer" class="mktoModule" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-				<tr>
-					<td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0;">
-
-						
-						<table align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-							<tr>
-								<td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-top: 60px;">
-								</td>
-							</tr>
-						</table>
-						
-
-						
-						<table align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-						  <tr>
-						    <td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0;">
-						      <img src="https://fergus.com/assets/images/fergus-horizontal-white@2x.png" width="150" style="display: block; width: 150px;">
-						    </td>
-						  </tr>
-						</table>
-						
-
-						
-						<table align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-							<tr>
-								<td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-top: 20px;">
-								</td>
-							</tr>
-						</table>
-						
-
-						<table align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-							<tr>
-								<td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-left: 40px; padding-right: 40px; font-family: 'Theinhardt Web', sans-serif; font-size: 18px; font-weight: 500; line-height: 130%; color: #ffffff;">
-									<div id="module-cta__subtitle" class="mktoText">
-										Everything you need. All in one place.
-									</div>
-								</td>
-							</tr>
-						</table>
-
-						
-						<table align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-							<tr>
-								<td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-top: 20px;">
-								</td>
-							</tr>
-						</table>
-						
-
-						<table align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-							<tr>
-								<td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-left: 40px; padding-right: 40px; font-family: 'Theinhardt Web', sans-serif; font-size: 13px; font-weight: 500; line-height: 130%; color: #ffffff;">
-									65 New North Road, Eden Terrace, Auckland 1021
-								</td>
-							</tr>
-						</table>
-
-						
-						<table align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-							<tr>
-								<td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-top: 20px;">
-								</td>
-							</tr>
-						</table>
-						
-
-						<table align="center" border="0" cellpadding="0" cellspacing="0" width="100" style="border-collapse: collapse; border-spacing: 0; padding: 0;">
-              <tr>
-                
-                <td align="center" style="margin: 0; padding: 0; padding-left: 10px; padding-right: 10px; border-collapse: collapse; border-spacing: 0;" valign="middle">
-                  <a href="https://www.facebook.com/fergusapp/" style="text-decoration: none;" target="_blank"><img alt="Facebook" border="0" height="24" hspace="0" src="https://info.fergus.com/rs/163-RUO-573/images/facebook.png" style="padding: 0; margin: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; border: none; display: inline-block; color: #000000;" title="Facebook" vspace="0" width="24"></a>
-                </td>
-                <td align="center" style="margin: 0; padding: 0; padding-left: 10px; padding-right: 10px; border-collapse: collapse; border-spacing: 0;" valign="middle">
-                  <a href="https://nz.linkedin.com/company/fergus-software-limited" style="text-decoration: none;" target="_blank"><img alt="Linkedin" border="0" height="24" hspace="0" src="https://info.fergus.com/rs/163-RUO-573/images/linkedin.png" style="padding: 0; margin: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; border: none; display: inline-block; color: #000000;" title="Linkedin" vspace="0" width="24"></a>
-                </td>
-              </tr>
-            </table>
-
-						
-						<table align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-							<tr>
-								<td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-top: 60px;">
-								</td>
-							</tr>
-						</table>
-						
-
-						<table align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0;">
-							<tr>
-			          <td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-left: 40px; padding-right: 40px; font-family: 'Theinhardt Web', sans-serif; font-size: 13px; font-weight: 500; line-height: 130%; color: #ffffff;">
-			            <span style="color: rgba(255,255,255,.5);">If you no longer wish to receive these emails, click on the following link:</span> <a href="https://info.fergus.com/UnsubscribePage.html" style="text-decoration: underline; color: #ffffff; font-family: 'Theinhardt Web', sans-serif; font-size: 13px; font-weight: 400; line-height: 150%;">Unsubscribe</a>
-			          </td>
-			        </tr>
-						</table>
-
-						
-						<table align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-							<tr>
-								<td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-top: 60px;">
-								</td>
-							</tr>
-						</table>
-						
-
-						<table align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0;">
-							<tr>
-			          <td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-left: 40px; padding-right: 40px; font-family: 'Theinhardt Web', sans-serif; font-size: 16px; font-weight: 500; line-height: 130%; color: #ffffff;">
-									&copy; Fergus
-			          </td>
-			        </tr>
-						</table>
-
-						
-						<table align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="border-collapse: collapse; border-spacing: 0; padding: 0; width: 100%; max-width: 650px;">
-							<tr>
-								<td align="center" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-top: 60px;">
-								</td>
-							</tr>
-						</table>
-						
-
-					</td>
-				</tr>
-			</table>
-			
-
-
-		</td>
-	</tr>
-</table>
-
+    </div>
+  </section>
+</div>
+
+
+
+
+
+
+
+
+<section class="padding-y:10vh border-bottom" style="display: ${threeCI_switch}; ${margin_toggle};">
+  <div class="wrap">
+
+    <div class="row">
+      <div class="column align:center">
+        <h1 class="font font-size:h2 font-size-sm:h1 margin-bottom:1">
+          ${threeCI_introTitle}
+        </h1>
+        <h4 class="font font-weight:medium margin-bottom:4">
+          ${threeCI_introSubtitle}
+        </h4>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column max-width:100 margin:auto">
+        <div class="row row-gutter:2 margin-bottom:2">
+          <div class="column:12 column-sm:4 padding-y:5">
+            <img class="mktoImg image image-shape:round image-size:3 fill:background-focus margin-bottom:2" id="threeCI_image1" mktoName="Three Col Icon - Image 1">
+            <h4 class="font margin-bottom:2">
+              ${threeCI_title1}
+            </h4>
+            <div class="mktoText" id="threeCI_body1" mktoName="Body 1">
+              Optionally add default text for the editable text area.
+            </div>
+          </div>
+
+          <div class="column:12 column-sm:4 padding-y:5">
+            <img class="mktoImg image image-shape:round image-size:3 fill:background-focus margin-bottom:2" id="threeCI_image2" mktoName="Three Col Icon - Image 2">
+            <h4 class="font margin-bottom:2">
+              ${threeCI_title2}
+            </h4>
+            <div class="mktoText" id="threeCI_body2" mktoName="Body 2">
+              Optionally add default text for the editable text area.
+            </div>
+          </div>
+
+          <div class="column:12 column-sm:4 padding-y:5">
+            <img class="mktoImg image image-shape:round image-size:3 fill:background-focus margin-bottom:2" id="threeCI_image3" mktoName="Three Col Icon - Image 3">
+            <h4 class="font margin-bottom:2">
+              ${threeCI_title3}
+            </h4>
+            <div class="mktoText" id="threeCI_body3" mktoName="Body 3">
+              Optionally add default text for the editable text area.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column align:center">
+        <a href="${threeCI_btnLink}" class="button color:yellow button-grow:2">
+          ${threeCI_btnText}
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<section class="padding-y:10vh border-bottom" style="display: ${threeCIMG_switch}; ${margin_toggle};">
+  <div class="wrap">
+
+    <div class="row">
+      <div class="column align:center">
+        <h1 class="font font-size:h2 font-size-sm:h1">
+          ${threeCIMG_introTitle}
+        </h1>
+        <h4 class="font font-weight:medium margin-bottom:4">
+          ${threeCIMG_introSubtitle}
+        </h4>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column max-width:100 margin:auto">
+        <div class="row row-gutter:2 margin-bottom:2">
+          <div class="column:12 column-sm:4 padding-y:5">
+            <img class="mktoImg s-img u-pad-bottom-2vh" id="threeCIMG_image1" mktoName="Three Col Icon - Image 1">
+            <h4 class="font margin-bottom:2">
+              ${threeCIMG_title1}
+            </h4>
+            <div class="mktoText" id="threeCIMG_body1" mktoName="Body 1">
+              Optionally add default text for the editable text area.
+            </div>
+          </div>
+
+          <div class="column:12 column-sm:4 padding-y:5">
+            <img class="mktoImg s-img u-pad-bottom-2vh" id="threeCIMG_image2" mktoName="Three Col Icon - Image 2">
+            <h4 class="font margin-bottom:2">
+              ${threeCIMG_title2}
+            </h4>
+            <div class="mktoText" id="threeCIMG_body2" mktoName="Body 2">
+              Optionally add default text for the editable text area.
+            </div>
+          </div>
+
+          <div class="column:12 column-sm:4 padding-y:5">
+            <img class="mktoImg s-img u-pad-bottom-2vh" id="threeCIMG_image3" mktoName="Three Col Icon - Image 3">
+            <h4 class="font margin-bottom:2">
+              ${threeCIMG_title3}
+            </h4>
+            <div class="mktoText" id="threeCIMG_body3" mktoName="Body 3">
+              Optionally add default text for the editable text area.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column align:center">
+        <a href="${threeCIMG_btnLink}" class="button color:yellow button-grow:2">
+          ${threeCIMG_btnText}
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+<section class="padding-y:10vh border-bottom" style="display: ${plainCTA_switch}; ${margin_toggle};">
+  <div class="wrap">
+
+    <div class="row align:center">
+      <div class="column -w-16">
+        <h1 class="font font-size:h2 font-size-sm:h1 margin-bottom:2">
+          ${plainCTA_title}
+        </h1>
+        <h4 class="font font-weight:medium margin-bottom:4">
+          ${plainCTA_subtitle}
+        </h4>
+        <a href="${plainCTA_btnLink}" class="button color:yellow button-grow:2">
+          ${plainCTA_btnText}
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+<section class="padding-y:10vh border-bottom" style="display: ${videoYT_switch};">
+  <div class="wrap align:center">
+    <h1 class="font font-size:h2 font-size-sm:h1 margin-bottom:2">
+      ${videoYT_title}
+    </h1>
+    <h4 class="font font-weight:medium margin-bottom:4">
+      ${videoYT_subtitle}
+    </h4>
+    <div class="row">
+      <div class="column max-width:100 margin:auto">
+        <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed/${videoYT_link}' frameborder='0' allowfullscreen></iframe></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="padding-y:10vh border-bottom" style="display: ${videoVM_switch};">
+  <div class="wrap align:center">
+    <h1 class="font font-size:h2 font-size-sm:h1 margin-bottom:2">
+      ${videoVM_title}
+    </h1>
+    <h4 class="font font-weight:medium margin-bottom:4">
+      ${videoVM_subtitle}
+    </h4>
+    <div class="row">
+      <div class="column max-width:100 margin:auto">
+        <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://player.vimeo.com/video/${videoVM_link}' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+<section class="padding-y:10vh border-bottom" style="display: ${imageLTR_switch}; ${margin_toggle};">
+  <div class="wrap">
+
+    <div class="row">
+      <div class="column max-width:100 margin:auto">
+
+        <div class="row row-gutter:2 row-gutter-sm:5">
+          <div class="column:12 column-sm:6 margin-bottom:2">
+            <img src="http://via.placeholder.com/800x500" class="mktoImg image" id="imageLTR_image" mktoName="Image Left Text Right - Image">
+          </div>
+          <div class="column:12 column-sm:6">
+            <h4 class="font margin-bottom:2">
+              ${imageLTR_title}
+            </h4>
+            <div class="mktoText margin-bottom:3" id="imageLTR_body" mktoName="Body">
+              Optionally add default text for the editable text area.
+            </div>
+            <div style="display: ${imageLTR_btnSwitch};">
+              <a href="${imageLTR_btnLink}" class="button color:yellow button-grow:1">
+                ${imageLTR_btnText}
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="padding-y:10vh border-bottom" style="display: ${form_switch}; ${margin_toggle};">
+  <div class="wrap">
+
+    <div class="row">
+      <div class="column max-width:100 margin:auto">
+        <h1 class="font font-size:h2 font-size-sm:h1 margin-bottom:2 align:center">
+          ${form_title}
+        </h1>
+        <h4 class="font font-weight:medium margin-bottom:4 align:center">
+          ${form_subtitle}
+        </h4>
+        <div class="card">
+          <div class="card/content">
+            <div class="mktoForm form" id="exampleForm" mktoName="Marketo Form">
+            </div>
+          </div>
+        </div>
+        <p class="margin-top:3 align:center" style="display: ${form_disclaimer_switch};">
+          ${form_disclaimer}
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="padding-y:5vh border-bottom" style="display: ${singleCTA_switch}; ${margin_toggle};">
+  <div class="wrap">
+
+    <div class="row">
+      <div class="column max-width:100 margin:auto align:center">
+
+        <a href="${singleCTA_btnLink}" class="button color:yellow button-grow:2">
+          ${singleCTA_btnText}
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="padding-y:5vh border-bottom" style="display: ${testimonial_switch}; ${margin_toggle};">
+  <div class="wrap">
+
+    <div class="row align-content:center">
+      <div class="column max-width:100">
+        <h1 class="font font-size:h2 font-size-sm:h1 margin-bottom:2 align:center">
+          ${testimonial_title}
+        </h1>
+        <h4 class="font font-weight:medium margin-bottom:4 align:center">
+          ${testimonial_subtitle}
+        </h4>
+
+        <div class="row">
+          <div class="column -w-16 -t-16 -d-14 -v-14 -center">
+            <div class="row row-gutter:2 u-pad-bottom-tight u-align-center">
+              <div class="column -w-16 -t-8 -d-4 u-pad-y-3vh">
+                <i class="fas fa-star u-color-yellow"></i>
+                <i class="fas fa-star u-color-yellow"></i>
+                <i class="fas fa-star u-color-yellow"></i>
+                <i class="fas fa-star u-color-yellow"></i>
+                <i class="fas fa-star u-color-yellow"></i>
+                <p class="font -h4 -tight weight:semi-bold margin-top:2">
+                  “${testimonial_quote1}”
+                </p>
+
+                <p class="font -h6">
+                  <strong>${testimonial_name1}</strong><br />
+                  ${testimonial_company1}
+                </p>
+              </div>
+
+              <div class="column -w-16 -t-8 -d-4 u-pad-y-3vh">
+                <i class="fas fa-star u-color-yellow"></i>
+                <i class="fas fa-star u-color-yellow"></i>
+                <i class="fas fa-star u-color-yellow"></i>
+                <i class="fas fa-star u-color-yellow"></i>
+                <i class="fas fa-star u-color-yellow"></i>
+                <p class="font -h4 -tight weight:semi-bold margin-top:2">
+                  “${testimonial_quote2}”
+                </p>
+                <p class="font -h6">
+                  <strong>${testimonial_name2}</strong><br />
+                  ${testimonial_company2}
+                </p>
+              </div>
+
+              <div class="column -w-16 -t-8 -d-4 u-pad-y-3vh">
+                <i class="fas fa-star u-color-yellow"></i>
+                <i class="fas fa-star u-color-yellow"></i>
+                <i class="fas fa-star u-color-yellow"></i>
+                <i class="fas fa-star u-color-yellow"></i>
+                <i class="fas fa-star u-color-yellow"></i>
+                <p class="font -h4 -tight weight:semi-bold margin-top:2">
+                  “${testimonial_quote3}”
+                </p>
+                <p class="font -h6">
+                  <strong>${testimonial_name3}</strong><br />
+                  ${testimonial_company3}
+                </p>
+              </div>
+
+              <div class="column -w-16 -t-8 -d-4 u-pad-y-3vh">
+                <i class="fas fa-star u-color-yellow"></i>
+                <i class="fas fa-star u-color-yellow"></i>
+                <i class="fas fa-star u-color-yellow"></i>
+                <i class="fas fa-star u-color-yellow"></i>
+                <i class="fas fa-star u-color-yellow"></i>
+                <p class="font -h4 -tight weight:semi-bold margin-top:2">
+                  “${testimonial_quote4}”
+                </p>
+                <p class="font -h6">
+                  <strong>${testimonial_name4}</strong><br />
+                  ${testimonial_company4}
+                </p>
+              </div>
+
+            </div>
+
+            <img src="https://info.fergus.com/rs/163-RUO-573/images/capterra-logo.png" class="s-img" style="display: block; width: 100%; max-width: 180px; margin: auto;" />
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<section class=" u-pad-y-5vh u-color-white" style="display: ${mainCTA_switch};">
+  <div class="wrap">
+
+    <div class="row">
+      <div class="column -w-16 -t-12 -d-11 -center u-align-center">
+        <img src="https://info.fergus.com/rs/163-RUO-573/images/fergus-logo-white.svg" class="s-img -footer u-marg-bottom u-marg-auto" style="display: ${mainCTA_logoSwitch};" />
+        <h1 class="font font-size:h3 font-size-sm:h1 color:white weight:semi-bold -xtight">
+          ${mainCTA_title}
+        </h1>
+        <h3 class="font -h4 -medium -tight">
+          ${mainCTA_subtitle}
+        </h3>
+        <a href="${mainCTA_btnLink}" class="s-btn -round -accent -broad -small">
+          ${mainCTA_btnText}
+        </a>
+        <p class="font -h6 margin-top:2">
+          ${mainCTA_disclaimer}
+        </p>
+
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class=" -brand u-pad-y-5vh u-color-white" style="display: ${footer_switch};">
+  <div class="wrap">
+
+    <div class="row">
+      <div class="column -w-16 -t-5 u-pad-y-xtight">
+        <img src="https://info.fergus.com/rs/163-RUO-573/images/fergus-logo-white.svg" class="s-img -footer" />
+      </div>
+      <div class="column -w-16 -t-10">
+        <div class="row">
+          <div class="column -w-16 -t-1-3 -d-1-3 u-pad-y-tight">
+            <ul class="m-list -tight -footer -footer">
+              <li class="m-list__item">
+                <h4 class="font u-color-white weight:semi-bold -tight">Features</h4>
+              </li>
+              <li class="m-list__item">
+                <a href="https://fergus.com/en/features-overview/track-manage-jobs">Job Tracking</a>
+              </li>
+              <li class="m-list__item">
+                <a href="https://fergus.com/en/features-overview/team-management">Team Management</a>
+              </li>
+              <li class="m-list__item">
+                <a href="https://fergus.com/en/features-overview/quoting">Quoting</a>
+              </li>
+              <li class="m-list__item">
+                <a href="https://fergus.com/en/features-overview/job-scheduler">Scheduling</a>
+              </li>
+              <li class="m-list__item">
+                <a href="https://fergus.com/en/features-overview/on-the-job">On the job</a>
+              </li>
+              <li class="m-list__item">
+                <a href="https://fergus.com/en/features-overview/invoicing">Invoicing</a>
+              </li>
+              <li class="m-list__item">
+                <a href="https://fergus.com/en/features-overview/reporting">Reporting</a>
+              </li>
+              <li class="m-list__item">
+                <a href="https://fergus.com/en/features-overview/integrations">Integrations</a>
+              </li>
+            </ul>
+          </div>
+          <div class="column -w-16 -t-1-3 -d-1-3 u-pad-y-tight">
+            <ul class="m-list -tight -footer">
+              <li class="m-list__item">
+                <h4 class="font u-color-white weight:semi-bold -tight">How we help</h4>
+              </li>
+              <li class="m-list__item">
+                <a href="https://fergus.com/en/plumbing">Plumbers</a>
+              </li>
+              <li class="m-list__item">
+                <a href="https://fergus.com/en/electrical">Electricians</a>
+              </li>
+              <li class="m-list__item">
+                <a href="https://fergus.com/en/services">Service Industry</a>
+              </li>
+              <li class="m-list__item">
+                <a href="https://fergus.com/en/other-trades">More</a>
+              </li>
+            </ul>
+          </div>
+          <div class="column -w-16 -t-1-3 -d-1-3 u-pad-y-tight">
+            <ul class="m-list -tight -footer">
+              <li class="m-list__item">
+                <h4 class="font u-color-white weight:semi-bold -tight">Resources</h4>
+              </li>
+              <li class="m-list__item">
+                <a href="https://fergus.com/en/about">About us</a>
+              </li>
+              <li class="m-list__item">
+                <a href="https://fergus.com/en/pricing">Pricing</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="font -h5 u-color-white u-pad-top-5vh">
+      © Fergus
+    </p>
+  </div>
+</section>
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script src="https://info.fergus.com/rs/163-RUO-573/images/main.js"></script>
 
 </body>
 </html>

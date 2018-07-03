@@ -1,0 +1,31 @@
+/************************************************************
+FLOAT
+************************************************************/
+
+.float{
+
+	&\:none {
+		float: none !important;
+	}
+	&\:left {
+		float: left !important;
+	}
+	&\:right {
+		float: right !important;
+	}
+	@each $key, $value in $screens {
+		&-#{$key} {
+			@media (min-width : #{$value}) {
+				&\:none {
+					float: none !important;
+				}
+				&\:left {
+					float: left !important;
+				}
+				&\:right {
+					float: right !important;
+				}
+			}
+		}
+	}
+}

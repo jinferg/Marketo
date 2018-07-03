@@ -1,0 +1,96 @@
+/************************************************************
+ACCORDION
+************************************************************/
+
+:root {
+  --accordion-fill: var(--white);
+  --accordion-header-padding: var(--u1) var(--u2);
+  --accordion-content-fill: var(--background-focus);
+  --accordion-body-padding: var(--u2);
+  --accordion-transition: var(--transition);
+  --accordion-arrow-fill: var(--black);
+}
+
+.accordion {
+  margin: 0;
+  background: var(--accordion-fill);
+  border-radius: var(--radius);
+  box-shadow: 0px 0px 0px 1px var(--border-color);
+
+  /******************************
+  ITEM
+  ******************************/
+
+  &\/item {
+    border-top: var(--border);
+    &:first-child {
+      border: 0;
+    }
+    &.is-active {
+      .accordion\/body {
+        opacity: 1;
+      }
+      .accordion\/arrow {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  /******************************
+  CHILD ELEMENTS
+  ******************************/
+
+  &\/header {
+    position: relative;
+    display: flex;
+    margin: 0;
+    padding: var(--accordion-header-padding);
+    list-style: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &\/body {
+    padding: var(--accordion-body-padding);
+    opacity: 0;
+    transition: var(--accordion-transition);
+  }
+
+  &\/content {
+    max-height: 0;
+    margin: 0;
+    background-color: var(--accordion-content-fill);
+    overflow: hidden;
+    transition: var(--accordion-transition);
+  }
+
+  &\/arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 4rem;
+    transition: var(--accordion-transition);
+    transform-origin: center center;
+    &:before {
+      display: block;
+      position: relative;
+      top: 4px;
+      content: '';
+      height: 0;
+    	width: 0;
+    	border: solid transparent;
+    	border-color: transparent;
+    	border-top-color: var(--accordion-arrow-fill);
+    	border-width: 6px;
+    }
+  }
+
+}

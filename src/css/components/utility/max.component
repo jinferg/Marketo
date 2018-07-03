@@ -1,0 +1,46 @@
+/************************************************************
+MAX
+************************************************************/
+
+.max {
+
+  &-width {
+    @for $i from 1 through 10 {
+      &\:#{$i}0 {
+        max-width: $i * 10rem !important;
+      }
+    }
+  }
+  &-height {
+    @for $i from 1 through 10 {
+      &\:#{$i}0 {
+        max-height: $i * 10rem !important;
+      }
+    }
+  }
+
+  @each $key, $value in $screens {
+    &-width {
+      &-#{$key} {
+        @media (min-width: $value) {
+          @for $i from 1 through 10 {
+            &\:#{$i}0 {
+              max-width: $i * 10rem !important;
+            }
+          }
+        }
+      }
+    }
+    &-height {
+      &-#{$key} {
+        @media (min-width: $value) {
+          @for $i from 1 through 10 {
+            &\:#{$i}0 {
+              max-height: $i * 10rem !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

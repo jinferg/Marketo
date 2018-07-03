@@ -1,0 +1,64 @@
+/************************************************************
+MENU
+************************************************************/
+
+:root {
+  --menu-height: var(--u6);
+  --menu-border: var(--border);
+
+  --menu-mobile-radius: var(--radius);
+  --menu-mobile-shadow: 0px 5px 5px 0px rgba(0,60,200,0.1);;
+  --menu-mobile-bg: #f6f8fb;
+}
+
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: var(--menu-height);
+  margin:0;
+  padding: 0;
+  background: white;
+
+  /******************************
+  CHILD ELEMENTS
+  ******************************/
+
+  &\/content {
+    display: flex;
+    margin:0;
+    padding: 0;
+    &:first-child {
+      flex-grow: 1;
+      &:last-child {
+        justify-content: flex-start;
+      }
+    }
+    &:last-child {
+      flex-grow: 1;
+      justify-content: flex-end;
+    }
+  }
+
+  &\/item {
+    display: flex;
+    flex: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    padding-left: var(--u2);
+    padding-right: var(--u2);
+    transition: all .2s ease;
+    color: var(--black);
+    text-decoration: none;
+    &\:hover {
+      &:hover {
+        background-color: var(--background-focus);
+      }
+    }
+    &.is-active {
+      box-shadow: inset 0px -2px 0px 0px var(--primary);
+    }
+  }
+}

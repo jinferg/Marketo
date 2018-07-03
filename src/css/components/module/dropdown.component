@@ -1,0 +1,154 @@
+/************************************************************
+DROPDOWN
+************************************************************/
+
+:root {
+  --dropdown-body-fill: var(--white);
+  --dropdown-body-radius: var(--radius);
+  --dropdown-body-shadow: 0px 0px 0px 1px var(--border-color);
+
+  --dropdown-item-padding: var(--u0) var(--u1);
+  --dropdown-item-color: var(--black);
+  --dropdown-item-hover-fill: var(--background-focus);
+  --dropdown-item-active-fill: var(--background-focus);
+  --dropdown-item-hover-color: var(--black);
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+
+  &.is-active {
+    .dropdown\/content {
+      visibility: visible;
+      opacity: 1;
+      margin-top: 10px;
+    }
+    &.dropdown-direction {
+      &\:top, &\:top-right, &\:top-center {
+        .dropdown\/content {
+          margin-top: auto;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  /******************************
+  DIRECTION
+  ******************************/
+
+  &-direction {
+    &\:center {
+      .dropdown\/content {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    &\:top {
+      .dropdown\/arrow {
+        &:before {
+          transform: translateY(-11px) rotate(45deg);
+        }
+    	}
+      .dropdown\/content {
+        top: auto;
+        bottom: calc(100% + 0);
+        &:before {
+          display: none;
+        }
+      }
+      &-center {
+        .dropdown\/arrow {
+          &:before {
+            transform: translateY(-11px) rotate(45deg);
+          }
+      	}
+        .dropdown\/content {
+          top: auto;
+          bottom: calc(100% + 0);
+          left: 50%;
+          transform: translateX(-50%);
+          &:before {
+            display: none;
+          }
+        }
+      }
+      &-right {
+        .dropdown\/content {
+          top: auto;
+          right: 0;
+          bottom: calc(100% + 0);
+          &:before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  /******************************
+  CHILD ELEMENTS
+  ******************************/
+
+  &\/toggle {
+    cursor: pointer;
+  }
+  &\/arrow {
+    position: relative;
+    margin: auto;
+    height: 18px;
+    overflow: hidden;
+    z-index: 2;
+    &:before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 20px;
+      margin: auto;
+      border-radius: 3px;
+      background: white;
+      transform: translateY(9px) rotate(45deg);
+      border: var(--border);
+    }
+	}
+  &\/content {
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    margin: 0;
+    min-width: 12em;
+    padding: 0;
+    transition: var(--transition);
+    opacity: 0;
+    z-index: 99;
+    &:before {
+      display: block;
+      content: '';
+      position: absolute;
+      top: -10px;
+      height: 10px;
+      width: 100%;
+    }
+  }
+  &\/body {
+    background: var(--dropdown-body-fill);
+    border-radius: var(--dropdown-body-radius);
+    box-shadow: var(--dropdown-body-shadow);
+    overflow: hidden;
+  }
+  &\/item {
+    display: block;
+    padding: var(--dropdown-item-padding);
+    color: inherit;
+    transition: var(--transition);
+    &:hover {
+      background: var(--dropdown-item-hover-fill);
+      color: inherit;
+      text-decoration: none;
+    }
+    &:active {
+      background: var(--dropdown-item-active-fill);
+    }
+  }
+}

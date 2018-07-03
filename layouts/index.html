@@ -18,9 +18,13 @@
   <link rel="icon" type="image/png" href="https://fergus.com/assets/images/favicon-32x32.png" sizes="32x32">
   <link rel="icon" type="image/png" href="https://fergus.com/assets/images/favicon-96x96.png" sizes="96x96">
 
+  <!-- Font Awesome 5 -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/solid.css" integrity="sha384-TbilV5Lbhlwdyc4RuIV/JhD8NR+BfMrvz4BL5QFa2we1hQu6wvREr3v6XSRfCTRp" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/fontawesome.css" integrity="sha384-ozJwkrqb90Oa3ZNb+yKFW2lToAWYdTiF1vt8JiH5ptTGHTGcN7qdoR1F95e0kYyG" crossorigin="anonymous">
+
   <!-- Styles -->
-  <!-- <link rel="stylesheet" href="https://info.fergus.com/rs/163-RUO-573/images/marketo.css"> -->
-  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="https://info.fergus.com/rs/163-RUO-573/images/marketo3.css">
+  <!-- <link rel="stylesheet" href="/assets/css/main.css"> -->
 
   <style>
     .mktoImg.mktoGen {
@@ -30,9 +34,8 @@
 
   <!-- SECTION SWITCHES -->
   <meta class="mktoBoolean" id="hero_switch" mktoName="Hero - Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
-  <meta class="mktoBoolean" id="heroIMG_switch" mktoName="Hero Image - Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
-  <meta class="mktoBoolean" id="threeCI_switch" mktoName="Three Col Icon - Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
-  <meta class="mktoBoolean" id="threeCIMG_switch" mktoName="Three Col Imagae - Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="threeCol_switch" mktoName="Three Col - Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
+
   <meta class="mktoBoolean" id="plainCTA_switch" mktoName="Plain CTA - Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
   <meta class="mktoBoolean" id="videoYT_switch" mktoName="Video YouTube - Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
   <meta class="mktoBoolean" id="videoVM_switch" mktoName="Video Vimeo - Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
@@ -43,107 +46,19 @@
   <meta class="mktoBoolean" id="mainCTA_switch" mktoName="Main CTA - Visibility" default="true" true_value="block"  false_value="none" false_value_name="Hide" true_value_name="Show">
   <meta class="mktoBoolean" id="footer_switch" mktoName="Footer - Visibility" default="true" true_value="block"  false_value="none" false_value_name="Hide" true_value_name="Show">
 
-  <!-- MASTER SWITCHES -->
-  <meta class="mktoBoolean" id="margin_toggle" mktoName="Margin - Toggle" default="false" true_value="padding-top: 0 !important" false_value="" false_value_name="Default" true_value_name="None">
-
-  <!-- HERO -->
-  <meta class="mktoBoolean" id="hero_title_switch" mktoName="Hero - Title Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
-  <meta class="mktoBoolean" id="hero_subtitle_switch" mktoName="Hero - Subtitle Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
-  <meta class="mktoBoolean" id="hero_btn_switch" mktoName="Hero - Button Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
-  <meta class="mktoBoolean" id="hero_disclaimer_switch" mktoName="Hero - Disclaimer Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
-  <meta class="mktoBoolean" id="hero_custom_switch" mktoName="Hero - Custom Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
-  <meta class="mktoString" id="hero_title" mktoName="Hero - Title" default="Quote, estimate and invoice" allowHtml="true">
-  <meta class="mktoString" id="hero_subtitle" mktoName="Hero - Subtitle" default="All from the same place. Forget data entry." allowHtml="true">
-  <meta class="mktoString" id="hero_btnLink" mktoName="Hero - Button Link" default="https://fergus.com" allowHtml="true">
-  <meta class="mktoString" id="hero_btnText" mktoName="Hero - Button Text" default="Free Trial" allowHtml="true">
-  <meta class="mktoString" id="hero_disclaimer" mktoName="Hero - Disclaimer" default="No credit card required. Try it for 30 days for free." allowHtml="true">
-
-  <!-- THREE COL ICON -->
-  <meta class="mktoString" id="threeCI_introTitle" mktoName="Three Col Icon - Intro Title" default="The nuts and bolts" allowHtml="true">
-  <meta class="mktoString" id="threeCI_introSubtitle" mktoName="Three Col Icon - Intro Subtitle" default="Create detailed quotes, carry out the work and then eliminate double handling by exporting as an invoice." allowHtml="true">
-  <meta class="mktoString" id="threeCI_title1" mktoName="Three Col Icon - Title 1" default="Title 1" allowHtml="true">
-  <meta class="mktoString" id="threeCI_title2" mktoName="Three Col Icon - Title 2" default="Title 2" allowHtml="true">
-  <meta class="mktoString" id="threeCI_title3" mktoName="Three Col Icon - Title 3" default="Title 3" allowHtml="true">
-  <meta class="mktoString" id="threeCI_btnLink" mktoName="Three Col Icon - Button Link" default="https://fergus.com" allowHtml="true">
-  <meta class="mktoString" id="threeCI_btnText" mktoName="Three Col Icon - Button Text" default="Free Trial" allowHtml="true">
-
-
-  <!-- THREE COL IMAGE -->
-  <meta class="mktoString" id="threeCIMG_introTitle" mktoName="Three Col Image - Intro Title" default="The nuts and bolts" allowHtml="true">
-  <meta class="mktoString" id="threeCIMG_introSubtitle" mktoName="Three Col Image - Intro Subtitle" default="Create detailed quotes, carry out the work and then eliminate double handling by exporting as an invoice." allowHtml="true">
-  <meta class="mktoString" id="threeCIMG_title1" mktoName="Three Col Image - Title 1" default="Title 1" allowHtml="true">
-  <meta class="mktoString" id="threeCIMG_title2" mktoName="Three Col Image - Title 2" default="Title 2" allowHtml="true">
-  <meta class="mktoString" id="threeCIMG_title3" mktoName="Three Col Image - Title 3" default="Title 3" allowHtml="true">
-  <meta class="mktoString" id="threeCIMG_btnLink" mktoName="Three Col Image - Button Link" default="https://fergus.com" allowHtml="true">
-  <meta class="mktoString" id="threeCIMG_btnText" mktoName="Three Col Image - Button Text" default="Free Trial" allowHtml="true">
-
-
-  <!-- PLAIN CTA -->
-  <meta class="mktoString" id="plainCTA_title" mktoName="Plain CTA - Title" default="The nuts and bolts" allowHtml="true">
-  <meta class="mktoString" id="plainCTA_subtitle" mktoName="Plain CTA - Subtitle" default="Create detailed quotes, carry out the work and then eliminate double handling by exporting as an invoice." allowHtml="true">
-  <meta class="mktoString" id="plainCTA_btnLink" mktoName="PlainC TA - Button Link" default="https://fergus.com" allowHtml="true">
-  <meta class="mktoString" id="plainCTA_btnText" mktoName="Plain CTA - Button Text" default="Free Trial" allowHtml="true">
-
-
   <!-- VIDEO YOUTUBE -->
-  <meta class="mktoString" id="videoYT_title" mktoName="Video Youtube - Title" default="The nuts and bolts" allowHtml="true">
-  <meta class="mktoString" id="videoYT_subtitle" mktoName="Video Youtube - Subtitle" default="Create detailed quotes, carry out the work and then eliminate double handling by exporting as an invoice." allowHtml="true">
   <meta class="mktoString" id="videoYT_link" mktoName="Video Youtube - Link" default="QILiHiTD3uc" allowHtml="true">
 
-
   <!-- VIDEO VIMEO -->
-  <meta class="mktoString" id="videoVM_title" mktoName="Video Vimeo - Title" default="The nuts and bolts" allowHtml="true">
-  <meta class="mktoString" id="videoVM_subtitle" mktoName="Video Vimeo - Subtitle" default="Create detailed quotes, carry out the work and then eliminate double handling by exporting as an invoice." allowHtml="true">
   <meta class="mktoString" id="videoVM_link" mktoName="Video Vimeo - Link" default="268010875" allowHtml="true">
 
-
-  <!-- IMAGE LEFT TEXT RIGHT -->
-  <meta class="mktoBoolean" id="imageLTR_btnSwitch" mktoName="Image Left Text Right - Button Switch" default="true" true_value="block"  false_value="none" false_value_name="Hide" true_value_name="Show">
-  <meta class="mktoString" id="imageLTR_title" mktoName="Image Left Text Right - Title" default="The nuts and bolts" allowHtml="true">
-  <meta class="mktoString" id="imageLTR_btnLink" mktoName="Image Left Text Right - Button Link" default="https://fergus.com" allowHtml="true">
-  <meta class="mktoString" id="imageLTR_btnText" mktoName="Image Left Text Right - Button Text" default="Free Trial" allowHtml="true">
-
-
-  <!-- FORM -->
-  <meta class="mktoString" id="form_title" mktoName="Form - Title" default="Sign up Form" allowHtml="true">
-  <meta class="mktoString" id="form_subtitle" mktoName="Form - Subitle" default="This is an example of a form block for marketo" allowHtml="true">
-  <meta class="mktoBoolean" id="form_disclaimer_switch" mktoName="Form - Disclaimer Visibility" default="true" true_value="block" false_value="none" false_value_name="Hide" true_value_name="Show">
-  <meta class="mktoString" id="form_disclaimer" mktoName="Form - Disclaimer" default="Please note, your email preference settings only apply to Fergus marketing emails. We may still send you operational emails that contain important information relating to Fergus services or your Fergus account." allowHtml="true">
-
-
-  <!-- SINGLE CTA -->
-  <meta class="mktoString" id="singleCTA_btnLink" mktoName="Single CTA - Button Link" default="https://fergus.com" allowHtml="true">
-  <meta class="mktoString" id="singleCTA_btnText" mktoName="Single CTA - Button Text" default="Free Trial" allowHtml="true">
-
-
-  <!-- TESTIMONIAL -->
-  <meta class="mktoString" id="testimonial_title" mktoName="Testimonial - Title" default="What our customers have to say..." allowHtml="true">
-  <meta class="mktoString" id="testimonial_subtitle" mktoName="Testimonial - Subitle" default="Create detailed quotes, carry out the work and then eliminate double handling by exporting as an invoice." allowHtml="true">
-
-  <meta class="mktoString" id="testimonial_quote1" mktoName="Testimonial - Quote 1" default="This job app software is amazing! It has cut my office time in half." allowHtml="true">
-  <meta class="mktoString" id="testimonial_name1" mktoName="Testimonial - Name 1" default="Ryan Walker" allowHtml="true">
-  <meta class="mktoString" id="testimonial_company1" mktoName="Testimonial - Company 1" default="Owner, Three Ducks Solutions Ltd." allowHtml="true">
-
-  <meta class="mktoString" id="testimonial_quote2" mktoName="Testimonial - Quote 2" default="This job app software is amazing! It has cut my office time in half." allowHtml="true">
-  <meta class="mktoString" id="testimonial_name2" mktoName="Testimonial - Name 2" default="Ryan Walker" allowHtml="true">
-  <meta class="mktoString" id="testimonial_company2" mktoName="Testimonial - Company 2" default="Owner, Three Ducks Solutions Ltd." allowHtml="true">
-
-  <meta class="mktoString" id="testimonial_quote3" mktoName="Testimonial - Quote 3" default="This job app software is amazing! It has cut my office time in half." allowHtml="true">
-  <meta class="mktoString" id="testimonial_name3" mktoName="Testimonial - Name 3" default="Ryan Walker" allowHtml="true">
-  <meta class="mktoString" id="testimonial_company3" mktoName="Testimonial - Company 3" default="Owner, Three Ducks Solutions Ltd." allowHtml="true">
-
-  <meta class="mktoString" id="testimonial_quote4" mktoName="Testimonial - Quote 4" default="This job app software is amazing! It has cut my office time in half." allowHtml="true">
-  <meta class="mktoString" id="testimonial_name4" mktoName="Testimonial - Name 4" default="Ryan Walker" allowHtml="true">
-  <meta class="mktoString" id="testimonial_company4" mktoName="Testimonial - Company 4" default="Owner, Three Ducks Solutions Ltd." allowHtml="true">
-
-
-  <!-- MAIN CTA -->
-  <meta class="mktoBoolean" id="mainCTA_logoSwitch" mktoName="Main CTA - Logo Visibility" default="true" true_value="block"  false_value="none" false_value_name="Hide" true_value_name="Show">
-  <meta class="mktoString" id="mainCTA_title" mktoName="Main CTA - Title" default="Try it free for 30 days" allowHtml="true">
-  <meta class="mktoString" id="mainCTA_subtitle" mktoName="Main CTA - Subitle" default="All from the same place. Forget data entry." allowHtml="true">
-  <meta class="mktoString" id="mainCTA_disclaimer" mktoName="Main CTA - Disclaimer" default="No credit card required. Try it for 30 days for free." allowHtml="true">
-  <meta class="mktoString" id="mainCTA_btnLink" mktoName="Main CTA - Button Link" default="https://fergus.com" allowHtml="true">
-  <meta class="mktoString" id="mainCTA_btnText" mktoName="Main CTA - Button Text" default="Free Trial" allowHtml="true">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PPBLX5N');</script>
+  <!-- End Google Tag Manager -->
 
 </head>
 <body>
@@ -164,25 +79,20 @@
     <div class="wrap">
       <div class="row padding-bottom:5vh">
         <div class="column align:center">
-          <h1 class="font font-size:h2 font-size-sm:h1 color:white weight:semi-bold margin-bottom:1" style="display: ${hero_title_switch};">
-            ${hero_title}
-          </h1>
-          <h3 class="font font-size:h5 font-weight:regular margin-bottom:5 color:white" style="display: ${hero_subtitle_switch};">
-            ${hero_subtitle}
-          </h3>
-          <div style="display: ${hero_btn_switch};">
-            <a href="${hero_btnLink}" class="button button-grow:2 fill:yellow color:secondary">
-              ${hero_btnText}
-            </a>
-          </div>
-          <p class="font font-size:tiny margin-top:2" style="display: ${hero_disclaimer_switch};">
-            ${hero_disclaimer}
-          </p>
 
-          <div style="display: ${hero_custom_switch};">
-            <div class="mktoText" id="hero_custom" mktoName="Hero - Custom">
-              CUSTOM CONTENT
-            </div>
+          <div class="mktoText" id="hero_content" mktoName="Hero Content">
+            <h1 class="font font-size:h2 font-size-sm:h1 color:white weight:semi-bold margin-bottom:1">
+              Quote, estimate and invoice
+            </h1>
+            <h5 class="font font-weight:regular margin-bottom:5 color:white">
+              All from the same place. Forget data entry.
+            </h5>
+            <a href="#" class="button button-grow:2 fill:yellow color:secondary">
+              Start Free Trial
+            </a>
+            <p class="font font-size:tiny margin-top:2" style="display: ${hero_disclaimer_switch};">
+              No credit card required. Try it for 30 days for free.
+            </p>
           </div>
 
         </div>
@@ -190,11 +100,11 @@
     </div>
   </section>
 
-  <section class="" style="display: ${heroIMG_switch}; ${margin_toggle};">
+  <section class="" style="display: ${heroIMG_switch};">
     <div class="wrap">
       <div class="row">
         <div class="column max-width:90 margin:auto">
-          <img class="mktoImg" id="hero_image" mktoName="Hero - Image" src="https://placehold.it/800x400" class="image">
+          <img class="mktoImg image image:fluid" id="hero_image" mktoName="Hero - Image" src="https://picsum.photos/1000/500">
         </div>
       </div>
     </div>
@@ -208,17 +118,19 @@
 
 
 
-<section class="padding-y:10vh border-bottom" style="display: ${threeCI_switch}; ${margin_toggle};">
+<section class="padding-y:8vh border-bottom" style="display: ${threeCol_switch};">
   <div class="wrap">
 
     <div class="row">
       <div class="column align:center">
-        <h1 class="font font-size:h2 font-size-sm:h1 margin-bottom:1">
-          ${threeCI_introTitle}
-        </h1>
-        <h4 class="font font-weight:medium margin-bottom:4">
-          ${threeCI_introSubtitle}
-        </h4>
+        <div class="mktoText" id="threeCol_intro" mktoName="Three Col Icon - Intro">
+          <h1 class="font font-size:h2 font-size-sm:h1 margin-bottom:1">
+            The nuts and bolts
+          </h1>
+          <h5 class="font font-weight:regular margin-bottom:4 max-width:70 margin:auto">
+            Create detailed quotes, carry out the work and then eliminate double handling by exporting as an invoice.
+          </h5>
+        </div>
       </div>
     </div>
 
@@ -226,43 +138,45 @@
       <div class="column max-width:100 margin:auto">
         <div class="row row-gutter:2 margin-bottom:2">
           <div class="column:12 column-sm:4 padding-y:5">
-            <img class="mktoImg image image-shape:round image-size:3 fill:background-focus margin-bottom:2" id="threeCI_image1" mktoName="Three Col Icon - Image 1">
-            <h4 class="font margin-bottom:2">
-              ${threeCI_title1}
-            </h4>
-            <div class="mktoText" id="threeCI_body1" mktoName="Body 1">
-              Optionally add default text for the editable text area.
+
+            <div class="mktoText" id="threeCol_content1" mktoName="Three Col Icon - Content 1">
+              <img src="https://picsum.photos/200/200" class="image image-shape:round image-size:3 fill:background-focus margin-bottom:2">
+              <h5 class="font margin-bottom:2">
+                Quick Quotes
+              </h5>
+              <p>
+                Load CSV price files from suppliers directly into Fergus, group materials used for specific jobs and track multiple quote versions.
+              </p>
+              <a href="#">Learn more</a>
             </div>
           </div>
 
           <div class="column:12 column-sm:4 padding-y:5">
-            <img class="mktoImg image image-shape:round image-size:3 fill:background-focus margin-bottom:2" id="threeCI_image2" mktoName="Three Col Icon - Image 2">
-            <h4 class="font margin-bottom:2">
-              ${threeCI_title2}
-            </h4>
-            <div class="mktoText" id="threeCI_body2" mktoName="Body 2">
-              Optionally add default text for the editable text area.
+            <div class="mktoText" id="threeCol_content2" mktoName="Three Col Icon - Content 2">
+              <img src="https://picsum.photos/200/200" class="image image-shape:round image-size:3 fill:background-focus margin-bottom:2">
+              <h5 class="font margin-bottom:2">
+                Quick Quotes
+              </h5>
+              <p>
+                Load CSV price files from suppliers directly into Fergus, group materials used for specific jobs and track multiple quote versions.
+              </p>
+              <a href="#">Learn more</a>
             </div>
           </div>
 
           <div class="column:12 column-sm:4 padding-y:5">
-            <img class="mktoImg image image-shape:round image-size:3 fill:background-focus margin-bottom:2" id="threeCI_image3" mktoName="Three Col Icon - Image 3">
-            <h4 class="font margin-bottom:2">
-              ${threeCI_title3}
-            </h4>
-            <div class="mktoText" id="threeCI_body3" mktoName="Body 3">
-              Optionally add default text for the editable text area.
+            <div class="mktoText" id="threeCol_content3" mktoName="Three Col Icon - Content 3">
+              <img src="https://picsum.photos/200/200" class="image image-shape:round image-size:3 fill:background-focus margin-bottom:2">
+              <h5 class="font margin-bottom:2">
+                Quick Quotes
+              </h5>
+              <p>
+                Load CSV price files from suppliers directly into Fergus, group materials used for specific jobs and track multiple quote versions.
+              </p>
+              <a href="#">Learn more</a>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="column align:center">
-        <a href="${threeCI_btnLink}" class="button color:yellow button-grow:2">
-          ${threeCI_btnText}
-        </a>
       </div>
     </div>
 
@@ -271,86 +185,22 @@
 
 
 
-
-<section class="padding-y:10vh border-bottom" style="display: ${threeCIMG_switch}; ${margin_toggle};">
-  <div class="wrap">
-
-    <div class="row">
-      <div class="column align:center">
-        <h1 class="font font-size:h2 font-size-sm:h1">
-          ${threeCIMG_introTitle}
-        </h1>
-        <h4 class="font font-weight:medium margin-bottom:4">
-          ${threeCIMG_introSubtitle}
-        </h4>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="column max-width:100 margin:auto">
-        <div class="row row-gutter:2 margin-bottom:2">
-          <div class="column:12 column-sm:4 padding-y:5">
-            <img class="mktoImg s-img u-pad-bottom-2vh" id="threeCIMG_image1" mktoName="Three Col Icon - Image 1">
-            <h4 class="font margin-bottom:2">
-              ${threeCIMG_title1}
-            </h4>
-            <div class="mktoText" id="threeCIMG_body1" mktoName="Body 1">
-              Optionally add default text for the editable text area.
-            </div>
-          </div>
-
-          <div class="column:12 column-sm:4 padding-y:5">
-            <img class="mktoImg s-img u-pad-bottom-2vh" id="threeCIMG_image2" mktoName="Three Col Icon - Image 2">
-            <h4 class="font margin-bottom:2">
-              ${threeCIMG_title2}
-            </h4>
-            <div class="mktoText" id="threeCIMG_body2" mktoName="Body 2">
-              Optionally add default text for the editable text area.
-            </div>
-          </div>
-
-          <div class="column:12 column-sm:4 padding-y:5">
-            <img class="mktoImg s-img u-pad-bottom-2vh" id="threeCIMG_image3" mktoName="Three Col Icon - Image 3">
-            <h4 class="font margin-bottom:2">
-              ${threeCIMG_title3}
-            </h4>
-            <div class="mktoText" id="threeCIMG_body3" mktoName="Body 3">
-              Optionally add default text for the editable text area.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="column align:center">
-        <a href="${threeCIMG_btnLink}" class="button color:yellow button-grow:2">
-          ${threeCIMG_btnText}
-        </a>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-
-
-
-<section class="padding-y:10vh border-bottom" style="display: ${plainCTA_switch}; ${margin_toggle};">
+<section class="padding-y:8vh border-bottom" style="display: ${plainCTA_switch};">
   <div class="wrap">
 
     <div class="row align:center">
       <div class="column -w-16">
-        <h1 class="font font-size:h2 font-size-sm:h1 margin-bottom:2">
-          ${plainCTA_title}
-        </h1>
-        <h4 class="font font-weight:medium margin-bottom:4">
-          ${plainCTA_subtitle}
-        </h4>
-        <a href="${plainCTA_btnLink}" class="button color:yellow button-grow:2">
-          ${plainCTA_btnText}
-        </a>
+        <div class="mktoText" id="plainCTA_content" mktoName="Plain CTA - Content">
+          <h1 class="font font-size:h2 font-size-sm:h1 margin-bottom:2">
+            The nuts and bolts
+          </h1>
+          <h5 class="font font-weight:regular margin-bottom:4 max-width:70 margin:auto">
+            Create detailed quotes, carry out the work and then eliminate double handling by exporting as an invoice.
+          </h5>
+          <a href="#" class="button color:yellow button-grow:2">
+            Start Free Trial
+          </a>
+        </div>
       </div>
     </div>
 
@@ -362,14 +212,17 @@
 
 
 
-<section class="padding-y:10vh border-bottom" style="display: ${videoYT_switch};">
+<section class="padding-y:8vh border-bottom" style="display: ${videoYT_switch};">
   <div class="wrap align:center">
-    <h1 class="font font-size:h2 font-size-sm:h1 margin-bottom:2">
-      ${videoYT_title}
-    </h1>
-    <h4 class="font font-weight:medium margin-bottom:4">
-      ${videoYT_subtitle}
-    </h4>
+
+    <div class="mktoText" id="videoYT_content" mktoName="Video YouTube - Content">
+      <h1 class="font font-size:h2 font-size-sm:h1 margin-bottom:2">
+        Watch YouTube
+      </h1>
+      <h5 class="font font-weight:regular margin-bottom:4 max-width:70 margin:auto">
+        Create detailed quotes, carry out the work and then eliminate double handling by exporting as an invoice.
+      </h5>
+    </div>
     <div class="row">
       <div class="column max-width:100 margin:auto">
         <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed/${videoYT_link}' frameborder='0' allowfullscreen></iframe></div>
@@ -379,17 +232,20 @@
   </div>
 </section>
 
-<section class="padding-y:10vh border-bottom" style="display: ${videoVM_switch};">
+<section class="padding-y:8vh border-bottom" style="display: ${videoVM_switch};">
   <div class="wrap align:center">
-    <h1 class="font font-size:h2 font-size-sm:h1 margin-bottom:2">
-      ${videoVM_title}
-    </h1>
-    <h4 class="font font-weight:medium margin-bottom:4">
-      ${videoVM_subtitle}
-    </h4>
-    <div class="row">
-      <div class="column max-width:100 margin:auto">
-        <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://player.vimeo.com/video/${videoVM_link}' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+
+    <div class="mktoText" id="videoVM_content" mktoName="Video Vimeo - Content">
+      <h1 class="font font-size:h2 font-size-sm:h1 margin-bottom:2">
+        Watch Vimeo
+      </h1>
+      <h5 class="font font-weight:regular margin-bottom:4 max-width:70 margin:auto">
+        Create detailed quotes, carry out the work and then eliminate double handling by exporting as an invoice.
+      </h5>
+      <div class="row">
+        <div class="column max-width:100 margin:auto">
+          <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://player.vimeo.com/video/${videoVM_link}' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+        </div>
       </div>
     </div>
 
@@ -398,9 +254,7 @@
 
 
 
-
-
-<section class="padding-y:10vh border-bottom" style="display: ${imageLTR_switch}; ${margin_toggle};">
+<section class="padding-y:8vh border-bottom" style="display: ${imageLTR_switch};">
   <div class="wrap">
 
     <div class="row">
@@ -410,16 +264,17 @@
           <div class="column:12 column-sm:6 margin-bottom:2">
             <img src="http://via.placeholder.com/800x500" class="mktoImg image" id="imageLTR_image" mktoName="Image Left Text Right - Image">
           </div>
-          <div class="column:12 column-sm:6">
-            <h4 class="font margin-bottom:2">
-              ${imageLTR_title}
-            </h4>
-            <div class="mktoText margin-bottom:3" id="imageLTR_body" mktoName="Body">
-              Optionally add default text for the editable text area.
-            </div>
-            <div style="display: ${imageLTR_btnSwitch};">
-              <a href="${imageLTR_btnLink}" class="button color:yellow button-grow:1">
-                ${imageLTR_btnText}
+          <div class="column:12 column-sm:6 display:flex align-item:middle">
+
+            <div class="mktoText" id="imageLTR_content" mktoName="Image Left Text Right - Content">
+              <h5 class="font margin-bottom:2">
+                Quick Quotes
+              </h5>
+              <p>
+                Load CSV price files from suppliers directly into Fergus, group materials used for specific jobs and track multiple quote versions.
+              </p>
+              <a href="#" class="button button-size:3 color:yellow button-grow:1 margin-top:2">
+                Start Free Trial
               </a>
             </div>
 
@@ -433,26 +288,32 @@
 </section>
 
 
-<section class="padding-y:10vh border-bottom" style="display: ${form_switch}; ${margin_toggle};">
+<section class="padding-y:8vh border-bottom" style="display: ${form_switch};">
   <div class="wrap">
 
     <div class="row">
       <div class="column max-width:100 margin:auto">
-        <h1 class="font font-size:h2 font-size-sm:h1 margin-bottom:2 align:center">
-          ${form_title}
-        </h1>
-        <h4 class="font font-weight:medium margin-bottom:4 align:center">
-          ${form_subtitle}
-        </h4>
-        <div class="card">
-          <div class="card/content">
-            <div class="mktoForm form" id="exampleForm" mktoName="Marketo Form">
+
+        <div class="mktoText" id="form_content" mktoName="Form - Content">
+          <h1 class="font font-size:h2 font-size-sm:h1 margin-bottom:2 align:center">
+            Marketo Form
+          </h1>
+          <h5 class="font font-weight:regular margin-bottom:4 max-width:70 margin:auto align:center">
+            Create detailed quotes, carry out the work and then eliminate double handling by exporting as an invoice.
+          </h5>
+          <p class="margin-bottom:4 align:center" style="display: ${form_disclaimer_switch};">
+            No credit card required
+          </p>
+        </div>
+          <div class="card">
+            <div class="card/content">
+              <div class="mktoForm form" id="marketoForm" mktoName="Marketo Form">
+              </div>
             </div>
           </div>
-        </div>
-        <p class="margin-top:3 align:center" style="display: ${form_disclaimer_switch};">
-          ${form_disclaimer}
-        </p>
+
+
+
       </div>
     </div>
 
@@ -460,15 +321,17 @@
 </section>
 
 
-<section class="padding-y:5vh border-bottom" style="display: ${singleCTA_switch}; ${margin_toggle};">
+<section class="padding-y:5vh border-bottom" style="display: ${singleCTA_switch};">
   <div class="wrap">
 
     <div class="row">
       <div class="column max-width:100 margin:auto align:center">
 
-        <a href="${singleCTA_btnLink}" class="button color:yellow button-grow:2">
-          ${singleCTA_btnText}
-        </a>
+        <div class="mktoText" id="singleCTA_content" mktoName="Single CTA - Content">
+          <a href="#" class="button color:yellow button-grow:2">
+            Start Free Trial
+          </a>
+        </div>
 
       </div>
     </div>
@@ -477,85 +340,88 @@
 </section>
 
 
-<section class="padding-y:5vh border-bottom" style="display: ${testimonial_switch}; ${margin_toggle};">
+<section class="padding-y:10vh border-bottom" style="display: ${testimonial_switch};">
   <div class="wrap">
 
     <div class="row align-content:center">
-      <div class="column max-width:100">
+      <div class="column:12 column-sm:10">
         <h1 class="font font-size:h2 font-size-sm:h1 margin-bottom:2 align:center">
-          ${testimonial_title}
+          What our customers have to say...
         </h1>
-        <h4 class="font font-weight:medium margin-bottom:4 align:center">
-          ${testimonial_subtitle}
-        </h4>
+        <h5 class="font font-weight:regular margin-bottom:4 max-width:70 margin:auto align:center">
+          Fergus is used by trades and service businesses across Australasia and the World. Fergus works best for small to medium-sized businesses and is perfect for managing large projects and small jobs.
+        </h5>
 
-        <div class="row">
-          <div class="column -w-16 -t-16 -d-14 -v-14 -center">
-            <div class="row row-gutter:2 u-pad-bottom-tight u-align-center">
-              <div class="column -w-16 -t-8 -d-4 u-pad-y-3vh">
-                <i class="fas fa-star u-color-yellow"></i>
-                <i class="fas fa-star u-color-yellow"></i>
-                <i class="fas fa-star u-color-yellow"></i>
-                <i class="fas fa-star u-color-yellow"></i>
-                <i class="fas fa-star u-color-yellow"></i>
-                <p class="font -h4 -tight weight:semi-bold margin-top:2">
-                  “${testimonial_quote1}”
-                </p>
+        <div class="row align:center">
+          <div class="column:12">
+            <div class="row row-gutter:2">
+              <div class="column:12 column-sm:3 padding-y:5vh">
+                <i class="fas fa-star color:yellow"></i>
+                <i class="fas fa-star color:yellow"></i>
+                <i class="fas fa-star color:yellow"></i>
+                <i class="fas fa-star color:yellow"></i>
+                <i class="fas fa-star color:yellow"></i>
+                <h5 class="font font-size:body font-weight:regular margin-y:2">
+                  “This job app software is amazing! It has cut my office time in half.”
+                </h5>
 
-                <p class="font -h6">
-                  <strong>${testimonial_name1}</strong><br />
-                  ${testimonial_company1}
+                <p class="font font-size:tiny color:black">
+                  <strong>Ryan Walker</strong><br />
+                  Owner, Three Ducks <br />Solutions Ltd.
                 </p>
               </div>
 
-              <div class="column -w-16 -t-8 -d-4 u-pad-y-3vh">
-                <i class="fas fa-star u-color-yellow"></i>
-                <i class="fas fa-star u-color-yellow"></i>
-                <i class="fas fa-star u-color-yellow"></i>
-                <i class="fas fa-star u-color-yellow"></i>
-                <i class="fas fa-star u-color-yellow"></i>
-                <p class="font -h4 -tight weight:semi-bold margin-top:2">
-                  “${testimonial_quote2}”
-                </p>
-                <p class="font -h6">
-                  <strong>${testimonial_name2}</strong><br />
-                  ${testimonial_company2}
+              <div class="column:12 column-sm:3 padding-y:5vh">
+                <i class="fas fa-star color:yellow"></i>
+                <i class="fas fa-star color:yellow"></i>
+                <i class="fas fa-star color:yellow"></i>
+                <i class="fas fa-star color:yellow"></i>
+                <i class="fas fa-star color:yellow"></i>
+                <h5 class="font font-size:body font-weight:regular margin-y:2">
+                  “It was a big call to move from my previous job management system to Fergus!”
+                </h5>
+
+                <p class="font font-size:tiny color:black">
+                  <strong>David Sander</strong><br />
+                  Rawlinson Plumbing <br />and Gas Ltd
                 </p>
               </div>
 
-              <div class="column -w-16 -t-8 -d-4 u-pad-y-3vh">
-                <i class="fas fa-star u-color-yellow"></i>
-                <i class="fas fa-star u-color-yellow"></i>
-                <i class="fas fa-star u-color-yellow"></i>
-                <i class="fas fa-star u-color-yellow"></i>
-                <i class="fas fa-star u-color-yellow"></i>
-                <p class="font -h4 -tight weight:semi-bold margin-top:2">
-                  “${testimonial_quote3}”
-                </p>
-                <p class="font -h6">
-                  <strong>${testimonial_name3}</strong><br />
-                  ${testimonial_company3}
+              <div class="column:12 column-sm:3 padding-y:5vh">
+                <i class="fas fa-star color:yellow"></i>
+                <i class="fas fa-star color:yellow"></i>
+                <i class="fas fa-star color:yellow"></i>
+                <i class="fas fa-star color:yellow"></i>
+                <i class="fas fa-star color:yellow"></i>
+                <h5 class="font font-size:body font-weight:regular margin-y:2">
+                  “This job app software is amazing! It has cut my office time in half.”
+                </h5>
+
+                <p class="font font-size:tiny color:black">
+                  <strong>Ryan Walker</strong><br />
+                  Owner, Three Ducks <br />Solutions Ltd.
                 </p>
               </div>
 
-              <div class="column -w-16 -t-8 -d-4 u-pad-y-3vh">
-                <i class="fas fa-star u-color-yellow"></i>
-                <i class="fas fa-star u-color-yellow"></i>
-                <i class="fas fa-star u-color-yellow"></i>
-                <i class="fas fa-star u-color-yellow"></i>
-                <i class="fas fa-star u-color-yellow"></i>
-                <p class="font -h4 -tight weight:semi-bold margin-top:2">
-                  “${testimonial_quote4}”
-                </p>
-                <p class="font -h6">
-                  <strong>${testimonial_name4}</strong><br />
-                  ${testimonial_company4}
+              <div class="column:12 column-sm:3 padding-y:5vh">
+                <i class="fas fa-star color:yellow"></i>
+                <i class="fas fa-star color:yellow"></i>
+                <i class="fas fa-star color:yellow"></i>
+                <i class="fas fa-star color:yellow"></i>
+                <i class="fas fa-star color:yellow"></i>
+                <h5 class="font font-size:body font-weight:regular margin-y:2">
+                  “Fergus is designed specifically for trades which suits us perfectly.”
+                </h5>
+
+                <p class="font font-size:tiny color:black">
+                  <strong>Nina Parker</strong><br />
+                  Parkercraft
                 </p>
               </div>
 
             </div>
 
-            <img src="https://info.fergus.com/rs/163-RUO-573/images/capterra-logo.png" class="s-img" style="display: block; width: 100%; max-width: 180px; margin: auto;" />
+            <img src="https://info.fergus.com/rs/163-RUO-573/images/capterra-logo.png" class="image" style="display: block; width: 100%; max-width: 180px; margin: auto;" />
           </div>
         </div>
 
@@ -568,25 +434,28 @@
 
 
 
-<section class=" u-pad-y-5vh u-color-white" style="display: ${mainCTA_switch};">
+<section class="fill:primary color:white padding-y:5vh" style="display: ${mainCTA_switch};">
   <div class="wrap">
 
     <div class="row">
-      <div class="column -w-16 -t-12 -d-11 -center u-align-center">
-        <img src="https://info.fergus.com/rs/163-RUO-573/images/fergus-logo-white.svg" class="s-img -footer u-marg-bottom u-marg-auto" style="display: ${mainCTA_logoSwitch};" />
-        <h1 class="font font-size:h3 font-size-sm:h1 color:white weight:semi-bold -xtight">
-          ${mainCTA_title}
-        </h1>
-        <h3 class="font -h4 -medium -tight">
-          ${mainCTA_subtitle}
-        </h3>
-        <a href="${mainCTA_btnLink}" class="s-btn -round -accent -broad -small">
-          ${mainCTA_btnText}
-        </a>
-        <p class="font -h6 margin-top:2">
-          ${mainCTA_disclaimer}
-        </p>
+      <div class="column align:center">
 
+        <div class="mktoText" id="mainCTA_content" mktoName="Main CTA - Content">
+          <h1 class="font font-size:h2 font-size-sm:h1 margin-bottom:2 align:center color:white font-leading:0">
+            Job management <br />software built to help
+          </h1>
+          <p class="font font-weight:regular margin-bottom:4 max-width:80 margin:auto align:center color:white">
+            All the tools you need. All in one place
+          </p>
+
+          <a href="#" class="button fill:yellow color:secondary button-grow:2 margin-bottom:3">
+            Start Free Trial
+          </a>
+
+          <p class="font font-size:tiny">
+            No credit card required
+          </p>
+        </div>
 
       </div>
     </div>
@@ -594,75 +463,77 @@
   </div>
 </section>
 
-<section class=" -brand u-pad-y-5vh u-color-white" style="display: ${footer_switch};">
+
+
+<section class="fill:black padding-y:10vh color:white" style="display: ${footer_switch};">
   <div class="wrap">
 
     <div class="row">
-      <div class="column -w-16 -t-5 u-pad-y-xtight">
-        <img src="https://info.fergus.com/rs/163-RUO-573/images/fergus-logo-white.svg" class="s-img -footer" />
+      <div class="column:12 column-sm:4 margin-bottom:5">
+        <img src="https://fergus.com/assets/images/fergus-horizontal-white@2x.png" class="image" style="width:120px;" />
       </div>
-      <div class="column -w-16 -t-10">
+      <div class="column:12 column-sm:8">
         <div class="row">
-          <div class="column -w-16 -t-1-3 -d-1-3 u-pad-y-tight">
-            <ul class="m-list -tight -footer -footer">
-              <li class="m-list__item">
-                <h4 class="font u-color-white weight:semi-bold -tight">Features</h4>
+          <div class="column:6 column-sm:4 margin-bottom:4">
+            <ul class="list list-gutter:1">
+              <li class="list/item">
+                <h5 class="font color:white weight:semi-bold margin-bottom:2">Features</h5>
               </li>
-              <li class="m-list__item">
-                <a href="https://fergus.com/en/features-overview/track-manage-jobs">Job Tracking</a>
+              <li class="list/item">
+                <a class="color:white font-size:body opacity:5 hover-opacity:10" href="https://fergus.com/en/features-overview/track-manage-jobs">Job Tracking</a>
               </li>
-              <li class="m-list__item">
-                <a href="https://fergus.com/en/features-overview/team-management">Team Management</a>
+              <li class="list/item">
+                <a class="color:white font-size:body opacity:5 hover-opacity:10" href="https://fergus.com/en/features-overview/team-management">Team Management</a>
               </li>
-              <li class="m-list__item">
-                <a href="https://fergus.com/en/features-overview/quoting">Quoting</a>
+              <li class="list/item">
+                <a class="color:white font-size:body opacity:5 hover-opacity:10" href="https://fergus.com/en/features-overview/quoting">Quoting</a>
               </li>
-              <li class="m-list__item">
-                <a href="https://fergus.com/en/features-overview/job-scheduler">Scheduling</a>
+              <li class="list/item">
+                <a class="color:white font-size:body opacity:5 hover-opacity:10" href="https://fergus.com/en/features-overview/job-scheduler">Scheduling</a>
               </li>
-              <li class="m-list__item">
-                <a href="https://fergus.com/en/features-overview/on-the-job">On the job</a>
+              <li class="list/item">
+                <a class="color:white font-size:body opacity:5 hover-opacity:10" href="https://fergus.com/en/features-overview/on-the-job">On the job</a>
               </li>
-              <li class="m-list__item">
-                <a href="https://fergus.com/en/features-overview/invoicing">Invoicing</a>
+              <li class="list/item">
+                <a class="color:white font-size:body opacity:5 hover-opacity:10" href="https://fergus.com/en/features-overview/invoicing">Invoicing</a>
               </li>
-              <li class="m-list__item">
-                <a href="https://fergus.com/en/features-overview/reporting">Reporting</a>
+              <li class="list/item">
+                <a class="color:white font-size:body opacity:5 hover-opacity:10" href="https://fergus.com/en/features-overview/reporting">Reporting</a>
               </li>
-              <li class="m-list__item">
-                <a href="https://fergus.com/en/features-overview/integrations">Integrations</a>
-              </li>
-            </ul>
-          </div>
-          <div class="column -w-16 -t-1-3 -d-1-3 u-pad-y-tight">
-            <ul class="m-list -tight -footer">
-              <li class="m-list__item">
-                <h4 class="font u-color-white weight:semi-bold -tight">How we help</h4>
-              </li>
-              <li class="m-list__item">
-                <a href="https://fergus.com/en/plumbing">Plumbers</a>
-              </li>
-              <li class="m-list__item">
-                <a href="https://fergus.com/en/electrical">Electricians</a>
-              </li>
-              <li class="m-list__item">
-                <a href="https://fergus.com/en/services">Service Industry</a>
-              </li>
-              <li class="m-list__item">
-                <a href="https://fergus.com/en/other-trades">More</a>
+              <li class="list/item">
+                <a class="color:white font-size:body opacity:5 hover-opacity:10" href="https://fergus.com/en/features-overview/integrations">Integrations</a>
               </li>
             </ul>
           </div>
-          <div class="column -w-16 -t-1-3 -d-1-3 u-pad-y-tight">
-            <ul class="m-list -tight -footer">
-              <li class="m-list__item">
-                <h4 class="font u-color-white weight:semi-bold -tight">Resources</h4>
+          <div class="column:6 column-sm:4 margin-bottom:4">
+            <ul class="list list-gutter:1">
+              <li class="list/item">
+                <h5 class="font color:white weight:semi-bold margin-bottom:2">How we help</h5>
               </li>
-              <li class="m-list__item">
-                <a href="https://fergus.com/en/about">About us</a>
+              <li class="list/item">
+                <a class="color:white font-size:body opacity:5 hover-opacity:10" href="https://fergus.com/en/plumbing">Plumbers</a>
               </li>
-              <li class="m-list__item">
-                <a href="https://fergus.com/en/pricing">Pricing</a>
+              <li class="list/item">
+                <a class="color:white font-size:body opacity:5 hover-opacity:10" href="https://fergus.com/en/electrical">Electricians</a>
+              </li>
+              <li class="list/item">
+                <a class="color:white font-size:body opacity:5 hover-opacity:10" href="https://fergus.com/en/services">Service Industry</a>
+              </li>
+              <li class="list/item">
+                <a class="color:white font-size:body opacity:5 hover-opacity:10" href="https://fergus.com/en/other-trades">More</a>
+              </li>
+            </ul>
+          </div>
+          <div class="column:6 column-sm:4 margin-bottom:4">
+            <ul class="list list-gutter:1">
+              <li class="list/item">
+                <h5 class="font color:white weight:semi-bold margin-bottom:2">Resources</h5>
+              </li>
+              <li class="list/item">
+                <a class="color:white font-size:body opacity:5 hover-opacity:10" href="https://fergus.com/en/about">About us</a>
+              </li>
+              <li class="list/item">
+                <a class="color:white font-size:body opacity:5 hover-opacity:10" href="https://fergus.com/en/pricing">Pricing</a>
               </li>
             </ul>
           </div>
@@ -670,7 +541,7 @@
       </div>
     </div>
 
-    <p class="font -h5 u-color-white u-pad-top-5vh">
+    <p class="font -h5 color:white u-pad-top-5vh">
       © Fergus
     </p>
   </div>

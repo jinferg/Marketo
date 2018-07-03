@@ -1,0 +1,309 @@
+/************************************************************
+MARGIN
+************************************************************/
+
+.margin {
+
+  &\:none {
+    margin: 0 !important;
+  }
+  &\:auto {
+    margin: auto !important;
+  }
+
+  @for $i from 0 through 10 {
+    &\:#{$i} {
+      margin: var(--u#{$i}) !important;
+    }
+  }
+  @for $i from 5 through 10 {
+    &\:#{$i}vh {
+      margin: #{$i}vh !important;
+    }
+  }
+
+  @each $key, $value in $screens {
+    &-#{$key} {
+      @media (min-width: $value) {
+        &\:none {
+          margin: 0 !important;
+        }
+        &\:auto {
+          margin: auto !important;
+        }
+        @for $i from 0 through 10 {
+          &\:#{$i} {
+            margin: var(--u#{$i}) !important;
+          }
+        }
+        @for $i from 5 through 10 {
+          &\:#{$i}vh {
+            margin: #{$i}vh !important;
+          }
+        }
+      }
+    }
+  }
+
+  &-top {
+    &\:none {
+      margin-top: 0 !important;
+    }
+    &\:auto {
+      margin-top: auto !important;
+    }
+    @for $i from 0 through 10 {
+      &\:#{$i} {
+        margin-top: var(--u#{$i}) !important;
+      }
+    }
+    @for $i from 5 through 10 {
+      &\:#{$i}vh {
+        margin-top: #{$i}vh !important;
+      }
+    }
+    @each $key, $value in $screens {
+      &-#{$key} {
+        @media (min-width: $value) {
+          &\:none {
+            margin-top: 0 !important;
+          }
+          &\:auto {
+            margin-top: auto !important;
+          }
+          @for $i from 0 through 10 {
+            &\:#{$i} {
+              margin-top: var(--u#{$i}) !important;
+            }
+          }
+          @for $i from 5 through 10 {
+            &\:#{$i}vh {
+              margin-top: #{$i}vh !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-right {
+    &\:none {
+      margin-right: 0 !important;
+    }
+    &\:auto {
+      margin-right: auto !important;
+    }
+    @for $i from 0 through 10 {
+      &\:#{$i} {
+        margin-right: var(--u#{$i}) !important;
+      }
+    }
+    @for $i from 5 through 10 {
+      &\:#{$i}vw {
+        margin-right: #{$i}vw !important;
+      }
+    }
+    @each $key, $value in $screens {
+      &-#{$key} {
+        @media (min-width: $value) {
+          &\:none {
+            margin-right: 0 !important;
+          }
+          &\:auto {
+            margin-right: auto !important;
+          }
+          @for $i from 0 through 10 {
+            &\:#{$i} {
+              margin-right: var(--u#{$i}) !important;
+            }
+          }
+          @for $i from 5 through 10 {
+            &\:#{$i}vw {
+              margin-right: #{$i}vw !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-bottom {
+    &\:none {
+      margin-bottom: 0 !important;
+    }
+    &\:auto {
+      margin-bottom: auto !important;
+    }
+    @for $i from 0 through 10 {
+      &\:#{$i} {
+        margin-bottom: var(--u#{$i}) !important;
+      }
+    }
+    @for $i from 5 through 10 {
+      &\:#{$i}vh {
+        margin-bottom: #{$i}vh !important;
+      }
+    }
+    @each $key, $value in $screens {
+      &-#{$key} {
+        @media (min-width: $value) {
+          &\:none {
+            margin-bottom: 0 !important;
+          }
+          &\:auto {
+            margin-bottom: auto !important;
+          }
+          @for $i from 0 through 10 {
+            &\:#{$i} {
+              margin-bottom: var(--u#{$i}) !important;
+            }
+          }
+          @for $i from 5 through 10 {
+            &\:#{$i}vh {
+              margin-bottom: #{$i}vh !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-left {
+    &\:none {
+      margin-left: 0 !important;
+    }
+    &\:auto {
+      margin-left: auto !important;
+    }
+    @for $i from 0 through 10 {
+      &\:#{$i} {
+        margin-left: var(--u#{$i}) !important;
+      }
+    }
+    @for $i from 5 through 10 {
+      &\:#{$i}vw {
+        margin-left: #{$i}vw !important;
+      }
+    }
+    @each $key, $value in $screens {
+      &-#{$key} {
+        @media (min-width: $value) {
+          &\:none {
+            margin-left: 0 !important;
+          }
+          &\:auto {
+            margin-left: auto !important;
+          }
+          @for $i from 0 through 10 {
+            &\:#{$i} {
+              margin-left: var(--u#{$i}) !important;
+            }
+          }
+          @for $i from 5 through 10 {
+            &\:#{$i}vw {
+              margin-left: #{$i}vw !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-x {
+    &\:none {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+    &\:auto {
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+    @for $i from 0 through 10 {
+      &\:#{$i} {
+        margin-left: var(--u#{$i}) !important;
+        margin-right: var(--u#{$i}) !important;
+      }
+    }
+    @for $i from 5 through 10 {
+      &\:#{$i}vw {
+        margin-left: #{$i}vw !important;
+        margin-right: #{$i}vw !important;
+      }
+    }
+    @each $key, $value in $screens {
+      &-#{$key} {
+        @media (min-width: $value) {
+          &\:none {
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+          }
+          &\:auto {
+            margin-left: auto !important;
+            margin-right: auto !important;
+          }
+          @for $i from 0 through 10 {
+            &\:#{$i} {
+              margin-left: var(--u#{$i}) !important;
+              margin-right: var(--u#{$i}) !important;
+            }
+          }
+          @for $i from 5 through 10 {
+            &\:#{$i}vw {
+              margin-left: #{$i}vw !important;
+              margin-right: #{$i}vw !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-y {
+    &\:none {
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+    }
+    &\:auto {
+      margin-top: auto !important;
+      margin-bottom: auto !important;
+    }
+    @for $i from 0 through 10 {
+      &\:#{$i} {
+        margin-top: var(--u#{$i}) !important;
+        margin-bottom: var(--u#{$i}) !important;
+      }
+    }
+    @for $i from 5 through 10 {
+      &\:#{$i}vh {
+        margin-top: #{$i}vh !important;
+        margin-bottom: #{$i}vh !important;
+      }
+    }
+    @each $key, $value in $screens {
+      &-#{$key} {
+        @media (min-width: $value) {
+          &\:none {
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+          }
+          &\:auto {
+            margin-top: auto !important;
+            margin-bottom: auto !important;
+          }
+          @for $i from 0 through 10 {
+            &\:#{$i} {
+              margin-top: var(--u#{$i}) !important;
+              margin-bottom: var(--u#{$i}) !important;
+            }
+          }
+          @for $i from 5 through 10 {
+            &\:#{$i}vh {
+              margin-top: #{$i}vh !important;
+              margin-bottom: #{$i}vh !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

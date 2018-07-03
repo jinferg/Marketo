@@ -1,0 +1,114 @@
+/************************************************************
+FONT
+************************************************************/
+
+.font {
+
+  margin: 0;
+  padding: 0;
+
+  /******************************
+  FONT SIZES
+  ******************************/
+
+  &-size {
+    @each $font-size, $value in $font-sizes {
+      &\:#{$font-size} {
+        font-size: var(--#{$font-size});
+      }
+      @each $screen, $size in $screens {
+        &-#{$screen} {
+          @media (min-width : #{$size}) {
+            &\:#{$font-size} {
+              font-size: var(--#{$font-size});
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /******************************
+  FONT WEIGHTS
+  ******************************/
+
+  &-weight {
+    @each $key, $value in $font-weights {
+      &\:#{$key} {
+        font-weight: var(--#{$key});
+      }
+    }
+    @each $screen, $size in $screens {
+      &-#{$screen} {
+        @media (min-width : #{$size}) {
+          @each $key, $value in $font-weights {
+            &\:#{$key} {
+              font-weight: var(--#{$key});
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /******************************
+  UNDERLINE
+  ******************************/
+
+  &\:underline {
+    padding-bottom: .25rem;
+    border-bottom: var(--border);
+  }
+
+  /******************************
+  LINE HEIGHT
+  ******************************/
+
+  &-leading {
+		@while $levels >= 0 {
+      &\:#{$levels} {
+        line-height: $levels / 5 + 1;
+      }
+      $levels: $levels - 1;
+    }
+    @each $screen, $size in $screens {
+      &-#{$screen} {
+        @media (min-width : #{$size}) {
+          @while $levels >= 0 {
+            &\:#{$levels} {
+              line-height: $levels / 5 + 1;
+            }
+            $levels: $levels - 1;
+          }
+        }
+      }
+    }
+	}
+
+  /******************************
+  TRANSFORM
+  ******************************/
+
+  &\:none {
+    text-transform: none;
+  }
+  &\:upper {
+    text-transform: uppercase;
+  }
+  &\:lower {
+    text-transform: lowercase;
+  }
+
+  /******************************
+  LINK
+  ******************************/
+
+  &\:link {
+    cursor: pointer;
+    transition: var(--transition);
+    color: var(--primary);
+    &:hover {
+      color: var(--black);
+    }
+  }
+}

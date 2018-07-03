@@ -1,0 +1,141 @@
+/************************************************************
+COLUMN
+************************************************************/
+
+.column {
+	flex-grow: 1;
+	flex-basis: 100%;
+	max-width: 100%;
+	width: 100%;
+
+	/******************************
+  COLUMNS
+  ******************************/
+
+	$total-columns: $columns;
+	@while $columns > 0 {
+		&\:#{$columns} {
+			flex-basis: 100% / $total-columns * $columns;
+			max-width: 100% / $total-columns * $columns;
+		  width: 100% / $total-columns * $columns;
+		}
+		$columns: $columns - 1;
+	}
+	@for $i from 1 through 5 {
+		&\:#{$i}\/5 {
+			flex-basis: 100% / 5 * $i;
+			max-width: 100% / 5 * $i;
+		  width: 100% / 5 * $i;
+		}
+  }
+	@for $i from 1 through 7 {
+		&\:#{$i}\/7 {
+			flex-basis: 100% / 7 * $i;
+			max-width: 100% / 7 * $i;
+		  width: 100% / 7 * $i;
+		}
+  }
+	@each $key, $value in $screens {
+		&-#{$key} {
+			@media (min-width : #{$value}) {
+				@while $columns > 0 {
+					&\:#{$columns} {
+						flex-basis: 100% / $total-columns * $columns;
+						max-width: 100% / $total-columns * $columns;
+					  width: 100% / $total-columns * $columns;
+					}
+					$columns: $columns - 1;
+				}
+				@for $i from 1 through 5 {
+					&\:#{$i}\/5 {
+						flex-basis: 100% / 5 * $i;
+						max-width: 100% / 5 * $i;
+					  width: 100% / 5 * $i;
+					}
+			  }
+				@for $i from 1 through 7 {
+					&\:#{$i}\/7 {
+						flex-basis: 100% / 7 * $i;
+						max-width: 100% / 7 * $i;
+					  width: 100% / 7 * $i;
+					}
+			  }
+			}
+		}
+	}
+
+	/******************************
+  ORDER
+  ******************************/
+
+	&-order {
+		@while $columns > 0 {
+			&\:#{$columns} {
+				order: $columns;
+			}
+			$columns: $columns - 1;
+		}
+		@each $key, $value in $screens {
+			&-#{$key} {
+				@media (min-width : #{$value}) {
+					@while $columns > 0 {
+						&\:#{$columns} {
+							order: $columns;
+						}
+						$columns: $columns - 1;
+					}
+				}
+			}
+		}
+	}
+
+	/******************************
+  PUSH
+  ******************************/
+
+	&-push {
+		@while $columns > 0 {
+			&\:#{$columns} {
+				margin-left: 100% / $total-columns * $columns;
+			}
+			$columns: $columns - 1;
+		}
+		@each $key, $value in $screens {
+			&-#{$key} {
+				@media (min-width : #{$value}) {
+					@while $columns > 0 {
+						&\:#{$columns} {
+							margin-left: 100% / $total-columns * $columns;
+						}
+						$columns: $columns - 1;
+					}
+				}
+			}
+		}
+	}
+
+	/******************************
+  PULL
+  ******************************/
+
+	&-pull {
+		@while $columns > 0 {
+			&\:#{$columns} {
+				margin-left: -100% / $total-columns * $columns;
+			}
+			$columns: $columns - 1;
+		}
+		@each $key, $value in $screens {
+			&-#{$key} {
+				@media (min-width : #{$value}) {
+					@while $columns > 0 {
+						&\:#{$columns} {
+							margin-left: -100% / $total-columns * $columns;
+						}
+						$columns: $columns - 1;
+					}
+				}
+			}
+		}
+	}
+}

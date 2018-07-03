@@ -1,0 +1,67 @@
+/************************************************************
+FILL
+************************************************************/
+
+.fill {
+
+  &\:transparent {
+    background-color: transparent !important;
+  }
+  @each $key, $value in $colors {
+    &\:#{$key} {
+      background-color: var(--#{$key}) !important;
+    }
+  }
+  &-size {
+    &\:cover {
+      background-size: cover !important;
+    }
+    &\:contain {
+      background-size: contain !important;
+    }
+  }
+  &-position {
+    &\:top {
+      background-position: top !important;
+    }
+    &\:right {
+      background-position: right !important;
+    }
+    &\:bottom {
+      background-position: bottom !important;
+    }
+    &\:left {
+      background-position: left !important;
+    }
+
+    &\:right-top {
+      background-position: right top !important;
+    }
+    &\:right-center {
+      background-position: right center !important;
+    }
+    &\:right-bottom {
+      background-position: right bottom !important;
+    }
+
+    &\:left-top {
+      background-position: left top !important;
+    }
+    &\:left-center {
+      background-position: left center !important;
+    }
+    &\:left-bottom {
+      background-position: left bottom !important;
+    }
+
+    &\:center-top {
+      background-position: center top !important;
+    }
+    &\:center-center {
+      background-position: center center !important;
+    }
+    &\:center-bottom {
+      background-position: center bottom !important;
+    }
+  }
+}

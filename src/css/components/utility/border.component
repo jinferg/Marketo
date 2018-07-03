@@ -1,0 +1,188 @@
+/************************************************************
+BORDER
+************************************************************/
+
+:root {
+  --border-border: var(--border);
+}
+
+.border {
+
+  border: var(--border-border) !important;
+
+  /******************************
+  CORNERS
+  ******************************/
+
+  &\:sharp {
+    border-radius: 0 !important;
+  }
+  &\:radius {
+    border-radius: var(--radius) !important;
+  }
+  &\:round {
+    border-radius: 500px !important;
+  }
+
+  /******************************
+  BORDERS
+  ******************************/
+
+  &\:none {
+    border: 0 !important;
+  }
+
+  &-top {
+    border-top: var(--border-border) !important;
+    &\:none {
+      border-top: 0 !important;
+    }
+    &\:radius {
+      border-top-left-radius: var(--radius) !important;
+      border-top-right-radius: var(--radius) !important;
+    }
+    @each $key, $value in $screens {
+      &-#{$key} {
+        @media (min-width : #{$value}) {
+          border-top: var(--border-border) !important;
+          &\:none {
+            border-top: 0 !important;
+          }
+          &\:radius {
+            border-top-left-radius: var(--radius) !important;
+            border-top-right-radius: var(--radius) !important;
+          }
+        }
+      }
+    }
+  }
+  &-right {
+    border-right: var(--border-border) !important;
+    &\:none {
+      border-right: 0 !important;
+    }
+    &\:radius {
+      border-top-right-radius: var(--radius) !important;
+      border-bottom-right-radius: var(--radius) !important;
+    }
+    @each $key, $value in $screens {
+      &-#{$key} {
+        @media (min-width : #{$value}) {
+          border-right: var(--border-border) !important;
+          &\:none {
+            border-right: 0 !important;
+          }
+          &\:radius {
+            border-top-right-radius: var(--radius) !important;
+            border-bottom-right-radius: var(--radius) !important;
+          }
+        }
+      }
+    }
+  }
+  &-bottom {
+    border-bottom: var(--border-border) !important;
+    &\:none {
+      border-bottom: 0 !important;
+    }
+    &\:radius {
+      border-bottom-left-radius: var(--radius) !important;
+      border-bottom-right-radius: var(--radius) !important;
+    }
+    @each $key, $value in $screens {
+      &-#{$key} {
+        @media (min-width : #{$value}) {
+          border-bottom: var(--border-border) !important;
+          &\:none {
+            border-bottom: 0 !important;
+          }
+          &\:radius {
+            border-bottom-left-radius: var(--radius) !important;
+            border-bottom-right-radius: var(--radius) !important;
+          }
+        }
+      }
+    }
+  }
+  &-left {
+    border-left: var(--border-border) !important;
+    &\:none {
+      border-left: 0 !important;
+    }
+    &\:radius {
+      border-top-left-radius: var(--radius) !important;
+      border-bottom-left-radius: var(--radius) !important;
+    }
+    @each $key, $value in $screens {
+      &-#{$key} {
+        @media (min-width : #{$value}) {
+          border-left: var(--border-border) !important;
+          &\:none {
+            border-left: 0 !important;
+          }
+          &\:radius {
+            border-top-left-radius: var(--radius) !important;
+            border-bottom-left-radius: var(--radius) !important;
+          }
+        }
+      }
+    }
+  }
+  &-x {
+    border-left: var(--border-border) !important;
+    border-right: var(--border-border) !important;
+    &\:none {
+      border-left: 0 !important;
+      border-right: 0 !important;
+    }
+    @each $key, $value in $screens {
+      &-#{$key} {
+        @media (min-width : #{$value}) {
+          border-left: var(--border-border) !important;
+          border-right: var(--border-border) !important;
+          &\:none {
+            border-left: 0 !important;
+            border-right: 0 !important;
+          }
+        }
+      }
+    }
+  }
+  &-y {
+    border-top: var(--border-border) !important;
+    border-bottom: var(--border-border) !important;
+    &\:none {
+      border-top: 0 !important;
+      border-bottom: 0 !important;
+    }
+    @each $key, $value in $screens {
+      &-#{$key} {
+        @media (min-width : #{$value}) {
+          border-top: var(--border-border) !important;
+          border-bottom: var(--border-border) !important;
+          &\:none {
+            border-top: 0 !important;
+            border-bottom: 0 !important;
+          }
+        }
+      }
+    }
+  }
+
+  &-color {
+    @each $key, $value in $colors {
+      &\:#{$key} {
+        border-color: var(--#{$key}) !important;
+      }
+    }
+  }
+
+  &-width {
+    @while $levels > 0 {
+      &\:#{$levels} {
+        border-width: $levels * 1rem  !important;
+      }
+      $levels: $levels - 1;
+    }
+  }
+}

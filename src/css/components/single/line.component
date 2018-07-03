@@ -1,0 +1,16 @@
+/************************************************************
+LINE
+************************************************************/
+
+
+:root {
+  --line-weight: 1px;
+}
+
+.line {
+  clear: both;
+  display: block;
+  width: 100%;
+  height: var(--line-weight);
+  background-color: var(--border-color);
+}
